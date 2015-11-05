@@ -170,7 +170,7 @@ def main():
 
     # Ignore exceptions and dump to pickle anyway.
     try:
-        scraper.calculate_influencers(seed_id, seed_name, 1000)
+        scraper.calculate_influencers(seed_id, seed_name, 3000)
     except MaxQpsExceededError:
         print 'Got MaxQpsExceededError. Aborting search...'
 
