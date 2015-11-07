@@ -204,8 +204,6 @@ def main():
         scraper.generate_influence_graph(seed_id, seed_name, max_artists)
     except MaxQpsExceededError:
         print 'Got MaxQpsExceededError. Aborting search...'
-    except Exception:
-        print 'Got Exception. Aborting search...'
     except:
         print 'Got Exception. Aborting search...'
 
