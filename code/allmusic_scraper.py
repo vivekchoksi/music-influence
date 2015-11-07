@@ -49,6 +49,9 @@ class Scraper(object):
     # Set of ids of artists who's influencers and followers have already been mapped.
     visited = set()
 
+    # Queue used in breadth-first search.
+    queue = None
+
     def __init__(self):
         self.last_timestamp = int(time.time())
 
@@ -61,17 +64,27 @@ class Scraper(object):
         :param max_artists: number of artists for whom to fetch influencers and followers; if None, let search execute
             exhaustively
         '''
-        queue = deque([seed_id])
-        self.artist_ids[seed_id] = seed_name
+        if self.queue is None:
+            self.queue = deque([seed_id])
+            self.artist_ids[seed_id] = seed_name
 
-        while len(queue) > 0 or (max_artists is not None and len(self.visited) > max_artists):
-            artist = queue.pop()
+        while len(self.queue) > 0 or (max_artists is not None and len(self.visited) > max_artists):
+            artist = self.queue.pop()
             if artist not in self.visited:
                 self.visited.add(artist)
-                self.get_influencers(artist, queue)
-                self._get_followers(artist, queue)
+                self._get_influencers(artist)
+                self._get_followers(artist)
 
-    def get_influencers(self, artist, queue):
+    def print_stats(self):
+        '''
+        Print statistics about how many artists have been scraped.
+        '''
+        print 'Number of artists visited:', len(self.visited)
+        print 'Number of nodes in graph:', len(self.artist_ids)
+        if self.queue is not None:
+            print 'Number of artists in queue:', len(self.queue)
+
+    def _get_influencers(self, artist):
         '''
         Given an artist ID, add edges to the influence graph describing each of the artist's influences.
         '''
@@ -90,9 +103,9 @@ class Scraper(object):
             if influencer['id'] not in self.artist_ids:
                 self.artist_ids[influencer['id']] = influencer['name']
 
-            self._create_influence_edge(influencer['id'], artist, queue)
+            self._create_influence_edge(influencer['id'], artist)
 
-    def _get_followers(self, artist, queue):
+    def _get_followers(self, artist):
         '''
         Given an artist ID, add edges to the influence graph describing each of the artist's followers.
         '''
@@ -112,7 +125,7 @@ class Scraper(object):
             if follower['id'] not in self.artist_ids:
                 self.artist_ids[follower['id']] = follower['name']
 
-            self._create_influence_edge(artist, follower['id'], queue)
+            self._create_influence_edge(artist, follower['id'])
 
     def _get_response(self, url):
         '''
@@ -136,7 +149,7 @@ class Scraper(object):
         # Get json list of followers.
         return resp.json()
 
-    def _create_influence_edge(self, influencer, influenced, queue):
+    def _create_influence_edge(self, influencer, influenced):
         '''
         Add an edge to the influence graph between the artist IDs `influencer` and `influenced`.
         '''
@@ -146,9 +159,9 @@ class Scraper(object):
         self.influencers[influenced].add(influencer)
 
         if influencer not in self.visited:
-            queue.appendleft(influencer)
+            self.queue.appendleft(influencer)
         if influenced not in self.visited:
-            queue.appendleft(influenced)
+            self.queue.appendleft(influenced)
 
     def _get_influencers_url(self, artist_id):
         return self.API_URL + 'influencers?apikey=%s&sig=%s&nameid=%s' % (self.KEY, self._get_sig(), artist_id)
@@ -162,15 +175,14 @@ class Scraper(object):
         '''
         now_timestamp = int(time.time())
         if self.sig is None or now_timestamp - self.last_timestamp > self.REFRESH_PERIOD:
+            # Refresh the signature.
             m = hashlib.md5()
             m.update(self.KEY)
             m.update(self.SECRET)
             m.update(str(now_timestamp))
             self.last_timestamp = now_timestamp
-            self.sig = m.hexdigest()
-            return self.sig
-        else:
-            return self.sig
+            self.sig = m.hexdigest() 
+        return self.sig
 
 def main():
     scraper = Scraper()
@@ -179,21 +191,33 @@ def main():
     seed_name = 'Miles Davis'
     max_artists = 3000
 
+    # Load the graph so far.
+    scraper.artist_ids = pickle.load(open('../data/artist_ids.pickle', 'rb'))
+    scraper.influencers = pickle.load(open('../data/influencers_graph.pickle', 'rb'))
+    scraper.visited = pickle.load(open('../data/visited_artists.pickle', 'rb'))
+    scraper.queue = pickle.load(open('../data/bfs_queue.pickle'))
+
+    scraper.print_stats()
+
     # Ignore QPS exceeded error and dump to pickle anyway.
     try:
         scraper.generate_influence_graph(seed_id, seed_name, max_artists)
     except MaxQpsExceededError:
         print 'Got MaxQpsExceededError. Aborting search...'
+    except Exception:
+        print 'Got Exception. Aborting search...'
+    except:
+        print 'Got Exception. Aborting search...'
 
     # print 'Influencers', scraper.influencers
     # print 'IDs', scraper.artist_ids
+    scraper.print_stats()
 
-    print 'Number of artists visited:', len(scraper.visited)
-    print 'Number of nodes in graph:', len(scraper.artist_ids)
     print 'Dumping to pickle files...'
-    pickle.dump(scraper.influencers, open('influencers_graph.pickle', 'wb'))
     pickle.dump(scraper.artist_ids, open('artist_ids.pickle', 'wb'))
+    pickle.dump(scraper.influencers, open('influencers_graph.pickle', 'wb'))
     pickle.dump(scraper.visited, open('visited_artists.pickle', 'wb'))
+    pickle.dump(scraper.queue, open('bfs_queue.pickle', 'wb'))
 
 if __name__ == '__main__':
     main()
