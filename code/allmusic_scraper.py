@@ -68,7 +68,7 @@ class Scraper(object):
             self.queue = deque([seed_id])
             self.artist_ids[seed_id] = seed_name
 
-        while len(self.queue) > 0 or (max_artists is not None and len(self.visited) > max_artists):
+        while len(self.queue) > 0 or (max_artists is not None and len(self.visited) < max_artists):
             artist = self.queue.pop()
             if artist not in self.visited:
                 self.visited.add(artist)
@@ -189,7 +189,6 @@ def main():
 
     seed_id = 'MN0000423829'
     seed_name = 'Miles Davis'
-    max_artists = 3000
 
     # Load the graph so far.
     scraper.artist_ids = pickle.load(open('../data/artist_ids.pickle', 'rb'))
@@ -201,7 +200,7 @@ def main():
 
     # Ignore QPS exceeded error and dump to pickle anyway.
     try:
-        scraper.generate_influence_graph(seed_id, seed_name, max_artists)
+        scraper.generate_influence_graph(seed_id, seed_name)
     except MaxQpsExceededError:
         print 'Got MaxQpsExceededError. Aborting search...'
     except:
