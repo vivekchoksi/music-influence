@@ -127,6 +127,16 @@ class Scraper(object):
 
             self._create_influence_edge(artist, follower['id'])
 
+    def get_info(self, artist_name_id):
+        '''
+        :return: json respones from Name/info
+        '''
+        return self._get_response(self._get_info_url(artist_name_id))
+
+
+    def _get_info_url(self, artist_name_id):
+        return self.API_URL + 'info?apikey=%s&sig=%s&nameid=%s' % (self.KEY, self._get_sig(), artist_name_id)
+
     def _get_response(self, url):
         '''
         Return the contents of a GET request to the specified url as JSON; return -1 on error.
