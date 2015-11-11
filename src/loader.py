@@ -14,12 +14,13 @@ import codecs
 import snap
 import os
 import logging
+logging.basicConfig(format="[%(name)s %(asctime)s]\t%(msg)s", level=logging.INFO)
 
 
 class GraphLoader(object):
     """ Graph Loader class to facilitate quickly loading snap/networkx influence/song graphs
     """
-    def __init__(self, path=None, verbose=False):
+    def __init__(self, path=None, verbose=True):
         self.basepath = os.path.dirname(os.path.dirname(__file__)) if path is None else path
         self.verbose = verbose
 
@@ -75,11 +76,11 @@ class GraphLoader(object):
         the artist name as one of its attributes
         """
         filepath = os.path.join(self.basepath, "data", "edges.csv") if path is None else path
-        G = nx.read_edgelist(os.path.join(filepath, 'edges.csv'), delimiter=';', comments="Source")
+        G = nx.read_edgelist(filepath, delimiter=';', comments="Source")
         names = self.get_artist_ids_to_names()
         for nid in G.node:
             if nid in names:
-                G.node[nid].update(artist_name=names[nid])
+                G.node[nid].update(artist_name=names[nid].lower())
 
         return self.prune_influence_graph(G) if pruned else G
 
@@ -94,12 +95,18 @@ class GraphLoader(object):
         """
         sdf = self.load_song_dataframe(path)
         IGpruned = IG.copy()
-        names_in_song_data = sdf["artist_name"] # artist names in song graph
+        names_in_song_data =  [st.lower() for st in set(sdf["artist_name"].values.tolist())] # artist names in song graph
         for nid in IG.node:
+            if "artist_name" not in IG.node[nid]:
+                self.log(u"Artist name was never set for artist: {}".format(nid))
+                continue
             name = IG.node[nid]["artist_name"]
             if name not in names_in_song_data:
-                self.log("Artist: {} id: {} did not have any songs in song dataset".format(name, id))
-                del IG.node[nid]  # Delete this artist from the pruned graph
+                self.log(u"Artist: {} id: {} did not have any songs in song dataset".format(name.strip(), nid))
+                del IGpruned.node[nid]  # Delete this artist from the pruned graph
+            else:
+                self.log(u"Artist: {} id: {} had a song in song dataset".format(name, nid))
+
         return IGpruned
 
     def get_artist_ids_to_names(self, path=None):
@@ -110,7 +117,11 @@ class GraphLoader(object):
         names = {}  # Rovicorp ids => names
         with codecs.open(filepath, encoding="utf-8") as fin:
             for line in fin.readlines():
-                nid, name = line.split(";")
+                ls = line.split(";")
+                if len(ls) != 2:
+                    self.log(u"Badly formated line: {}".format(line))
+                    continue
+                nid, name = ls
                 if nid == "Id": continue  # Header
                 names[nid] = name
         return names

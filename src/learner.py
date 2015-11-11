@@ -1,4 +1,5 @@
 from featurizer import FeatureGenerator
+import logging
 from loader import GraphLoader
 import random
 from sklearn.ensemble import ExtraTreesClassifier
@@ -71,7 +72,16 @@ class EdgePredictor(object):
 
 
 if __name__ == '__main__':
+    # Setup logging
+    logging.basicConfig(format="[%(name)s %(asctime)s]\t%(msg)s", level=logging.INFO)
+
+    # Load IG graph
     IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=True)
+
+    # Initialize and train Predictor
     ep = EdgePredictor(IG)
+    ep.train()
+
+    # Evaluate
     ep.evaluate_model()
 
