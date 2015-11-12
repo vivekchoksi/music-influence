@@ -20,21 +20,29 @@ class EdgePredictor(object):
     # Tuple Xtest, YTest set when self.train() is called by the client
     test_data = None
 
-    def __init__(self, IG):
+    def __init__(self, IG, verbose=True):
         random.seed(0)
         self.IG = IG
         self.featurizer = FeatureGenerator(IG)
+        self.verbose = verbose
 
     def nrandom_negative_examples(self, m):
         """
         :return: list of m, (u,v) randomly selected negative examples (edges that don't exist in the graph)
         """
         examples = []
+        self.log("Generating {} negative training examples".format(m))
+        percent = int(m/10)
         while len(examples) < m:
+            if len(examples) % percent == 0: self.log("\t...{}% progress".format(len(examples)%percent*10))
             u, v = random.sample(self.IG.node, 2)
-            if self.IG.edge_exists(u,v):  continue
+            if self.IG.has_edge(u,v):  continue
             examples.append((u,v))
+        self.log("done")
         return examples
+
+    def log(self, *args, **kwargs):
+        if self.verbose: logging.info(*args, **kwargs)
 
     def train(self):
         """
@@ -42,7 +50,7 @@ class EdgePredictor(object):
         :return:
         """
         # Generate positive, negative examples
-        pos_exs = self.featurizer.feature_matrix(self.IG.edges)
+        pos_exs = self.featurizer.feature_matrix(self.IG.edges())
         mpos = len(pos_exs)
         neg_exs = self.featurizer.feature_matrix(self.nrandom_negative_examples(mpos))
         mneg = len(neg_exs)
@@ -76,7 +84,7 @@ if __name__ == '__main__':
     logging.basicConfig(format="[%(name)s %(asctime)s]\t%(msg)s", level=logging.INFO)
 
     # Load IG graph
-    IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=True)
+    IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=False)
 
     # Initialize and train Predictor
     ep = EdgePredictor(IG)

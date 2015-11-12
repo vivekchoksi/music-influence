@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+from networkx import Graph
 from loader import GraphLoader
 import logging
 
@@ -38,7 +39,10 @@ class FeatureGenerator(object):
         # Features: As baseline just doing # of common neighbors
         # Other possible features, edge closeness centrality, Lada-Adamic
         features = []
-        for u,v in edges:
+        percent = int(10*len(edges))
+        self.log("Generating feature matrix for {} edges".format(len(edges)))
+        for i, (u,v) in enumerate(edges):
+            if i % percent == 0: self.log("...{}% progress".format(i%percent*10))
             features.append(self.get_features(u,v))
         return features
 
@@ -48,9 +52,7 @@ class FeatureGenerator(object):
 
 
 if __name__ == '__main__':
-    IG = GraphLoader().load_networkx_influence_graph()
+    IG = GraphLoader().load_networkx_influence_graph(pruned=False)
     featurizer = FeatureGenerator(IG)
-    Xtrain = featurizer.feature_matrix()
-    # Predict based on Xtrain
 
 
