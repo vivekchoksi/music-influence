@@ -34,11 +34,13 @@ class EdgePredictor(object):
         self.featurizer = FeatureGenerator(IG)
         self.verbose = verbose
 
+    def _total_edges(self):
+        return len(self.IG.nodes()) * (len(self.IG.nodes())-1)  # N * N-1 total possible directed edges
+
     def all_negative_examples(self):
         examples = []
-        total_edges = len(self.IG.nodes()) * (len(self.IG.nodes())-1) / 2.0
-        percent = int(total_edges/10)
-        self.log("Generating all {} negative training examples".format(total_edges))
+        percent = int(self._total_edges()/10)
+        self.log("Generating all {} negative training examples".format(self._total_edges()))
         for ni in self.IG.node:
             for nj in self.IG.node:
                 if ni==nj or self.IG.has_edge(ni, nj): continue
@@ -74,67 +76,102 @@ class EdgePredictor(object):
         if not os.path.exists(path): os.makedirs(path)
 
     def load_cache_successful(self):
+        self.log("Loading features")
         features_path = os.path.join(self.basepath, "data", "features")
         self._ensure_dir_exists(features_path)
 
+        self.log("\tloading train.pickle")
         train_path = os.path.join(features_path, "train.pickle")
         if not os.path.exists(train_path): return False
         self.train_data = cPickle.load(open(train_path))
 
+        self.log("\tloading validation.pickle")
         validation_path = os.path.join(features_path, "validation.pickle")
         if not os.path.exists(validation_path): return False
         self.validation_data = cPickle.load(open(validation_path))
 
+        self.log("\tloading test.pickle")
         test_path = os.path.join(features_path, "test.pickle")
         if not os.path.exists(test_path): return False
         self.test_data = cPickle.load(open(test_path))
 
         return True
 
+    def _cache_intermediate(self, allpos, allneg):
+        self.log("Caching nonsplit features in permanent storage")
+        features_path = os.path.join(self.basepath, "data", "features")
+        pos_path = os.path.join(features_path, "pos.pickle")
+        cPickle.dump(allpos, open(pos_path, 'wb'))
+        neg_path = os.path.join(features_path, "neg.pickle")
+        cPickle.dump(allneg, open(neg_path, 'wb'))
+
     def _cache_features(self):
+        self.log("Caching features in permanent storage")
         features_path = os.path.join(self.basepath, "data", "features")
 
+        self.log("\tDumping train.pickle")
         train_path = os.path.join(features_path, "train.pickle")
         cPickle.dump(self.train_data, open(train_path, 'wb'))
 
+        self.log("\tDumping validation.pickle")
         validation_path = os.path.join(features_path, "validation.pickle")
         cPickle.dump(self.validation_data, open(validation_path, 'wb'))
 
+        self.log("\tDumping test.pickle")
         test_path = os.path.join(features_path, "test.pickle")
         cPickle.dump(self.test_data, open(test_path, 'wb'))
 
-    def train(self, ptrain=.6, pvalidation=.2, use_cache=True):
+    def train(self, ptrain=.9, pvalidation=.05, use_cache=True, scale=.005):
         """
         Generates features, randomly splits datasets into train, validation, test, and fits classifier.
-        Suppose there are m' edges in the dataset, then we generate m=size*m' positive training examples and m negative training examples. This function sets
+        Suppose there are m' edges in the dataset, then we generate m=scale*m' positive training examples and m negative training examples. This function sets
         self.train_data to have m*ptrain positive examples and m*ptrain negative examples (to mantain class balance),
         similarly it sets self.test_data to have m*(1-ptrain) positive examples and m*(1-ptrain) negative examples.
+
+        Note we are implicitly over-sampling the minority class (this is one way to combat class imbalance) but we need
+        to make sure that we are testing on the original distribution. TODO other ways to tackle class imbalance:
+        using cost-sensitive learning (adding class weights to classifiers), generate synthetic samples (using SMOTE),
+        frame is as outlier detection (use once-class SVM)
         :param ptrain: The percentage of the pruned dataset to use for training
         :param pvalidation: The percentage to use as validation set
+        :scale: The scale of the dataset to use, needed because running the entire dataset is too slow (4 hours)
         """
-        assert pvalidation + ptrain < 1;
+        assert pvalidation + ptrain < 1; assert scale < 1;
         if use_cache and self.load_cache_successful(): return
 
-        # Generate positive, negative examples
-        pos = self.IG.edges()
-        phipos = self.featurizer.feature_matrix(self.IG.edges())
+        # Positive examples
+        npos = len(self.IG.edges())
+        pos = list(self.IG.edges())
+        # Randomize Positive
+        random.shuffle(pos)
+        # Select Subset
+        pos = pos[0:int(npos*scale)]
+        # Generate features
+        phipos = self.featurizer.feature_matrix(pos)
         pos = zip(pos, phipos)
         m = len(pos)
 
-        allneg = self.all_negative_examples()
-        neg = allneg[0:m]  #  Just grab the first m for now
-        phineg = self.featurizer.feature_matrix(neg)
-        neg = zip(neg, phineg)
+        # Negative examples
+        if scale == 1:
+            allneg = self.all_negative_examples()  # This function is faster than self.nrandom_negative_examples
+        else:
+            extra_negative = self._num_neg_needed_to_calibrate_test_data(m - (int(m*ptrain)+int(m*pvalidation)))
+            allneg = self.nrandom_negative_examples(extra_negative)
+        # Generate Featues
+        phineg = self.featurizer.feature_matrix(allneg)
+        allneg = zip(allneg, phineg)
+        # Select subset
+        neg = allneg[0:m]
 
-        # Randomize
-        random.shuffle(pos)
-        random.shuffle(neg)
+        # Save features
+        self._cache_intermediate(pos, zip(allneg, phineg))
 
         # Split
+        self.log("Splitting")
         postr, posvalid, postst = self._split(pos, ptrain, pvalidation)  # positive train, positive test
         negtr, negvalid, negtst = self._split(neg, ptrain, pvalidation)  # negative train, negative test
 
-        # Set Attributes
+        # Set data attributes
         # Train
         Xtr = postr + negtr
         Ytr = [1 for _ in xrange(len(postr))] + [0 for _ in xrange(len(negtr))]
@@ -147,16 +184,26 @@ class EdgePredictor(object):
         Xtst = postst + negtst
         Ytst  = [1 for _ in xrange(len(postst))] + [0 for _ in xrange(len(negvalid))]
         Xtst += allneg[m:len(allneg)]
-        Ytst = [0 for _ in xrange(len(Xtst) - len(Ytst))]
-        self.tst_data = (Xtst, Ytst)
+        Ytst += [0 for _ in xrange(len(Xtst) - len(Ytst))]
+        self.test_data = (Xtst, Ytst)
 
         if use_cache: self._cache_features()
+
+    def tune_model(self):
+        """
+        TODO use validation set to tune hyperparameters
+        :return:
+        """
+        pass
 
     def fit(self):
         # Fit
         self.log("Fitting Model")
         exs, phi = zip(*self.train_data[0])  # train examples and feature mappings
-        self.classifier.fit(phi, self.train_data[1])
+        phis_ys = zip(phi, self.train_data[1])
+        random.shuffle(phis_ys)
+        phi, y = zip(*phis_ys)
+        self.classifier.fit(phi, y)
         self.log("done")
 
     def predict(self, u, v):
@@ -169,23 +216,15 @@ class EdgePredictor(object):
     def predict_from_features(self, feats):
         return self.classifier.predict(feats)
 
-    def _calibrate_test_data(self):
+    def _num_neg_needed_to_calibrate_test_data(self, pos_in_tst):
         """
-        Sets negative examples to train data to ensure that the overall distribution is the same as the original
+        Get number negative examples needed to ensure that the overall distribution of test set is the same as the original
         """
         # Compute number of negative examples needed to calibrate the ratio
-        pos_in_tst = len(self.test_data)
-        total_edges = len(self.IG.nodes()) * (len(self.IG.nodes())-1) / 2.0
         total_pos = len(self.IG.edges())
-        total_neg = total_edges-total_pos
-        numneg_needed = total_neg * pos_in_tst / float(total_pos)
-
-        # Get unused negative examples
-        Xtst, Phitst, Ytst = self._get_unused_negative_examples(numneg_needed)
-
-        # Set self.test_data to account for calibration
-        self.test_data[0] += zip(Xtst, Phitst)
-        self.test_data[1] += Ytst
+        total_neg = self._total_edges()-total_pos
+        numneg_needed = int(total_neg * pos_in_tst / float(total_pos))
+        return numneg_needed
 
     def evaluate_model(self):
         exs, phis = zip(*self.test_data[0])
@@ -209,7 +248,10 @@ if __name__ == '__main__':
 
     # Initialize and train Predictor
     ep = EdgePredictor(IG)
-    ep.train()
+    ep.train(use_cache=False)
+
+    # Fit
+    ep.fit()
 
     # Evaluate
     ep.evaluate_model()
