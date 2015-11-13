@@ -25,11 +25,14 @@ class FeatureGenerator(object):
         if self.verbose: logging.info(*args, **kwargs)
 
 
+    def get_feature_names(self):
+        return ["commong_neighbors"]
+
     def get_features(self, u, v):
         """
-        :return: dict of features for influence edge (u,v)
+        :return: list of feature mappings for influence edge (u,v)
         """
-        return {"common_neighbors": self._ncommon_neighbors(u,v)}
+        return [self._ncommon_neighbors(u,v)]
 
     def feature_matrix(self, edges):
         """
@@ -39,11 +42,12 @@ class FeatureGenerator(object):
         # Features: As baseline just doing # of common neighbors
         # Other possible features, edge closeness centrality, Lada-Adamic
         features = []
-        percent = int(10*len(edges))
+        percent = int(len(edges)/10)
         self.log("Generating feature matrix for {} edges".format(len(edges)))
         for i, (u,v) in enumerate(edges):
-            if i % percent == 0: self.log("...{}% progress".format(i%percent*10))
+            if i % percent == 0: self.log("\t...{}% progress".format((i/percent)*10))
             features.append(self.get_features(u,v))
+        self.log("done")
         return features
 
 
