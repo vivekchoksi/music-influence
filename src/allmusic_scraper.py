@@ -23,6 +23,8 @@ class MaxQpsExceededError(Exception):
 class Scraper(object):
     API_URL = 'http://api.rovicorp.com/data/v1.1/name/'
 
+    API_URL_SONG = 'http://api.rovicorp.com/data/v1.1/song/'
+
     # Credentials for the request to Rovicorp's API.
     KEY = secrets.API_KEY
     SECRET = secrets.SHARED_SECRET
@@ -84,7 +86,7 @@ class Scraper(object):
         if self.queue is not None:
             print 'Number of artists in queue:', len(self.queue)
 
-    def _get_influencers(self, artist):
+    def _get_influencers(self, artist, artists):
         '''
         Given an artist ID, add edges to the influence graph describing each of the artist's influences.
         '''
@@ -97,15 +99,16 @@ class Scraper(object):
         else:
             influencers_response = response['influencers']
 
-        print self.artist_ids[artist], 'has', len(influencers_response), 'influencers'
+        #print self.artist_ids[artist], 'has', len(influencers_response), 'influencers'
         for influencer in influencers_response:
+            if influencer['id'] in artists:
             # Map influencer id to name.
-            if influencer['id'] not in self.artist_ids:
-                self.artist_ids[influencer['id']] = influencer['name']
+            #if influencer['id'] not in self.artist_ids:
+                #self.artist_ids[influencer['id']] = influencer['name']
 
-            self._create_influence_edge(influencer['id'], artist)
+                self._create_influence_edge(influencer['id'], artist)
 
-    def _get_followers(self, artist):
+    def _get_followers(self, artist, artists):
         '''
         Given an artist ID, add edges to the influence graph describing each of the artist's followers.
         '''
@@ -118,14 +121,14 @@ class Scraper(object):
         else:
             followers_response = response['followers']
 
-        print self.artist_ids[artist], 'has', len(followers_response), 'followers'
+        #print self.artist_ids[artist], 'has', len(followers_response), 'followers'
 
         for follower in followers_response:
             # Map follower id to name.
-            if follower['id'] not in self.artist_ids:
-                self.artist_ids[follower['id']] = follower['name']
-
-            self._create_influence_edge(artist, follower['id'])
+            #if follower['id'] not in self.artist_ids:
+                #self.artist_ids[follower['id']] = follower['name']
+            if follower['id'] in artists:
+                self._create_influence_edge(artist, follower['id'])
 
     def get_info(self, artist_name_id):
         '''
@@ -136,6 +139,26 @@ class Scraper(object):
 
     def _get_info_url(self, artist_name_id):
         return self.API_URL + 'info?apikey=%s&sig=%s&nameid=%s' % (self.KEY, self._get_sig(), artist_name_id)
+
+    def get_song(self, song_name):
+        response = self._get_response(self._get_song_url(song_name))
+        if response == -1:
+            return
+        else:
+            return response
+
+    def _get_song_url(self, song_name):
+        return self.API_URL_SONG + 'info?apikey=%s&sig=%s&track=%s' %(self.KEY,self._get_sig(), song_name)
+
+    def get_artist(self, artist_name):
+        response = self._get_response(self._get_artist_url(artist_name))
+        if response == -1:
+            return
+        else:
+            return response
+
+    def _get_artist_url(self, artist_name):
+        return self.API_URL + 'info?apikey=%s&sig=%s&name=%s' % (self.KEY, self._get_sig(), artist_name)
 
     def _get_response(self, url):
         '''
@@ -168,10 +191,10 @@ class Scraper(object):
             self.influencers[influenced] = set()
         self.influencers[influenced].add(influencer)
 
-        if influencer not in self.visited:
-            self.queue.appendleft(influencer)
-        if influenced not in self.visited:
-            self.queue.appendleft(influenced)
+        #if influencer not in self.visited:
+           # self.queue.appendleft(influencer)
+        #if influenced not in self.visited:
+            #self.queue.appendleft(influenced)
 
     def _get_influencers_url(self, artist_id):
         return self.API_URL + 'influencers?apikey=%s&sig=%s&nameid=%s' % (self.KEY, self._get_sig(), artist_id)
