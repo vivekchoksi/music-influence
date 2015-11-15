@@ -27,11 +27,11 @@ class EdgePredictor(object):
     test_data = None
 
 
-    def __init__(self, IG, verbose=True):
+    def __init__(self, IG, verbose=True, features_to_use=None):
         random.seed(0)
         self.basepath = os.path.dirname(os.path.dirname(__file__))
         self.IG = IG
-        self.featurizer = FeatureGenerator(IG)
+        self.featurizer = FeatureGenerator(features_to_use=features_to_use)
         self.verbose = verbose
 
     def _total_edges(self):
@@ -121,7 +121,10 @@ class EdgePredictor(object):
         test_path = os.path.join(features_path, "test.pickle")
         cPickle.dump(self.test_data, open(test_path, 'wb'))
 
-    def train(self, ptrain=.8, pvalidation=.05, use_cache=True, scale=.01):
+    def _delete_edges(self, ebunch):
+        self.IG.remove_edges_from(ebunch)
+
+    def preprocess(self, ptrain=.8, pvalidation=.05, use_cache=True, scale=.01):
         """
         Generates features, randomly splits datasets into train, validation, test, and fits classifier.
         Suppose there are m' edges in the dataset, then we generate m=scale*m' positive training examples and m negative training examples. This function sets
@@ -146,30 +149,33 @@ class EdgePredictor(object):
         random.shuffle(pos)
         # Select Subset
         pos = pos[0:int(npos*scale)]
-        # Generate features
-        phipos = self.featurizer.feature_matrix(pos)
-        pos = zip(pos, phipos)
         m = len(pos)
 
         # Negative examples
         if scale == 1:
-            allneg = self.all_negative_examples()  # This function is faster than self.nrandom_negative_examples
+            allneg = self.all_negative_examples()  # Faster than self.nrandom_negative_examples when scale ~ 1
         else:
             extra_negative = self._num_neg_needed_to_calibrate_test_data(m - (int(m*ptrain)+int(m*pvalidation)))
             allneg = self.nrandom_negative_examples(extra_negative)
-        # Generate Featues
-        phineg = self.featurizer.feature_matrix(allneg)
-        allneg = zip(allneg, phineg)
         # Select subset
         neg = allneg[0:m]
-
-        # Save features
-        self._cache_intermediate(pos, zip(allneg, phineg))
 
         # Split
         self.log("Splitting")
         postr, posvalid, postst = self._split(pos, ptrain, pvalidation)  # positive train, positive test
         negtr, negvalid, negtst = self._split(neg, ptrain, pvalidation)  # negative train, negative test
+
+        # Delete Test Edges from Graph
+        self._delete_edges(posvalid+postst+negvalid+negtst)     # Note this mutates self.IG
+        self.featurizer.set_graph(self.IG)                      # featurizer should use pruned graph
+
+        # Generate Features
+        postr = zip(postr, self.featurizer.feature_matrix(postr))
+        posvalid = zip(posvalid, self.featurizer.feature_matrix(posvalid))
+        postst = zip(postst, self.featurizer.feature_matrix(postst))
+        negtr = zip(negtr, self.featurizer.feature_matrix(negtr))
+        negvalid = zip(negvalid, self.featurizer.feature_matrix(negvalid))
+        negtst = zip(negtst, self.featurizer.feature_matrix(negtst))
 
         # Set data attributes
         # Train
@@ -183,7 +189,7 @@ class EdgePredictor(object):
         # Test
         Xtst = postst + negtst
         Ytst  = [1 for _ in xrange(len(postst))] + [0 for _ in xrange(len(negvalid))]
-        Xtst += allneg[m:len(allneg)]
+        Xtst += zip(allneg[m:len(allneg)], self.featurizer.feature_matrix(allneg[m:len(allneg)]))
         Ytst += [0 for _ in xrange(len(Xtst) - len(Ytst))]
         self.test_data = (Xtst, Ytst)
 
@@ -210,7 +216,7 @@ class EdgePredictor(object):
         """
         :return: Returns {1,0} if there should be an influence edge between u,v
         """
-        features = self.featurizer.get_features(u,v)
+        features = self.featurizer.compute_features(u,v)
         return self.classifier.predict(features)
 
     def predict_from_features(self, feats):
@@ -254,8 +260,8 @@ if __name__ == '__main__':
     IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=False)
 
     # Initialize and train Predictor
-    ep = EdgePredictor(IG)
-    ep.train(use_cache=False)
+    ep = EdgePredictor(IG, features_to_use=["pa"])
+    ep.preprocess(use_cache=False)
 
     # Fit
     ep.fit()

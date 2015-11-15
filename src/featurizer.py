@@ -2,6 +2,8 @@ import os
 import pandas as pd
 from networkx import Graph
 import networkx as nx
+import sys
+from networkx.exception import NetworkXNoPath
 from loader import GraphLoader
 import random
 import math
@@ -15,46 +17,70 @@ class FeatureGenerator(object):
     IG = None  # All Music Influence Graph
     sdf = None  # Song DataFrame with audio features
 
-    def __init__(self, IG, verbose=True):
+    def __init__(self, verbose=True, features_to_use=None):
         """
         :param IG: All music influence graph, type networkx.Graph
         """
         self.verbose = verbose
         self.basepath = os.path.dirname(os.path.dirname(__file__))
         self.sdf = GraphLoader().load_song_dataframe()
-        self.IG = IG
+        self.IG = None
+        features_to_use = ["nc"] if features_to_use is None else features_to_use
+        self.feature_mappers = self.get_feature_mappers(features_to_use)
+        self.log("Featurizer will use: {}".format(self.get_feature_names()))
 
     def log(self, *args, **kwargs):
         if self.verbose: logging.info(*args, **kwargs)
 
 
-    def get_feature_names(self):
-        cm = "ncommon_neighbors"
-        jc = "jaccard_coefficient"
-        aa = "adamic_adar"
-        pa = "preferential_attachment"
-        pp = "personalized page rank"
-        return [pp]
+    def set_graph(self, IG):
+        self.IG = IG
+        self.UIG = IG.to_undirected()
 
-    def get_features(self, u, v):
+
+    def get_feature_names(self):
+        names, funcs = zip(*self.feature_mappers)
+        return names
+
+    def get_feature_mappers(self, features_to_use):
+        abbreviation_map = {
+            "nc": "ncommon_neighbors",
+            "jc": "jaccard_coefficient",
+            "aa": "adamic_adar",
+            "pa": "preferential_attachment",
+            "pp": "personalized_page_rank",
+            #"sp": "len_shortest_undirected_path",
+            "ra": "resource_allocation"
+        }
+        feature_mappers = {
+            "ncommon_neighbors": self._ncommon_neighbors,
+            "jaccard_coefficient": self._jaccard_coeff,
+            "adamic_adar": self._adamic_adar,
+            "preferential_attachment": self._preferential_attachment,
+            "personalized_page_rank": self._ppage_rank,
+            "len_shortest_undirected_path": self._len_shortest_path,
+            "resource_allocation": self._resource_allocation,
+        }
+        result = []
+        for abbrv in features_to_use:
+            if abbrv in abbreviation_map.keys():
+                feature_name = abbreviation_map[abbrv]
+                result.append( (feature_name, feature_mappers[feature_name]) )
+        return result
+
+
+    def compute_features(self, u, v):
         """
         :return: list of feature mappings for influence edge (u,v)
-        Other scoring functions per Jure's lecture:
+        Other scoring functions
         Jaccard coeff:   ncommon_neighbors / union_neighbors
         Graph Distaince: negated shortest path length
         Adamic/Adar: sum_{z \in common_neighbors} 1 / log(deg(z))
         Preferential Attachment:  deg(u) * deg(v)
         PPageRank:    r_u{v} + r_v{u}
         """
-        rd = self._random(u,v)
-        #cn = self._ncommon_neighbors(u,v)
-        #jc = self._jaccard_coeff(u,v)
-        #aa = self._adamic_adar(u,v)
-        #pa = self._preferential_attachment(u,v)
-        #pp = self._ppage_rank(u,v)  # not tractable also not good according to Jure
-        ra = self._resource_allocation(u,v)
-        sp = self._len_shortest_path(u, v)
-        return [sp]
+        edge_features = [func(u,v) for name, func in self.feature_mappers]
+        return edge_features
 
     def _common_neighbors(self, u, v):
         return set(self.IG.neighbors(v)) & set(self.IG.neighbors(u))
@@ -78,7 +104,13 @@ class FeatureGenerator(object):
         return 1 if random.uniform(0,1) <=.5 else 0
 
     def _len_shortest_path(self, u, v):
-        return len(nx.shortest_path(self.IG, source=u, target=v))-2
+        try:
+            path = nx.shortest_path(self.UIG, source=u, target=v)
+        except NetworkXNoPath, e:
+            self.log("\tNo path between {} and {}, will set to graph distance to sys.maxint, this will most likely"
+                    " lead to garbage for any classifier".format(u, v))
+            return sys.maxint - 2
+        return len(path)-2
 
     def _ppage_rank(self, u, v):
         personal = {nid: 0 for nid in self.IG.node}
@@ -100,8 +132,8 @@ class FeatureGenerator(object):
         percent = int(len(edges)/10)
         self.log("Generating feature matrix for {} edges".format(len(edges)))
         for i, (u,v) in enumerate(edges):
-            if i % percent == 0: self.log("\t...{}% progress".format((i/percent)*10))
-            features.append(self.get_features(u,v))
+            #if i % percent == 0: self.log("\t...{}% progress".format((i/percent)*10))
+            features.append(self.compute_features(u,v))
         self.log("done")
         return features
 
