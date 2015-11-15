@@ -4,7 +4,7 @@ from loader import GraphLoader
 import random
 import cPickle
 from sklearn.ensemble import ExtraTreesClassifier
-from sklearn.metrics.ranking import roc_auc_score
+from sklearn.metrics.ranking import roc_auc_score, average_precision_score
 import os
 
 class EdgePredictor(object):
@@ -121,7 +121,7 @@ class EdgePredictor(object):
         test_path = os.path.join(features_path, "test.pickle")
         cPickle.dump(self.test_data, open(test_path, 'wb'))
 
-    def train(self, ptrain=.9, pvalidation=.05, use_cache=True, scale=.005):
+    def train(self, ptrain=.8, pvalidation=.05, use_cache=True, scale=.01):
         """
         Generates features, randomly splits datasets into train, validation, test, and fits classifier.
         Suppose there are m' edges in the dataset, then we generate m=scale*m' positive training examples and m negative training examples. This function sets
@@ -216,6 +216,9 @@ class EdgePredictor(object):
     def predict_from_features(self, feats):
         return self.classifier.predict(feats)
 
+    def predict_proba_from_features(self, feats):
+        return self.classifier.predict_proba(feats)[0][1]
+
     def _num_neg_needed_to_calibrate_test_data(self, pos_in_tst):
         """
         Get number negative examples needed to ensure that the overall distribution of test set is the same as the original
@@ -234,10 +237,14 @@ class EdgePredictor(object):
         percent = int(len(ys)/10)
         ypreds = []
         for i, phi in enumerate(phis):
-            ypreds.append(self.predict_from_features(phi))
+            ypreds.append(self.predict_proba_from_features(phi))
             if i % percent == 0:
                 self.log("\t...{}% progress".format((i/percent)*10))
-        print roc_auc_score(ys, ypreds)
+        print("Features Used: {}".format(self.featurizer.get_feature_names()))
+        print("\tROC AUC: {}".format(roc_auc_score(ys, ypreds)))
+        # Note that for this problem the PRAUC as below is probably more informative but let's just save that
+        # for the final project report
+        print("\tPrecision-Recall AUC: {}".format(average_precision_score(ys, ypreds, average="weighted")))
 
 if __name__ == '__main__':
     # Setup logging
