@@ -143,7 +143,7 @@ class Scraper(object):
     def get_song(self, song_name):
         response = self._get_response(self._get_song_url(song_name))
         if response == -1:
-            return
+            return -1
         else:
             return response
 
@@ -153,7 +153,7 @@ class Scraper(object):
     def get_artist(self, artist_name):
         response = self._get_response(self._get_artist_url(artist_name))
         if response == -1:
-            return
+            return -1
         else:
             return response
 
