@@ -124,7 +124,7 @@ class EdgePredictor(object):
     def _delete_edges(self, ebunch):
         self.IG.remove_edges_from(ebunch)
 
-    def preprocess(self, ptrain=.8, pvalidation=.05, use_cache=True, scale=.01):
+    def preprocess(self, ptrain=.8, pvalidation=.05, use_cache=True, scale=.1):
         """
         Generates features, randomly splits datasets into train, validation, test, and fits classifier.
         Suppose there are m' edges in the dataset, then we generate m=scale*m' positive training examples and m negative training examples. This function sets
@@ -260,7 +260,8 @@ if __name__ == '__main__':
     IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=False)
 
     # Initialize and train Predictor
-    ep = EdgePredictor(IG, features_to_use=["pa"])
+    features = ["nc", "jc", "aa", "pa", "ra", "si", "lh"]
+    ep = EdgePredictor(IG, features_to_use=["nc"])
     ep.preprocess(use_cache=False)
 
     # Fit

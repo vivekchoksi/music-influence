@@ -50,7 +50,10 @@ class FeatureGenerator(object):
             "pa": "preferential_attachment",
             "pp": "personalized_page_rank",
             #"sp": "len_shortest_undirected_path",
-            "ra": "resource_allocation"
+            "ra": "resource_allocation",
+            "si": "sorensen_index",
+            "lh": "leicht_holme_newman"
+
         }
         feature_mappers = {
             "ncommon_neighbors": self._ncommon_neighbors,
@@ -60,6 +63,8 @@ class FeatureGenerator(object):
             "personalized_page_rank": self._ppage_rank,
             "len_shortest_undirected_path": self._len_shortest_path,
             "resource_allocation": self._resource_allocation,
+            "sorensen_index": self._sorensen_index,
+            "leicht_holme_newman": self._leicht_holme_newman
         }
         result = []
         for abbrv in features_to_use:
@@ -72,15 +77,17 @@ class FeatureGenerator(object):
     def compute_features(self, u, v):
         """
         :return: list of feature mappings for influence edge (u,v)
-        Other scoring functions
-        Jaccard coeff:   ncommon_neighbors / union_neighbors
-        Graph Distaince: negated shortest path length
-        Adamic/Adar: sum_{z \in common_neighbors} 1 / log(deg(z))
-        Preferential Attachment:  deg(u) * deg(v)
-        PPageRank:    r_u{v} + r_v{u}
         """
         edge_features = [func(u,v) for name, func in self.feature_mappers]
         return edge_features
+
+    def _sorensen_index(self, u, v):
+        if (float(self.IG.degree(u) + self.IG.degree(v))) == 0: return 0
+        return self._ncommon_neighbors(u,v) / float(self.IG.degree(u) + self.IG.degree(v))
+
+    def _leicht_holme_newman(self, u, v):
+        if (self.IG.degree(u) * self.IG.degree(v)) == 0: return 0
+        return self._ncommon_neighbors(u,v) / float(self.IG.degree(u) * self.IG.degree(v))
 
     def _common_neighbors(self, u, v):
         return set(self.IG.neighbors(v)) & set(self.IG.neighbors(u))
