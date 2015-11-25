@@ -68,29 +68,31 @@ def find_artist(artist_name, scraper, has_influencers_dict, has_followers_dict):
   else:
     return False, None
 
-def create_data_files(artist_ids, scraper, has_influencers_dict, has_followers_dict):
-  for artist_id in artist_ids:
-    if not has_influencers_dict[artist_id]:
-      print '%s has no influencers' % artist_id
-    else:
-      scraper._get_influencers(artist_id, artist_ids)
-    if not has_followers_dict[artist_id]:
-      print '%s has no followers' % artist_id
-    else:
-      scraper._get_followers(artist_id, artist_ids)
+def create_data_files(artist_ids, artist_dict, scraper, has_influencers_dict, has_followers_dict):
+  for a in artist_ids:
+    scraper._get_influencers(a, artist_ids)
+    scraper._get_followers(a, artist_ids)
+  #for a in artist_dict:
+   # if not has_influencers_dict[a]:
+    #  print '%s has no influencers' % a
+    #else:
+     # scraper._get_influencers(a, artist_ids)
+    ## print '%s has no followers' % a
+    #else:
+     # scraper._get_followers(a, artist_ids)
     
   # get influencers for each of the artists, make sure that's in the artist set as well
 
 
 def main():
   song_file = open('../data/evolution.csv', 'r')
-  for i in range(1001): 
+  for i in range(1401): 
     next(song_file)
   song_to_artist = {}
   songs = []
   num_lines = 0
   for line in song_file:
-    if num_lines == 200:
+    if num_lines == 20:
       break
     num_lines += 1
     line = line.replace('"', '').strip()
@@ -125,10 +127,15 @@ def main():
   print 'We were not able to find the following song/artists in allmusic:'
   for key in song_to_artist:
     print key, song_to_artist[key]
-
-  create_data_files(artist_ids, scraper, has_influencers_dict, has_followers_dict)
+  labels_already_generated = open('../data/song_artists_only_labels.csv')
+  next(labels_already_generated)
+  for line in labels_already_generated:
+    tokens = line.split(';')
+    artist_ids.add(tokens[0])
+  create_data_files(artist_ids, artist_dict, scraper, has_influencers_dict, has_followers_dict)
   pickle.dump(scraper.influencers, open('../data/influencers_song_artists_only_graph.pickle', 'wb'))
   pickle.dump(artist_dict, open('../data/song_artists_only.pickle', 'wb'))
+  #we recreate edge list every time, but not node labels
   ge.generate_edge_lists('../data/influencers_song_artists_only_graph.pickle', 'song_artists_only_edges')
   ge.generate_node_labels('../data/song_artists_only.pickle', 'song_artists_only_labels')
 if __name__ == "__main__":
