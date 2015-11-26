@@ -86,7 +86,7 @@ class Scraper(object):
         if self.queue is not None:
             print 'Number of artists in queue:', len(self.queue)
 
-    def _get_influencers(self, artist, artists):
+    def _get_influencers(self, artist):
         '''
         Given an artist ID, add edges to the influence graph describing each of the artist's influences.
         '''
@@ -101,14 +101,13 @@ class Scraper(object):
 
         #print self.artist_ids[artist], 'has', len(influencers_response), 'influencers'
         for influencer in influencers_response:
-            if influencer['id'] in artists:
             # Map influencer id to name.
             #if influencer['id'] not in self.artist_ids:
                 #self.artist_ids[influencer['id']] = influencer['name']
 
-                self._create_influence_edge(influencer['id'], artist)
+            self._create_influence_edge(influencer['id'], artist)
 
-    def _get_followers(self, artist, artists):
+    def _get_followers(self, artist):
         '''
         Given an artist ID, add edges to the influence graph describing each of the artist's followers.
         '''
@@ -127,8 +126,7 @@ class Scraper(object):
             # Map follower id to name.
             #if follower['id'] not in self.artist_ids:
                 #self.artist_ids[follower['id']] = follower['name']
-            if follower['id'] in artists:
-                self._create_influence_edge(artist, follower['id'])
+            self._create_influence_edge(artist, follower['id'])
 
     def get_info(self, artist_name_id):
         '''

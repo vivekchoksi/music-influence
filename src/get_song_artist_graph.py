@@ -68,13 +68,13 @@ def find_artist(artist_name, scraper, has_influencers_dict, has_followers_dict):
   else:
     return False, None
 
-def create_data_files(artist_ids, artist_dict, scraper, has_influencers_dict, has_followers_dict):
+def create_data_files(artist_dict, scraper, has_influencers_dict, has_followers_dict, influencers_dict):
   print 'Creating edges...'
-  for a in artist_ids:
-    if a not in has_influencers_dict or has_influencers_dict[a] == True:
-      scraper._get_influencers(a, artist_ids)
-    if a not in has_followers_dict or has_followers_dict[a] == True:
-      scraper._get_followers(a, artist_ids)
+  for a in artist_dict:
+    if a in has_influencers_dict and has_influencers_dict[a] == True:
+      scraper._get_influencers(a)
+    if a in has_followers_dict and has_followers_dict[a] == True:
+      scraper._get_followers(a)
 
 def get_artist_and_song(line):
   line = line.replace('"', '').strip()
@@ -110,11 +110,28 @@ def load_time_active():
   if os.path.isfile('../data/time_active.pickle'):
     time_active = pickle.load(open('../data/time_active.pickle','r'))
 
+def get_seen_influencers():
+  if os.path.isfile('../data/seen_influencers.pickle'):
+    return pickle.load(open('../data/seen_influencers.pickle', 'r'))
+  else:
+    return {}
+
+def generate_influencers_graph(to_populate, all_influencers_pickle, artist_ids):
+  all_influencers = pickle.load(open(all_influencers_pickle, 'r'))
+  subgraph_influencers = {}
+  for person in all_influencers:
+    if person not in artist_ids: continue
+    subgraph_influencers[person] = set()
+    for influencer_id in all_influencers[person]:
+      if influencer_id in artist_ids:
+        subgraph_influencers[person].add(influencer_id)
+  pickle.dump(subgraph_influencers, open(to_populate, 'wb'))
+
 def main():
   load_genres()
   load_time_active()
   song_file = open('../data/evolution.csv', 'r')
-  num_already_looked_at = 1402+1 #how many songs i've already looked at (first line is just column titles)
+  num_already_looked_at = 0+1 #how many songs i've already looked at (first line is just column titles)
   for i in range(num_already_looked_at): 
     next(song_file)
   artist_to_songs = get_artist_to_songs_dict() #read from pickle file (if exists)
@@ -153,14 +170,22 @@ def main():
   # add all the artists we've already seen, so we include them in our regenerated influence graph
   for artist_id in labels_already_generated:
     artist_ids.add(artist_id)
+  influencers_dict = get_seen_influencers()
+  create_data_files(artist_dict, scraper, has_influencers_dict, has_followers_dict, influencers_dict)
+  for artist_id in labels_already_generated:
     artist_dict[artist_id] = labels_already_generated[artist_id]
   print 'Generated labels'
-  create_data_files(artist_ids, artist_dict, scraper, has_influencers_dict, has_followers_dict)
-  pickle.dump(scraper.influencers, open('../data/song_artists_edges_only.pickle', 'wb'))
+  influencers_dict.update(scraper.influencers)
+  
   pickle.dump(artist_dict, open('../data/song_artists_labels_only.pickle', 'wb'))
   pickle.dump(artist_to_songs, open('../data/artist_to_songs.pickle', 'wb'))
   pickle.dump(genres, open('../data/genres.pickle', 'wb'))
   pickle.dump(time_active, open('../data/time_active.pickle', 'wb'))
+  pickle.dump(influencers_dict, open('../data/seen_influencers.pickle', 'wb'))
+
+
+  #to avoid getting everyone's influencers every single time
+  generate_influencers_graph('../data/song_artists_edges_only.pickle', '../data/seen_influencers.pickle', artist_ids)
   
   # generate csv files
   ge.generate_edge_lists('../data/song_artists_edges_only.pickle', 'song_artists_only_edges')
