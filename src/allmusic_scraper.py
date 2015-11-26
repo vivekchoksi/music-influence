@@ -170,7 +170,7 @@ class Scraper(object):
         time.sleep(self.WAIT_TIME)
 
         if resp.status_code != 200:
-            print 'Non-200 response:', resp.content
+            print 'No influencers or followers'
 
             if resp.content.find('Developer Over Rate') != -1:
                 raise MaxQpsExceededError
