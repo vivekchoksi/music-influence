@@ -139,7 +139,7 @@ def main():
   load_genres()
   load_time_active()
   song_file = open('../data/evolution.csv', 'r')
-  num_already_looked_at = 2412+1 #how many songs i've already looked at (first line is just column titles)
+  num_already_looked_at = 2612+1 #how many songs i've already looked at (first line is just column titles)
   for i in range(num_already_looked_at): 
     next(song_file)
   artist_to_songs = get_artist_to_songs_dict() #read from pickle file (if exists)
