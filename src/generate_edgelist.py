@@ -20,7 +20,7 @@ def generate_edge_lists(influence_graph, file_to_write):
 def generate_node_labels(artist_ids, file_to_write, is_first=False):
     artist_ids = pickle.load(open(artist_ids, 'rb'))
 
-    with open('../data/%s.csv' %file_to_write, 'a') as f:
+    with open('../data/%s.csv' %file_to_write, 'w') as f:
         f.write('Id;Label\n')
         for artist_id in artist_ids:
             f.write(artist_id.encode('utf-8') + ';' + artist_ids[artist_id].encode('utf-8') + '\n')

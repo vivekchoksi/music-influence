@@ -5,6 +5,7 @@ import allmusic_scraper as sc
 import generate_edgelist as ge
 import pickle
 import os.path
+import copy
 
 genres = {}
 time_active = {}
@@ -49,7 +50,7 @@ def find_artist(artist_name, scraper, has_influencers_dict, has_followers_dict):
   artist_json_response = scraper.get_artist(artist_name)
   if artist_json_response != -1:
     artist_retrieved = artist_json_response['name']['name']
-    if is_same_artist(artist_name, artist_retrieved): #make this check, because sometimes we get back rubbish
+    if is_same_artist(copy.deepcopy(artist_name), artist_retrieved): #make this check, because sometimes we get back rubbish
       artist_id = artist_json_response['name']['ids']['nameId']
       ### populate genre and active pickle here ###
       add_genre(artist_id, artist_json_response['name']['musicGenres'])
@@ -91,10 +92,17 @@ def add_song(artist_to_songs, artist_name, song_index):
     artist_to_songs[artist_name] = [song_index]
 
 def get_artist_to_songs_dict():
-  if os.path.isfile('../data/artist_to_songs.pickle'):
-    return pickle.load(open('../data/artist_to_songs.pickle', 'r'))
-  else:
-    return {}
+  file_open = open('../data/artist_to_songs.csv', 'r')
+  to_return = {}
+  next(file_open)
+  for line in file_open:
+    tokens = line.split(';')
+    to_return[tokens[0].strip()] = tokens[1].strip()
+  return to_return
+  #if os.path.isfile('../data/artist_to_songs.pickle'):
+  #  return pickle.load(open('../data/artist_to_songs.pickle', 'r'))
+  #else:
+  #  return {}
 
 def get_artist_labels():
   if os.path.isfile('../data/song_artists_labels_only.pickle'):
@@ -131,14 +139,14 @@ def main():
   load_genres()
   load_time_active()
   song_file = open('../data/evolution.csv', 'r')
-  num_already_looked_at = 0+1 #how many songs i've already looked at (first line is just column titles)
+  num_already_looked_at = 2010+1 #how many songs i've already looked at (first line is just column titles)
   for i in range(num_already_looked_at): 
     next(song_file)
   artist_to_songs = get_artist_to_songs_dict() #read from pickle file (if exists)
   song_to_artist = {}
   num_lines = 0
   for line in song_file:
-    if num_lines == 100: #how many we want to scrape this time (for query limit)
+    if num_lines == 6: #how many we want to scrape this time (for query limit)
       break
     num_lines += 1
     artist_name, song_title = get_artist_and_song(line)
@@ -146,14 +154,13 @@ def main():
     song_to_artist[song_title] = artist_name
     # THIS ASSUMES THAT EVERY SONG HAS A DATE AND AN ARTIST NAME, AND SONG TITLE IS ALWAYS BEFORE DATE
   scraper = sc.Scraper()
-
   artist_ids = set()
   artist_dict = {} # for node labels
   has_influencers_dict = {}
   has_followers_dict = {}
   for song in song_to_artist: 
     artist_name = song_to_artist[song]
-    is_found, artist_id = find_artist(artist_name, scraper, has_influencers_dict, has_followers_dict)
+    is_found, artist_id = find_artist(copy.deepcopy(artist_name), scraper, has_influencers_dict, has_followers_dict)
     if artist_id in artist_ids: continue
     if artist_id != None:
       artist_to_songs[artist_id] = artist_to_songs[artist_name]
