@@ -1,4906 +1,5974 @@
 (dp0
-VMN0000376613
+VMN0000484145
 p1
-S'Q-Tip'
-p2
-sVMN0001162681
-p3
-S'C+C Music Factory'
-p4
-sVMN0000484145
-p5
 S'The Partridge Family'
-p6
-sVMN0002453941
-p7
-S'Portrait'
-p8
-sVMN0000274637
-p9
-S'Mario'
-p10
-sVMN0000245760
-p11
-S'Les McCann'
-p12
-sVMN0000677241
-p13
-S'Lyfe Jennings'
-p14
+p2
 sVMN0000900303
-p15
+p3
 S'2 In A Room'
-p16
-sVMN0000226556
-p17
-S'Dead Or Alive'
-p18
+p4
 sVMN0000096964
-p19
+p5
 S'Boz Scaggs'
-p20
-sVMN0000472925
-p21
-S'The Offspring'
-p22
-sVMN0000752673
-p23
-S'Steve Forbert'
-p24
-sVMN0000596126
-p25
-S'Mott The Hoople'
-p26
+p6
+sVMN0000498961
+p7
+S"'Til Tuesday"
+p8
 sVMN0001928494
-p27
+p9
 S'Sweet Dreams'
-p28
+p10
 sVMN0000530745
-p29
+p11
 S'Bruce Springsteen'
-p30
-sVMN0000260038
-p31
-S'Dinah Washington'
-p32
-sVMN0000299668
-p33
-S'KC & The Sunshine Band'
-p34
-sVMN0000739041
-p35
-S'Fountains Of Wayne'
-p36
+p12
 sVMN0000670226
-p37
+p13
 S'The Killers'
-p38
-sVMN0000053606
-p39
-S'Bloodstone'
-p40
+p14
 sVMN0000231342
-p41
+p15
 S'Deee-Lite'
-p42
-sVMN0000768926
-p43
-S'Bill Quateman'
-p44
-sVMN0000665835
-p45
-S'Goose Creek Symphony'
-p46
+p16
 sVMN0000868174
-p47
+p17
 S'Rascal Flatts'
-p48
-sVMN0000151431
-p49
-S'Roger Miller'
-p50
+p18
 sVMN0000295276
-p51
+p19
 S'Jimmy Cliff'
-p52
-sVMN0000035338
-p53
-S'Peabo Bryson'
-p54
-sVMN0000677781
-p55
-S'Wilson Pickett'
-p56
-sVMN0000121357
-p57
-S'J.D. Souther'
-p58
-sVMN0000239921
-p59
-S'Depeche Mode'
-p60
-sVMN0000744573
-p61
-S'TKA'
-p62
-sVMN0000883318
-p63
-S'Red Hot Chili Peppers'
-p64
-sVMN0000913490
-p65
-S'Cheyenne Kimball'
-p66
-sVMN0000799053
-p67
-S'Donovan'
-p68
-sVMN0000866491
-p69
-S'Maxwell'
-p70
-sVMN0000322092
-p71
-S'Peter Cetera'
-p72
-sVMN0000664093
-p73
-S'Hamilton Bohannon'
-p74
-sVMN0000242543
-p75
-S'West Street Mob'
-p76
-sVMN0000166785
-p77
-S'Dan Fogelberg'
-p78
-sVMN0000757070
-p79
-S'Steve Perry'
-p80
-sVMN0000387973
-p81
-S'Raekwon'
-p82
-sVMN0000527463
-p83
-S'Bull Moose Jackson'
-p84
-sVMN0000633358
-p85
-S'Danity Kane'
-p86
-sVMN0000132449
-p87
-S'Crystal Gayle'
-p88
-sVMN0000069153
-p89
-S'Joan Baez'
-p90
-sVMN0000036641
-p91
-S'Paul Wall Featuring Big Pokey'
-p92
-sVMN0000794306
-p93
-S'EMF'
-p94
-sVMN0000485135
-p95
-S'311'
-p96
-sVMN0000661318
-p97
-S'Giggles'
-p98
-sVMN0000068896
-p99
-S'B2K'
-p100
-sVMN0000603980
-p101
-S'Tiny Tim'
-p102
-sVMN0000567153
-p103
-S'Daughtry'
-p104
-sVMN0000114342
-p105
-S'The Doors'
-p106
-sVMN0000610880
-p107
-S'Brad Paisley'
-p108
-sVMN0000069702
-p109
-S'Choirboys'
-p110
-sVMN0000141838
-p111
-S'Eddie Money'
-p112
-sVMN0000824022
-p113
-S'Little Richard'
-p114
-sVMN0000186185
-p115
-S'Celine Dion'
-p116
-sVMN0000103484
-p117
-S'Indigo Girls'
-p118
-sVMN0000838327
-p119
-S'Savage Garden'
-p120
-sVMN0000226312
-p121
-S'Lil Suzy'
-p122
-sVMN0000175049
-p123
-S'Firehouse'
-p124
-sVMN0000240503
-p125
-S'Leon Redbone'
-p126
-sVMN0000943827
-p127
-S'Cake'
-p128
-sVMN0000136871
-p129
-S'The Doobie Brothers'
-p130
-sVMN0000029808
-p131
-S'Tesla'
-p132
-sVMN0000790732
-p133
-S'Squeeze'
-p134
-sVMN0000197867
-p135
-S'The Hullaballoos'
-p136
-sVMN0000340152
-p137
-S'Ratt'
-p138
-sVMN0000930722
-p139
-S'Timi Yuro'
-p140
-sVMN0000059156
-p141
-S'B.B. King'
-p142
-sVMN0001002843
-p143
-S'Keith Anderson'
-p144
-sVMN0000796690
-p145
-S'Don Covay'
-p146
-sVMN0000932922
-p147
-S'Brass Construction'
-p148
-sVMN0000051736
-p149
-S'The Manhattans'
-p150
-sVMN0000662067
-p151
-S'Gravediggaz'
-p152
-sVMN0000208997
-p153
-S'Rita Coolidge'
-p154
-sVMN0000866417
-p155
-S'Maxi Priest'
-p156
-sVMN0000661795
-p157
-S'DMX'
-p158
-sVMN0000304401
-p159
-S'Procol Harum'
-p160
-sVMN0000068097
-p161
-S'Bob Lind'
-p162
-sVMN0000216978
-p163
-S'U.N.V.'
-p164
-sVMN0000011754
-p165
-S'Sheena Easton'
-p166
-sVMN0000147468
-p167
-S'Clay Aiken'
-p168
-sVMN0000796734
-p169
-S'Elton John'
-p170
-sVMN0000959876
-p171
-S'Wu-Tang Clan'
-p172
-sVMN0000570046
-p173
-S'Marc Almond'
-p174
-sVMN0000173647
-p175
-S'Firefall'
-p176
-sVMN0000172582
-p177
-S'Franz Ferdinand'
-p178
-sVMN0000342834
-p179
-S'Mel Carter'
-p180
-sVMN0000135059
-p181
-S'Classics IV'
-p182
-sVMN0000315336
-p183
-S'Perry Como'
-p184
-sVMN0000051909
-p185
-S'Carpenters'
-p186
-sVMN0000117272
-p187
-S'Connie Stevens'
-p188
-sVMN0000658950
-p189
-S'DJ Quik'
-p190
-sVMN0000923745
-p191
-S'Aaron Carter'
-p192
-sVMN0000796281
-p193
-S'Five For Fighting'
-p194
-sVMN0000774588
-p195
-S'Kris Kristofferson'
-p196
-sVMN0000119469
-p197
-S'Corey Hart'
-p198
-sVMN0000616296
-p199
-S'Ashlee Simpson'
-p200
-sVMN0000222748
-p201
-S'Vixen'
-p202
-sVMN0000942580
-p203
-S'Burton Cummings'
-p204
-sVMN0000215058
-p205
-S'Jars Of Clay'
-p206
-sVMN0000062729
-p207
-S'Bobby Sherman'
-p208
-sVMN0000497236
-p209
-S'Adina Howard'
-p210
-sVMN0000127451
-p211
-S'Jackie DeShannon'
-p212
-sVMN0000695401
-p213
-S'Yvonne Fair'
-p214
-sVMN0003018652
-p215
-S'Peter Shelley'
-p216
-sVMN0000077732
-p217
-S'Bobby Vee'
-p218
-sVMN0000167517
-p219
-S'Dire Straits'
-p220
-sVMN0000755776
-p221
-S'Simon Stokes'
-p222
-sVMN0000199995
-p223
-S'Genesis'
-p224
-sVMN0000358408
-p225
-S'Run-D.M.C.'
-p226
-sVMN0000106916
-p227
-S'Chris Cagle'
-p228
-sVMN0000013393
-p229
-S'Tower Of Power'
-p230
-sVMN0000234647
-p231
-S'Deborah Cox'
-p232
-sVMN0000637022
-p233
-S'The Capitols'
-p234
-sVMN0000016235
-p235
-S'Tony Orlando'
-p236
-sVMN0000792507
-p237
-S'Frank Sinatra'
-p238
-sVMN0000747757
-p239
-S'Split Enz'
-p240
-sVMN0000814898
-p241
-S'Lee Dorsey'
-p242
-sVMN0000925635
-p243
-S'Sunshine Anderson'
-p244
-sVMN0000502806
-p245
-S'The Rivingtons'
-p246
-sVMN0000089710
-p247
-S'Billy Paul'
-p248
-sVMN0000766893
-p249
-S'The Isley Brothers'
-p250
-sVMN0000533117
-p251
-S'Ice Cube Featuring George Clinton'
-p252
-sVMN0000020278
-p253
-S'Teddy Pendergrass'
-p254
-sVMN0000178345
-p255
-S'Jane Child'
-p256
-sVMN0000175939
-p257
-S'David Geddes'
-p258
-sVMN0000662797
-p259
-S'Ginuwine'
-p260
-sVMN0000317020
-p261
-S"Quad City DJ's"
-p262
-sVMN0000858827
-p263
-S'Queen'
-p264
-sVMN0000600075
-p265
-S'Adam Wade'
-p266
-sVMN0000334740
-p267
-S'Ronnie Milsap'
-p268
-sVMN0000188432
-p269
-S'David Sanborn'
-p270
-sVMN0000039637
-p271
-S'Survivor'
-p272
-sVMN0000081832
-p273
-S'Kenny Loggins'
-p274
-sVMN0000043714
-p275
-S'Bee Gees'
-p276
-sVMN0000509156
-p277
-S'Mudvayne'
-p278
-sVMN0000749175
-p279
-S'Skeeter Davis'
-p280
-sVMN0000806991
-p281
-S'Vikki Carr'
-p282
-sVMN0000105354
-p283
-S'Cheap Trick'
-p284
-sVMN0000122754
-p285
-S'Cyndi Lauper'
-p286
-sVMN0000295756
-p287
-S'Santana'
-p288
-sVMN0000678408
-p289
-S'Herbie Mann'
-p290
-sVMN0000153526
-p291
-S'Cliff Richard'
-p292
-sVMN0000346336
-p293
-S'Pink Floyd'
-p294
-sVMN0000383056
-p295
-S'The Click Five'
-p296
-sVMN0000073666
-p297
-S'Baby Washington'
-p298
-sVMN0000021050
-p299
-S'Paul Lekakis'
-p300
-sVMN0000012307
-p301
-S'Tracie Spencer'
-p302
-sVMN0000632986
-p303
-S'Jordan Pruitt'
-p304
-sVMN0000820434
-p305
-S'Whitney Houston'
-p306
-sVMN0000850692
-p307
-S'Jethro Tull'
-p308
-sVMN0003116716
-p309
-S'Eye To Eye'
-p310
-sVMN0000808304
-p311
-S'Lou Gramm'
-p312
-sVMN0000180228
-p313
-S'Elvis Presley'
-p314
-sVMN0000246628
-p315
-S'Johnny Nash'
-p316
-sVMN0000361393
-p317
-S'Prince'
-p318
-sVMN0000080428
-p319
-S'The Lettermen'
-p320
-sVMN0000604924
-p321
-S'Arthur Conley'
-p322
-sVMN0000988692
-p323
-S'Grapefruit'
-p324
-sVMN0000266129
-p325
-S'Jennifer Hudson'
-p326
-sVMN0000008828
-p327
-S'Spice Girls'
-p328
-sVMN0000179021
-p329
-S'Don Fardon'
-p330
-sVMN0000178750
-p331
-S'Stacy Lattisaw'
-p332
-sVMN0000046120
-p333
-S'The Amboy Dukes'
-p334
-sVMN0000177122
-p335
-S'Fat Joe'
-p336
-sVMN0000861252
-p337
-S'Carrie Underwood'
-p338
-sVMN0000794449
-p339
-S'Frankie Valli'
-p340
-sVMN0000232564
-p341
-S'John Lennon'
-p342
-sVMN0000576979
-p343
-S'The Wombles'
-p344
-sVMN0000249559
-p345
-S'Deryl Dodd'
-p346
-sVMN0000495861
-p347
-S'Mindy McCready'
-p348
-sVMN0000624215
-p349
-S'The Brothers Johnson'
-p350
-sVMN0000352575
-p351
-S'Men At Large'
-p352
-sVMN0000150048
-p353
-S'Enigma'
-p354
-sVMN0000087985
-p355
-S'The Hollies'
-p356
-sVMN0000840348
-p357
-S'Velvet Revolver'
-p358
-sVMN0000274822
-p359
-S'Lonnie Mack'
-p360
-sVMN0000945196
-p361
-S'Gerry Rafferty'
-p362
-sVMN0000813392
-p363
-S'Dean Martin'
-p364
-sVMN0000165076
-p365
-S'Stacey Q'
-p366
-sVMN0000165077
-p367
-S'Stacie Orrico'
-p368
-sVMN0000406657
-p369
-S'Meredith Brooks'
-p370
-sVMN0000178122
-p371
-S'Filter'
-p372
-sVMN0000125561
-p373
-S'Cinderella'
-p374
-sVMN0000368112
-p375
-S'Martina McBride'
-p376
-sVMN0000923033
-p377
-S'Styx'
-p378
-sVMN0000807361
-p379
-S'Tyrese'
-p380
-sVMN0000634180
-p381
-S'Brownstone'
-p382
-sVMN0000104714
-p383
-S'Kraftwerk'
-p384
-sVMN0002907557
-p385
-S'The Raindrops'
-p386
-sVMN0000950805
-p387
-S'Glass Tiger'
-p388
-sVMN0000090803
-p389
-S'King Curtis'
-p390
-sVMN0000339624
-p391
-S'Meat Loaf'
-p392
-sVMN0000842802
-p393
-S'Peter Gabriel'
-p394
-sVMN0000610706
-p395
-S'Bread'
-p396
-sVMN0000294891
-p397
-S'Salt-N-Pepa'
-p398
-sVMN0000224186
-p399
-S'John Mellencamp'
-p400
-sVMN0000936009
-p401
-S'Heather Headley'
-p402
-sVMN0000411761
-p403
-S'Nina Simone'
-p404
-sVMN0000059819
-p405
-S'Betty Wright'
-p406
-sVMN0000833539
-p407
-S'Mark Morrison'
-p408
-sVMN0000010155
-p409
-S'Paper Lace'
-p410
-sVMN0000038469
-p411
-S'Beastie Boys'
-p412
-sVMN0000830538
-p413
-S'Robert Plant'
-p414
-sVMN0000115554
-p415
-S'LSG'
-p416
-sVMN0000019241
-p417
-S'Patty Loveless'
-p418
-sVMN0000825883
-p419
-S'Dierks Bentley'
-p420
-sVMN0000096744
-p421
-S'Chris Rea'
-p422
-sVMN0000521674
-p423
-S'The Brecker Brothers'
-p424
-sVMN0000760977
-p425
-S'The Five Stairsteps'
-p426
-sVMN0000795053
-p427
-S'Fantasia'
-p428
-sVMN0000575051
-p429
-S"Herman's Hermits"
-p430
-sVMN0000027136
-p431
-S'Paulina Rubio'
-p432
-sVMN0000988627
-p433
-S'Fuel'
-p434
-sVMN0000133626
-p435
-S'Jake Holmes'
-p436
-sVMN0000118664
-p437
-S'Basia'
-p438
-sVMN0000504815
-p439
-S'Art Garfunkel'
-p440
-sVMN0000283405
-p441
-S'Mark Chesnutt'
-p442
-sVMN0000017387
-p443
-S'Sixpence None The Richer'
-p444
-sVMN0000118544
-p445
-S'The Drifters'
-p446
-sVMN0000281376
-p447
-S'Lords Of The Underground'
-p448
-sVMN0000929043
-p449
-S'After The Fire'
-p450
+p20
 sVMN0000794846
-p451
+p21
 S'Eddie Rabbitt'
-p452
-sVMN0000578999
-p453
-S'Aaliyah'
-p454
-sVMN0000554804
-p455
-S'The Wreckers'
-p456
-sVMN0000286518
-p457
-S'Platinum Blonde'
-p458
-sVMN0000986573
-p459
-S'The Red Jumpsuit Apparatus'
-p460
-sVMN0000743968
-p461
-S'Patrice Rushen'
-p462
-sVMN0000754055
-p463
-S'Sophie B. Hawkins'
-p464
-sVMN0000477410
-p465
-S'The Orlons'
-p466
-sVMN0000812920
-p467
-S'Dee Dee Sharp'
-p468
-sVMN0000788126
-p469
-S'Clay Davidson'
-p470
-sVMN0000832341
-p471
-S'Robert Goulet'
-p472
-sVMN0000543595
-p473
-S'Candlebox'
-p474
-sVMN0000115140
-p475
-S'Commander Cody And His Lost Planet Airmen'
-p476
-sVMN0000049374
-p477
-S'Simple Minds'
-p478
-sVMN0000153443
-p479
-S'Fabolous'
-p480
-sVMN0000559405
-p481
-S'Daddy Yankee'
-p482
-sVMN0000102050
-p483
-S'The Kingston Trio'
-p484
-sVMN0000026227
-p485
-S'Smokie'
-p486
-sVMN0000888484
-p487
-S'Michelle Branch'
-p488
-sVMN0000325401
-p489
-S'Petula Clark'
-p490
-sVMN0000355208
-p491
-S'Porno For Pyros'
-p492
-sVMN0000123132
-p493
-S'Barbara Lewis'
-p494
-sVMN0000465822
-p495
-S'Michael Peterson'
-p496
-sVMN0000311674
-p497
-S'Vanilla Fudge'
-p498
-sVMN0000038321
-p499
-S'Snow Patrol'
-p500
-sVMN0000284882
-p501
-S'Josie Cotton'
-p502
-sVMN0000550120
-p503
-S'High School Musical Cast'
-p504
-sVMN0000193963
-p505
-S'Warrant'
-p506
-sVMN0000478603
-p507
-S'The Monkees'
-p508
-sVMN0000078532
-p509
-S'Inner Circle'
-p510
-sVMN0000955647
-p511
-S'Mason Williams'
-p512
-sVMN0000771638
-p513
-S'Bonnie Guitar'
-p514
-sVMN0000129551
-p515
-S'Crossfade'
-p516
-sVMN0000260206
-p517
-S'Van Halen'
-p518
-sVMN0000553483
-p519
-S'Happy Mondays'
-p520
-sVMN0000801762
-p521
-S'Floyd Cramer'
-p522
-sVMN0000490738
-p523
-S'Monica'
-p524
-sVMN0000194246
-p525
-S'Garbage'
-p526
-sVMN0000058035
-p527
-S'The Chiffons'
-p528
-sVMN0000258000
-p529
-S'T-Pain'
-p530
-sVMN0000178536
-p531
-S'Edgar Winter'
-p532
-sVMN0000153103
-p533
-S'Donald Fagen'
-p534
-sVMN0000246885
-p535
-S'Johnny Mathis'
-p536
-sVMN0000882782
-p537
-S'Noel Harrison'
-p538
-sVMN0000050656
-p539
-S'B. Bumble & The Stingers'
-p540
-sVMN0000746666
-p541
-S'Sister Sledge'
-p542
-sVMN0000006987
-p543
-S'Alias'
-p544
-sVMN0000577235
-p545
-S'The Staple Singers'
-p546
-sVMN0000146755
-p547
-S'Cutting Crew'
-p548
-sVMN0000190946
-p549
-S'Lefty Frizzell'
-p550
-sVMN0000838524
-p551
-S'Savoy Brown'
-p552
-sVMN0000053190
-p553
-S'The Castells'
-p554
-sVMN0000409954
-p555
-S'Ray Price'
-p556
-sVMN0000243008
-p557
-S'Weezer'
-p558
-sVMN0000935330
-p559
-S'Toni Braxton'
-p560
-sVMN0000156938
-p561
-S'Shaggy'
-p562
-sVMN0000949780
-p563
-S'Hanson'
-p564
-sVMN0000676313
-p565
-S'Hi-Five'
-p566
-sVMN0000026367
-p567
-S'Skid Row'
-p568
-sVMN0000662692
-p569
-S'Glenn Medeiros'
-p570
-sVMN0000531986
-p571
-S'David Bowie'
-p572
-sVMN0000078467
-p573
-S'The Communards'
-p574
-sVMN0000897205
-p575
-S'Miki Howard'
-p576
-sVMN0000312522
-p577
-S'Van McCoy'
-p578
-sVMN0000228715
-p579
-S'Looking Glass'
-p580
-sVMN0000565388
-p581
-S'The Swinging Blue Jeans'
-p582
-sVMN0000198426
-p583
-S'Changing Faces'
-p584
-sVMN0000921965
-p585
-S'The Ventures'
-p586
-sVMN0000089058
-p587
-S'Billy Ocean'
-p588
-sVMN0000049774
-p589
-S'BLACKstreet'
-p590
-sVMN0000209142
-p591
-S'George Harrison'
-p592
-sVMN0000303061
-p593
-S'Junior M.A.F.I.A.'
-p594
-sVMN0000749167
-p595
-S'Trini Lopez'
-p596
-sVMN0000149973
-p597
-S'Barbara Lynn'
-p598
-sVMN0000732709
-p599
-S'Taylor Hicks'
-p600
-sVMN0000739702
-p601
-S'Frozen Ghost'
-p602
-sVMN0000747967
-p603
-S'Shelby Flint'
-p604
-sVMN0000166291
-p605
-S'Eagle-Eye Cherry'
-p606
-sVMN0000590285
-p607
-S'Billy Preston'
-p608
-sVMN0000025335
-p609
-S'Trina'
-p610
-sVMN0000859868
-p611
-S'Quiet Riot'
-p612
-sVMN0000590524
-p613
-S'Young-Holt Unlimited'
-p614
-sVMN0000359559
-p615
-S'Karyn White'
-p616
-sVMN0000134729
-p617
-S'Faith No More'
-p618
-sVMN0000069813
-p619
-S'Paula DeAnda Featuring Baby Bash'
-p620
-sVMN0000227088
-p621
-S'Deana Carter'
-p622
-sVMN0000933772
-p623
-S'Brand Nubian'
-p624
-sVMN0000691616
-p625
-S'Ryan Cabrera'
-p626
-sVMN0000849405
-p627
-S'Marques Houston'
-p628
-sVMN0000852688
-p629
-S'Jimmy Eat World'
-p630
-sVMN0000343930
-p631
-S'The Jesus and Mary Chain'
-p632
-sVMN0000869487
-p633
-S'Ray Conniff'
-p634
+p22
+sVMN0000757070
+p23
+S'Steve Perry'
+p24
+sVMN0000387973
+p25
+S'Raekwon'
+p26
+sVMN0000603980
+p27
+S'Tiny Tim'
+p28
 sVMN0000500646
-p635
+p29
 S'Motherlode'
-p636
-sVMN0000861687
-p637
-S'Nelly Furtado'
-p638
-sVMN0000021744
-p639
-S'Stephen Stills'
-p640
-sVMN0000118791
-p641
-S'LeAnn Rimes'
-p642
-sVMN0000567570
-p643
-S'Thompson Twins'
-p644
-sVMN0000169795
-p645
-S'Fiona Apple'
-p646
-sVMN0000423267
-p647
-S'Small Faces'
-p648
-sVMN0000775323
-p649
-S'Chris Isaak'
-p650
-sVMN0000087179
-p651
-S'The Knack'
-p652
-sVMN0000572579
-p653
-S'Anita Baker'
-p654
-sVMN0000128440
-p655
-S'Duran Duran'
-p656
-sVMN0000118189
-p657
-S'Clay Walker'
-p658
-sVMN0000198162
-p659
-S'Johnnie Taylor'
-p660
-sVMN0000059101
-p661
-S'Bobby Byrd'
-p662
-sVMN0000160690
-p663
-S'En Vogue'
-p664
-sVMN0000033481
-p665
-S'Andy Griggs'
-p666
-sVMN0000281254
-p667
-S'Lonestar'
-p668
-sVMN0000147785
-p669
-S'Eve 6'
-p670
-sVMN0000059537
-p671
-S'Blue Cheer'
-p672
-sVMN0000919805
-p673
-S"Lil' Kim Featuring 50 Cent"
-p674
-sVMN0000219203
-p675
-S'U2'
-p676
-sVMN0000184811
-p677
-S'Erasure'
-p678
-sVMN0000903609
-p679
-S'Jim Reeves'
-p680
-sVMN0000098081
-p681
-S'Engelbert Humperdinck'
-p682
-sVMN0000338887
-p683
-S'Jerry Vale'
-p684
-sVMN0000780258
-p685
-S'Christina Aguilera'
-p686
-sVMN0000093872
-p687
-S'Koffee Brown'
-p688
-sVMN0000165624
-p689
-S'Change'
-p690
-sVMN0000806645
-p691
-S'Dr. Hook'
-p692
-sVMN0000891911
-p693
-S'Midnight Star'
-p694
-sVMN0000987621
-p695
-S'Foreigner'
-p696
-sVMN0000018977
-p697
-S'Barry Manilow'
-p698
-sVMN0000766066
-p699
-S'Bobby Vinton'
-p700
-sVMN0000099246
-p701
-S'Concrete Blonde'
-p702
-sVMN0000046784
-p703
-S'Syl Johnson'
-p704
-sVMN0000171117
-p705
-S'Eddie Lovette'
-p706
-sVMN0000110161
-p707
-S'Chicago'
-p708
-sVMN0000169124
-p709
-S'Eddie Harris'
-p710
-sVMN0000100196
-p711
-S'Chubb Rock'
-p712
-sVMN0000142106
-p713
-S'Lauren Wood'
-p714
-sVMN0000140608
-p715
-S"dog's eye view"
-p716
-sVMN0000074520
-p717
-S'The Hives'
-p718
-sVMN0000546678
-p719
-S'Lonnie Gordon'
-p720
-sVMN0000164053
-p721
-S'Faith Evans'
-p722
-sVMN0000337119
-p723
-S'Phil Collins'
-p724
-sVMN0000060476
-p725
-S'The Friends Of Distinction'
-p726
-sVMN0000020984
-p727
-S'Shelley Fabares'
-p728
-sVMN0000351227
-p729
-S'Richard Marx'
-p730
-sVMN0001772529
-p731
-S'Pockets'
-p732
-sVMN0000188342
-p733
-S'Freddy Fender'
-p734
-sVMN0000814974
-p735
-S'Del Reeves'
-p736
-sVMN0000083095
-p737
-S'Kirk Franklin'
-p738
-sVMN0000176358
-p739
-S'Jamiroquai'
-p740
-sVMN0000227544
-p741
-S'Walter Egan'
-p742
-sVMN0000787960
-p743
-S'Joe Diffie'
-p744
-sVMN0000583959
-p745
-S'Willie Nelson'
-p746
-sVMN0000816387
-p747
-S'Leon Russell'
-p748
-sVMN0000097173
-p749
-S'Bonnie Tyler'
-p750
-sVMN0000190632
-p751
-S'Dottie West'
-p752
-sVMN0000774941
-p753
-S'Collin Raye'
-p754
-sVMN0000495201
-p755
-S'Mims'
-p756
-sVMN0000041874
-p757
-S'The Beach Boys'
-p758
-sVMN0000677575
-p759
-S'Blaine Larsen'
-p760
-sVMN0000113300
-p761
-S'Kool Moe Dee'
-p762
-sVMN0000696015
-p763
-S'Phoebe Snow'
-p764
-sVMN0000290072
-p765
-S'Roberta Flack'
-p766
-sVMN0000926237
-p767
-S'Third Eye Blind'
-p768
-sVMN0000576718
-p769
-S'Seal'
-p770
-sVMN0000097654
-p771
-S'Kim Carnes'
-p772
-sVMN0000806829
-p773
-S"Jane's Addiction"
-p774
-sVMN0000134761
-p775
-S'Pat Green'
-p776
-sVMN0000066915
-p777
-S'Bob Dylan'
-p778
-sVMN0000156950
-p779
-S'Chad Brock'
-p780
-sVMN0000049026
-p781
-S'Switchfoot'
-p782
-sVMN0000070715
-p783
-S'Bobby Darin'
-p784
-sVMN0000856640
-p785
-S"Lil' Kim Featuring Puff Daddy"
-p786
-sVMN0000258955
-p787
-S'Juvenile'
-p788
-sVMN0000864209
-p789
-S'Neil Diamond'
-p790
-sVMN0000594665
-p791
-S'Diana Ross'
-p792
-sVMN0000792839
-p793
-S'Shanice'
-p794
-sVMN0000816701
-p795
-S'Deniece Williams'
-p796
-sVMN0000837886
-p797
-S'Lit'
-p798
-sVMN0000303506
-p799
-S'Usher'
-p800
-sVMN0000352992
-p801
-S'Jimmy Dean'
-p802
-sVMN0000184091
-p803
-S'Don Henley'
-p804
-sVMN0000796763
-p805
-S'Eddy Grant'
-p806
-sVMN0000898828
-p807
-S'The Searchers'
-p808
-sVMN0000120005
-p809
-S'Corina'
-p810
-sVMN0000164594
-p811
-S'Ben E. King'
-p812
-sVMN0000162487
-p813
-S'Dixie Chicks'
-p814
-sVMN0000047789
-p815
-S'Bodeans'
-p816
-sVMN0000289058
-p817
-S'Saigon Kick'
-p818
-sVMN0000802464
-p819
-S'Freedy Johnston'
-p820
-sVMN0000449578
-p821
-S'Miami Sound Machine'
-p822
-sVMN0000165818
-p823
-S'Charley Pride'
-p824
-sVMN0000930642
-p825
-S'Morris Day'
-p826
-sVMN0000149605
-p827
-S'Clipse'
-p828
-sVMN0000042768
-p829
-S'Benny Spellman'
-p830
-sVMN0000480086
-p831
-S'Modest Mouse'
-p832
-sVMN0000569685
-p833
-S'The Temptations'
-p834
-sVMN0000162820
-p835
-S'Gene Chandler'
-p836
-sVMN0000319347
-p837
-S'R. Kelly'
-p838
-sVMN0000325459
-p839
-S'R.E.M.'
-p840
-sVMN0000220590
-p841
-S'MC Lyte'
-p842
-sVMN0000179205
-p843
-S'Don McLean'
-p844
-sVMN0000065590
-p845
-S'The Flaming Lips'
-p846
-sVMN0000290502
-p847
-S'Limp Bizkit'
-p848
-sVMN0000345355
-p849
-S'Melissa Etheridge'
-p850
-sVMN0000355616
-p851
-S'Poison'
-p852
-sVMN0000192436
-p853
-S'Chairmen Of The Board'
-p854
-sVMN0000212614
-p855
-S'Deodato'
-p856
-sVMN0000186978
-p857
-S'Mack 10'
-p858
-sVMN0000116178
-p859
-S'Culture Club'
-p860
-sVMN0000145920
-p861
-S'The Ebonys'
-p862
-sVMN0000237205
-p863
-S'Madonna'
-p864
-sVMN0000792370
-p865
-S'Clint Black'
-p866
-sVMN0000170381
-p867
-S'Europe'
-p868
-sVMN0000785585
-p869
-S'Claude Gray'
-p870
-sVMN0000621112
-p871
-S'Mya'
-p872
-sVMN0000266952
-p873
-S'Livingston Taylor'
-p874
-sVMN0000816890
-p875
-S'Johnny Cash'
-p876
-sVMN0000031380
-p877
-S'Paula Abdul'
-p878
-sVMN0000162269
-p879
-S'Faith Hill'
-p880
-sVMN0000931015
-p881
-S'Tom Cochrane'
-p882
-sVMN0000292243
-p883
-S'Polly Brown'
-p884
-sVMN0000187478
-p885
-S'Eric Clapton'
-p886
-sVMN0000290590
-p887
-S'Samantha Fox'
-p888
-sVMN0000400322
-p889
-S'The Neon Philharmonic'
-p890
-sVMN0000323652
-p891
-S'Ned Miller'
-p892
-sVMN0000103391
-p893
-S'Kris Jensen'
-p894
-sVMN0000205254
-p895
-S'Vic Damone'
-p896
-sVMN0000084446
-p897
-S'India.Arie'
-p898
-sVMN0000567862
-p899
-S'A Flock Of Seagulls'
-p900
-sVMN0000403184
-p901
-S'The Osmonds'
-p902
-sVMN0000662438
-p903
-S'Donnie Brooks'
-p904
-sVMN0000260384
-p905
-S'Julian Lennon'
-p906
-sVMN0000198480
-p907
-S'Cat Stevens'
-p908
-sVMN0000413000
-p909
-S'The Notorious B.I.G. Featuring Diddy'
-p910
-sVMN0000898275
-p911
-S'Missing Persons'
-p912
-sVMN0000765011
-p913
-S'Ian Whitcomb'
-p914
-sVMN0000391003
-p915
-S'Norman Greenbaum'
-p916
-sVMN0000478982
-p917
-S'A Tribe Called Quest'
-p918
-sVMN0000762496
-p919
-S'Folk Implosion'
-p920
-sVMN0000208076
-p921
-S'Luther Vandross'
-p922
-sVMN0000000441
-p923
-S'P.O.D.'
-p924
-sVMN0000801971
-p925
-S'Bob Geldof'
-p926
-sVMN0000493122
-p927
-S'The Rascals'
-p928
-sVMN0000826762
-p929
-S'Digable Planets'
-p930
-sVMN0000619536
-p931
-S'Pretty Ricky'
-p932
-sVMN0000208774
-p933
-S'Janet Jackson'
-p934
-sVMN0000176332
-p935
-S'Right Said Fred'
-p936
-sVMN0000606283
-p937
-S'Al Jarreau'
-p938
-sVMN0000256349
-p939
-S'Peggy Lee'
-p940
-sVMN0000232679
-p941
-S'John Kongos'
-p942
-sVMN0000305468
-p943
-S'Lita Ford'
-p944
-sVMN0000174155
-p945
-S'Fred Schneider'
-p946
-sVMN0000490852
-p947
-S'Our Lady Peace'
-p948
-sVMN0000865016
-p949
-S'New Edition'
-p950
-sVMN0000109025
-p951
-S'Larry Groce'
-p952
-sVMN0000926108
-p953
-S'Montgomery Gentry'
-p954
-sVMN0000784759
-p955
-S'Joanie Sommers'
-p956
-sVMN0000477834
-p957
-S'The New Seekers'
-p958
-sVMN0000920939
-p959
-S'The Undisputed Truth'
-p960
-sVMN0000066429
-p961
-S'Bobby Bare'
-p962
-sVMN0000678009
-p963
-S'Henry Mancini'
-p964
-sVMN0000564631
-p965
-S'The Sugarhill Gang'
-p966
-sVMN0000165663
-p967
-S'Twisted Sister'
-p968
-sVMN0000075473
-p969
-S'The Honeydrippers'
-p970
-sVMN0000639304
-p971
-S'Groove Theory'
-p972
-sVMN0000020812
-p973
-S'Slaughter'
-p974
-sVMN0000325366
-p975
-S'R.B. Greaves'
-p976
-sVMN0000611797
-p977
-S'Lady Sovereign'
-p978
-sVMN0000291043
-p979
-S'Journey'
-p980
-sVMN0000667669
-p981
-S'Daft Punk'
-p982
-sVMN0000312890
-p983
-S'Justin Timberlake'
-p984
-sVMN0000405655
-p985
-S'Michael Stanley Band'
-p986
-sVMN0000790833
-p987
-S'Shalamar'
-p988
-sVMN0000585896
-p989
-S'The Wallflowers'
-p990
-sVMN0000307461
-p991
-S'Van Morrison'
-p992
-sVMN0000302106
-p993
-S'Lisa Stansfield'
-p994
-sVMN0000492331
-p995
-S'Pretenders'
-p996
-sVMN0000548338
-p997
-S'Cannonball Adderley'
-p998
-sVMN0000565727
-p999
-S'Darrell Banks'
-p1000
-sVMN0000944349
-p1001
-S'Cameo'
-p1002
-sVMN0000956093
-p1003
-S'Henry Lee Summer'
-p1004
-sVMN0000480108
-p1005
-S'A-Ha'
-p1006
-sVMN0000748222
-p1007
-S'Siouxsie and The Banshees'
-p1008
-sVMN0000796736
-p1009
-S'Elvin Bishop'
-p1010
-sVMN0000814387
-p1011
-S'John Legend'
-p1012
-sVMN0000264350
-p1013
-S'Sean Paul'
-p1014
-sVMN0000822910
-p1015
-S'Hoobastank'
-p1016
-sVMN0000667794
-p1017
-S'Gordon Lightfoot'
-p1018
-sVMN0000075100
-p1019
-S'Bad Company'
-p1020
-sVMN0000294923
-p1021
-S'Judy Collins'
-p1022
-sVMN0000074853
-p1023
-S'The KLF'
-p1024
-sVMN0000147635
-p1025
-S'Carly Simon'
-p1026
-sVMN0000057663
-p1027
-S'Blessid Union Of Souls'
-p1028
-sVMN0000123360
-p1029
-S'Chris Walker'
-p1030
-sVMN0000284667
-p1031
-S'Robbie Nevil'
-p1032
-sVMN0000263019
-p1033
-S'Jonathan King'
-p1034
-sVMN0000851745
-p1035
-S'Jewel Akens'
-p1036
-sVMN0000321321
-p1037
-S'Lulu'
-p1038
-sVMN0000317093
-p1039
-S'Nat King Cole'
-p1040
-sVMN0000368367
-p1041
-S'Nancy Wilson'
-p1042
-sVMN0000689891
-p1043
-S'Young MC'
-p1044
-sVMN0000868616
-p1045
-S'Nickelback'
-p1046
-sVMN0000508443
-p1047
-S'Air Supply'
-p1048
-sVMN0000233147
-p1049
-S'Howie Day'
-p1050
-sVMN0000074195
-p1051
-S'Natalie Cole'
-p1052
-sVMN0000563349
-p1053
-S'Dan Seals'
-p1054
-sVMN0001009627
-p1055
-S'Rob Thomas'
-p1056
-sVMN0000252495
-p1057
-S'Wayne Newton'
-p1058
-sVMN0000584041
-p1059
-S'Ying Yang Twins'
-p1060
-sVMN0000745915
-p1061
-S'Paul Anka'
-p1062
-sVMN0000500612
-p1063
-S'Adam Sandler'
-p1064
-sVMN0000569256
-p1065
-S'The Tams'
-p1066
-sVMN0000289685
-p1067
-S'Robyn'
-p1068
-sVMN0000894847
-p1069
-S'The Pointer Sisters'
-p1070
-sVMN0000148066
-p1071
-S'D.C. LaRue'
-p1072
-sVMN0000134600
-p1073
-S"D'Angelo"
-p1074
-sVMN0000240999
-p1075
-S'Mark Lindsay'
-p1076
-sVMN0000317108
-p1077
-S'Jeffrey Osborne'
-p1078
-sVMN0000498987
-p1079
-S'SWV'
-p1080
-sVMN0000659517
-p1081
-S'Grand Funk Railroad'
-p1082
-sVMN0000093215
-p1083
-S'Black Moon'
-p1084
-sVMN0000287407
-p1085
-S'Jessica Simpson'
-p1086
-sVMN0000944084
-p1087
-S'George Strait'
-p1088
-sVMN0000758453
-p1089
-S'Blues Traveler'
-p1090
-sVMN0000019133
-p1091
-S'Ambrosia'
-p1092
-sVMN0000831448
-p1093
-S'Romeo Void'
-p1094
-sVMN0000669303
-p1095
-S'Golden Earring'
-p1096
-sVMN0000179730
-p1097
-S'Charlie Rich'
-p1098
-sVMN0000018419
-p1099
-S'Patti Drew'
-p1100
-sVMN0000036849
-p1101
-S'Sonny James'
-p1102
-sVMN0000005953
-p1103
-S'Alice Cooper'
-p1104
-sVMN0000044764
-p1105
-S'Blondie'
-p1106
-sVMN0000132305
-p1107
-S'Clarence Reid'
-p1108
-sVMN0000162197
-p1109
-S'Ben Folds'
-p1110
-sVMN0000069534
-p1111
-S'Bon Jovi'
-p1112
-sVMN0000965206
-p1113
-S'Garnet Mimms'
-p1114
-sVMN0000173563
-p1115
-S'Freak Nasty'
-p1116
-sVMN0000227675
-p1117
-S'Walter Jackson'
-p1118
-sVMN0002855999
-p1119
-S'Freddy King'
-p1120
-sVMN0000944241
-p1121
-S'George Hamilton IV'
-p1122
-sVMN0000072999
-p1123
-S'The Happenings'
-p1124
-sVMN0000674662
-p1125
-S'Manfred Mann'
-p1126
-sVMN0000664459
-p1127
-S'Da Brat'
-p1128
-sVMN0000411689
-p1129
-S'Ray Peterson'
-p1130
-sVMN0000552576
-p1131
-S'Gino Soccio'
-p1132
-sVMN0000584923
-p1133
-S'Dave Edmunds'
-p1134
-sVMN0000057840
-p1135
-S'B.J. Thomas'
-p1136
-sVMN0000019297
-p1137
-S'America'
-p1138
-sVMN0000196993
-p1139
-S'England Dan & John Ford Coley'
-p1140
-sVMN0000633313
-p1141
-S'Katharine McPhee'
-p1142
-sVMN0000279337
-p1143
-S'Sade'
-p1144
-sVMN0000498484
-p1145
-S'The Rembrandts'
-p1146
-sVMN0000626939
-p1147
-S'Stone Sour'
-p1148
-sVMN0000028772
-p1149
-S'The 5th Dimension'
-p1150
-sVMN0000845662
-p1151
-S'Jill Scott'
-p1152
-sVMN0000855531
-p1153
-S'Barbra Streisand'
-p1154
-sVMN0000722133
-p1155
-S'Boys Like Girls'
-p1156
-sVMN0000218994
-p1157
-S'John Anderson'
-p1158
-sVMN0000420381
-p1159
-S'OutKast'
-p1160
-sVMN0000502163
-p1161
-S'10cc'
-p1162
-sVMN0000807949
-p1163
-S'Underworld'
-p1164
-sVMN0000244048
-p1165
-S'Sammie'
-p1166
-sVMN0000857597
-p1167
-S'E-40 Featuring Keak Da Sneak'
-p1168
-sVMN0000383853
-p1169
-S'Neal McCoy'
-p1170
-sVMN0000033666
-p1171
-S'Supertramp'
-p1172
-sVMN0000198783
-p1173
-S'Johnny Horton'
-p1174
-sVMN0000220194
-p1175
-S'MC Eiht'
-p1176
-sVMN0000413753
-p1177
-S'The Persuaders'
-p1178
-sVMN0000744265
-p1179
-S'Tony Joe White'
-p1180
-sVMN0000298764
-p1181
-S'Roxette'
-p1182
-sVMN0000046823
-p1183
-S'Benzino'
-p1184
-sVMN0000297894
-p1185
-S'Poco'
-p1186
-sVMN0000182360
-p1187
-S'Donny Hathaway'
-p1188
-sVMN0000086927
-p1189
-S'Kelly Clarkson'
-p1190
-sVMN0000410219
-p1191
-S'Merle Haggard'
-p1192
-sVMN0000201983
-p1193
-S'Westlife'
-p1194
-sVMN0000502371
-p1195
-S'Ciara Featuring Missy Elliott'
-p1196
-sVMN0000159805
-p1197
-S'Beats International'
-p1198
-sVMN0000568861
-p1199
-S'The Sweet Inspirations'
-p1200
-sVMN0000158407
-p1201
-S'Beau Coup'
-p1202
-sVMN0000306258
-p1203
-S'Ludacris'
-p1204
-sVMN0000366681
-p1205
-S'Paramore'
-p1206
-sVMN0000492249
-p1207
-S'Anything Box'
-p1208
-sVMN0000938878
-p1209
-S'Brownsville Station'
-p1210
-sVMN0000835585
-p1211
-S'Loverboy'
-p1212
-sVMN0000326964
-p1213
-S'Jeremy Jordan'
-p1214
-sVMN0000221059
-p1215
-S'Jason Mraz'
-p1216
-sVMN0000029600
-p1217
-S'Smash Mouth'
-p1218
-sVMN0000635466
-p1219
-S'Bubba Sparxxx'
-p1220
-sVMN0000203639
-p1221
-S'Johnny Rivers'
-p1222
-sVMN0000187907
-p1223
-S'Aventura Featuring Don Omar'
-p1224
-sVMN0000424244
-p1225
-S'Ozzy Osbourne'
-p1226
-sVMN0000618713
-p1227
-S'Aldo Nova'
-p1228
-sVMN0000070800
-p1229
-S'Billy Idol'
-p1230
-sVMN0000062002
-p1231
-S'Bachman-Turner Overdrive'
-p1232
-sVMN0000473554
-p1233
-S'Olivia Newton-John'
-p1234
-sVMN0000758444
-p1235
-S'Blur'
-p1236
-sVMN0000255576
-p1237
-S'Honeymoon Suite'
-p1238
-sVMN0000022255
-p1239
-S'Paul Evans'
-p1240
-sVMN0000317865
-p1241
-S'Jennifer Lopez Featuring Big Pun '
-p1242
-sVMN0000170214
-p1243
-S'Ferrante & Teicher'
-p1244
-sVMN0000605375
-p1245
-S'Alan Jackson'
-p1246
-sVMN0000936425
-p1247
-S'Todd Rundgren'
-p1248
-sVMN0000894962
-p1249
-S'The Postal Service'
-p1250
-sVMN0000749734
-p1251
-S'Slade'
-p1252
-sVMN0000496487
-p1253
-S'Adam Ant'
-p1254
-sVMN0000468938
-p1255
-S'Omarion'
-p1256
-sVMN0000805208
-p1257
-S'Joe Simon'
-p1258
-sVMN0000379669
-p1259
-S'Naughty By Nature'
-p1260
-sVMN0000061172
-p1261
-S'The Cars'
-p1262
-sVMN0000414889
-p1263
-S'The Presidents Of The United States Of America'
-p1264
-sVMN0000344609
-p1265
-S'Jesus Jones'
-p1266
-sVMN0000500889
-p1267
-S'Minnie Riperton'
-p1268
-sVMN0000048622
-p1269
-S'The Marcels'
-p1270
-sVMN0000776093
-p1271
-S'Kylie Minogue'
-p1272
-sVMN0000574102
-p1273
-S'Dashboard Confessional'
-p1274
-sVMN0002556485
-p1275
-S'Surface'
-p1276
-sVMN0000131650
-p1277
-S'Talking Heads'
-p1278
-sVMN0000754251
-p1279
-S'Suzanne Vega'
-p1280
-sVMN0000100116
-p1281
-S'Charlie Wilson'
-p1282
-sVMN0000100160
-p1283
-S'The Kinks'
-p1284
-sVMN0000222436
-p1285
-S'David Lee Roth'
-p1286
-sVMN0000005307
-p1287
-S'Alicia Keys'
-p1288
-sVMN0000936190
-p1289
-S'Stevie Nicks'
-p1290
-sVMN0000220946
-p1291
-S'David Houston'
-p1292
-sVMN0000010458
-p1293
-S'Alison Moyet'
-p1294
-sVMN0000495366
-p1295
-S'The S.O.S. Band'
-p1296
-sVMN0000516202
-p1297
-S'Brian Hyland'
-p1298
-sVMN0000002923
-p1299
-S"T'Pau"
-p1300
-sVMN0000932665
-p1301
-S'Alanis Morissette'
-p1302
-sVMN0000524239
-p1303
-S'Brook Benton'
-p1304
-sVMN0000173925
-p1305
-S'Eddie Holman'
-p1306
-sVMN0000341672
-p1307
-S'No Doubt'
-p1308
-sVMN0000475650
-p1309
-S'The Outfield'
-p1310
-sVMN0000158309
-p1311
-S'Pat Benatar'
-p1312
-sVMN0000861757
-p1313
-S'David Foster'
-p1314
-sVMN0000806542
-p1315
-S'Etta James'
-p1316
-sVMN0000201297
-p1317
-S'Foghat'
-p1318
-sVMN0000402872
-p1319
-S'The Meters'
-p1320
-sVMN0000175286
-p1321
-S'Dolly Parton'
-p1322
-sVMN0000023925
-p1323
-S'Stephen Bishop'
-p1324
-sVMN0000251358
-p1325
-S'Leschea'
-p1326
-sVMN0000477875
-p1327
-S'The Supremes'
-p1328
-sVMN0000649435
-p1329
-S'Gerald Levert'
-p1330
-sVMN0000807041
-p1331
-S'Joey Scarbury'
-p1332
-sVMN0000228444
-p1333
-S'Lee Ritenour'
-p1334
-sVMN0000545074
-p1335
-S'George Michael'
-p1336
-sVMN0000167361
-p1337
-S'Dru Hill'
-p1338
-sVMN0000073682
-p1339
-S'Trina Featuring Kelly Rowland'
-p1340
-sVMN0000101946
-p1341
-S'Isaac Hayes'
-p1342
-sVMN0000771905
-p1343
-S'Bowling For Soup'
-p1344
-sVMN0000463803
-p1345
-S"Ol' Dirty Bastard"
-p1346
-sVMN0000797431
-p1347
-S'Elastica'
-p1348
-sVMN0000628467
-p1349
-S'Britney Spears'
-p1350
-sVMN0000536275
-p1351
-S'Sweet'
-p1352
-sVMN0000139089
-p1353
-S'Barenaked Ladies'
-p1354
-sVMN0000475431
-p1355
-S'Stray Cats'
-p1356
-sVMN0000149515
-p1357
-S'Joe Cocker'
-p1358
-sVMN0000503242
-p1359
-S'Miranda Lambert'
-p1360
-sVMN0000315142
-p1361
-S'Scandal'
-p1362
-sVMN0000048507
-p1363
-S'Sweet Sensation'
-p1364
-sVMN0000293896
-p1365
-S'Rod Stewart'
-p1366
-sVMN0000599389
-p1367
-S"Mother's Finest"
-p1368
-sVMN0000768584
-p1369
-S'Billy Swan'
-p1370
-sVMN0000215513
-p1371
-S'Ciara'
-p1372
-sVMN0000664817
-p1373
-S'Gloria Estefan'
-p1374
-sVMN0000773642
-p1375
-S'The Kingsmen'
-p1376
-sVMN0000675710
-p1377
-S'Marc Cohn'
-p1378
-sVMN0000221235
-p1379
-S'David Laflamme'
-p1380
-sVMN0000540010
-p1381
-S'Capleton'
-p1382
-sVMN0000988471
-p1383
-S'Enya'
-p1384
-sVMN0000817011
-p1385
-S'Was (Not Was)'
-p1386
-sVMN0000829523
-p1387
-S'Londonbeat'
-p1388
-sVMN0000491288
-p1389
-S'Mike Post'
-p1390
-sVMN0000075308
-p1391
-S'The Jeff Healey Band'
-p1392
-sVMN0000267814
-p1393
-S'Hot Chocolate'
-p1394
-sVMN0000145180
-p1395
-S'The Emotions'
-p1396
-sVMN0000772567
-p1397
-S'Iron Butterfly'
-p1398
-sVMN0001176481
-p1399
-S'The Alan Parsons Project'
-p1400
-sVMN0000804703
-p1401
-S'GTR'
-p1402
-sVMN0000804289
-p1403
-S'Lynn Anderson'
-p1404
-sVMN0000776371
-p1405
-S'Color Me Badd'
-p1406
-sVMN0000510805
-p1407
-S'Toby Keith'
-p1408
-sVMN0000012491
-p1409
-S'Taylor Dayne'
-p1410
-sVMN0000036106
-p1411
-S'Steve Miller Band'
-p1412
-sVMN0000093632
-p1413
-S'Robert Palmer'
-p1414
-sVMN0000068934
-p1415
-S'Kenny G'
-p1416
-sVMN0000607028
-p1417
-S'Arthur Lyman'
-p1418
-sVMN0000621869
-p1419
-S'Bobby Pinson'
-p1420
-sVMN0002479562
-p1421
-S'Whistle'
-p1422
-sVMN0000774956
-p1423
-S'Chris Kenner'
-p1424
-sVMN0000293779
-p1425
-S'Royal Scots Dragoon Guards'
-p1426
-sVMN0000945900
-p1427
-S'George McCrae'
-p1428
-sVMN0000254827
-p1429
-S'Diamond Rio'
-p1430
-sVMN0000125506
-p1431
-S'Jagged Edge'
-p1432
-sVMN0000200679
-p1433
-S'Twista'
-p1434
-sVMN0000091549
-p1435
-S'Chevelle'
-p1436
-sVMN0000035076
-p1437
-S'Soul II Soul'
-p1438
-sVMN0000129775
-p1439
-S'Parliament'
-p1440
-sVMN0000963005
-p1441
-S'Will Smith Featuring Dru Hill '
-p1442
-sVMN0000390390
-p1443
-S'Ohio Players'
-p1444
-sVMN0000297702
-p1445
-S'Sammy Hagar'
-p1446
-sVMN0000028619
-p1447
-S'Steve Arrington'
-p1448
-sVMN0000749970
-p1449
-S'Ted Nugent'
-p1450
-sVMN0000941579
-p1451
-S'Buck Owens'
-p1452
-sVMN0000322027
-p1453
-S'Nelson Riddle'
-p1454
-sVMN0000061226
-p1455
-S'Babyface'
-p1456
-sVMN0000670057
-p1457
-S'Dan Hartman'
-p1458
-sVMN0000002330
-p1459
-S'Sergio Mendes'
-p1460
-sVMN0000768737
-p1461
-S'Icehouse'
-p1462
-sVMN0000046727
-p1463
-S'Edwin Starr'
-p1464
-sVMN0000832833
-p1465
-S'Samantha Mumba'
-p1466
-sVMN0000772745
-p1467
-S'Incubus'
-p1468
-sVMN0000424296
-p1469
-S'The Righteous Brothers'
-p1470
-sVMN0000757085
-p1471
-S'Bangles'
-p1472
-sVMN0000081619
-p1473
-S'Keith Urban'
-p1474
-sVMN0000092942
-p1475
-S'Chic'
-p1476
-sVMN0000046861
-p1477
-S'Ray Charles'
-p1478
-sVMN0000685647
-p1479
-S'Yes'
-p1480
-sVMN0000224257
-p1481
-S'Jay-Z'
-p1482
-sVMN0000665860
-p1483
-S'Godsmack'
-p1484
-sVMN0000575012
-p1485
-S'Darlene Love'
-p1486
-sVMN0000200882
-p1487
-S'Gene Pitney'
-p1488
-sVMN0000189644
-p1489
-S'Doris Day'
-p1490
-sVMN0000479149
-p1491
-S'A Perfect Circle'
-p1492
-sVMN0000892771
-p1493
-S"The O'Jays"
-p1494
-sVMN0000194063
-p1495
-S'Lee Ann Womack'
-p1496
-sVMN0000373634
-p1497
-S'Nas'
-p1498
-sVMN0000813731
-p1499
-S'Debbie Gibson'
-p1500
-sVMN0000349180
-p1501
-S'Jimmy Barnes'
-p1502
-sVMN0000359119
-p1503
-S'KRS-One'
-p1504
-sVMN0000219428
-p1505
-S'Uncle Kracker'
-p1506
-sVMN0000256974
-p1507
-S'Wild Cherry'
-p1508
-sVMN0000180449
-p1509
-S'Freddie Jackson'
-p1510
-sVMN0000390477
-p1511
-S'New Kids On The Block'
-p1512
-sVMN0000017929
-p1513
-S'Patti Austin'
-p1514
-sVMN0000094752
-p1515
-S'LL Cool J'
-p1516
-sVMN0000868456
-p1517
-S'Melba Montgomery'
-p1518
-sVMN0000085915
-p1519
-S'Billy Joel'
-p1520
-sVMN0000019083
-p1521
-S'Paul Davis'
-p1522
-sVMN0000246960
-p1523
-S'Wham!'
-p1524
-sVMN0000354722
-p1525
-S'Rick Astley'
-p1526
-sVMN0000294085
-p1527
-S'Rodney Crowell'
-p1528
-sVMN0000864973
-p1529
-S'NewSong'
-p1530
-sVMN0000171637
-p1531
-S'Duane Eddy'
-p1532
-sVMN0000234004
-p1533
-S'Jeannie Seely'
-p1534
-sVMN0000678339
-p1535
-S'XTC'
-p1536
-sVMN0000472440
-p1537
-S'The Olympics'
-p1538
-sVMN0000322733
-p1539
-S'Jermaine Dupri Featuring Nate Dogg'
-p1540
-sVMN0000200074
-p1541
-S'Lenny Kravitz'
-p1542
-sVMN0000393106
-p1543
-S'The Newbeats'
-p1544
-sVMN0000143781
-p1545
-S'The Del Fuegos'
-p1546
-sVMN0000490304
-p1547
-S'Thee Midniters'
-p1548
-sVMN0000149044
-p1549
-S'Barry White'
-p1550
-sVMN0000934367
-p1551
-S'Breaking Benjamin'
-p1552
-sVMN0000193320
-p1553
-S'Def Leppard'
-p1554
-sVMN0000737886
-p1555
-S'Enrique Iglesias'
-p1556
-sVMN0000051118
-p1557
-S'The Marathons'
-p1558
-sVMN0000361014
-p1559
-S'Brandy Featuring Kanye West'
-p1560
-sVMN0000391933
-p1561
-S'Rainbow'
-p1562
-sVMN0000502398
-p1563
-S'Archie Bell & The Drells'
-p1564
-sVMN0000852656
-p1565
-S'RuPaul'
-p1566
-sVMN0000178775
-p1567
-S'Figures On A Beach'
-p1568
-sVMN0000000674
-p1569
-S'P.J. Proby'
-p1570
-sVMN0000191006
-p1571
-S'Gary Wright'
-p1572
-sVMN0000469519
-p1573
-S'Ashley Tisdale'
-p1574
-sVMN0000010412
-p1575
-S'Spin Doctors'
-p1576
-sVMN0000138407
-p1577
-S'The Dramatics'
-p1578
-sVMN0000350685
-p1579
-S'Twista Featuring Pitbull'
-p1580
-sVMN0000142531
-p1581
-S'James Darren'
-p1582
-sVMN0000193305
-p1583
-S'Cassie'
-p1584
-sVMN0000077283
-p1585
-S'Geto Boys Featuring Flaj'
-p1586
-sVMN0000159214
-p1587
-S'Dusty Springfield'
-p1588
-sVMN0000665364
-p1589
-S'Goanna'
-p1590
-sVMN0000651549
-p1591
-S'Gwen McCrae'
-p1592
-sVMN0000312782
-p1593
-S'Keith Carradine'
-p1594
-sVMN0000040743
-p1595
-S'Audioslave'
-p1596
-sVMN0000194018
-p1597
-S'Del Shannon'
-p1598
-sVMN0000075825
-p1599
-S'The Coasters'
-p1600
-sVMN0000619388
-p1601
-S'Alejandro Sanz'
-p1602
-sVMN0000270667
-p1603
-S'Live'
-p1604
-sVMN0000813463
-p1605
-S'John Waite'
-p1606
-sVMN0000057907
-p1607
-S'Betty Boo'
-p1608
-sVMN0000672656
-p1609
-S'Crime Mob Featuring Lil Scrappy'
-p1610
-sVMN0000617104
-p1611
-S'Tommy Shane Steiner'
-p1612
-sVMN0000780346
-p1613
-S'Coolio'
-p1614
-sVMN0000490860
-p1615
-S'Three Days Grace'
-p1616
-sVMN0000774145
-p1617
-S'Kimberley Locke'
-p1618
-sVMN0000544965
-p1619
-S'Daniel Powter'
-p1620
-sVMN0000085397
-p1621
-S'Kelis'
-p1622
-sVMN0000242211
-p1623
-S'Saliva'
-p1624
-sVMN0000180617
-p1625
-S'Carolyn Dawn Johnson'
-p1626
-sVMN0000068551
-p1627
-S'Kenny Chesney'
-p1628
-sVMN0000671953
-p1629
-S'Heart'
-p1630
-sVMN0000379125
-p1631
-S'Neil Young'
-p1632
-sVMN0000771010
-p1633
-S'The Left Banke'
-p1634
-sVMN0000061045
-p1635
-S'Bobby Caldwell'
-p1636
-sVMN0000834314
-p1637
-S'Jude Cole'
-p1638
-sVMN0000805661
-p1639
-S'Humble Pie'
-p1640
-sVMN0000765075
-p1641
-S'The Honeycombs'
-p1642
-sVMN0000006320
-p1643
-S'Toto'
-p1644
-sVMN0000048903
-p1645
-S'Blu Cantrell'
-p1646
-sVMN0000787940
-p1647
-S'Levert'
-p1648
-sVMN0000667738
-p1649
-S'Dan Hill'
-p1650
-sVMN0000566430
-p1651
-S'Mobb Deep Featuring Vita & Noyd'
-p1652
-sVMN0000148477
-p1653
-S'Clarence Carter'
-p1654
-sVMN0000848688
-p1655
-S'J.J. Fad'
-p1656
-sVMN0000154967
-p1657
-S'Shades Of Blue'
-p1658
-sVMN0000407101
-p1659
-S'Nicolette Larson'
-p1660
-sVMN0000490004
-p1661
-S'The Ramones'
-p1662
-sVMN0000674011
-p1663
-S'Manu Dibango'
-p1664
-sVMN0000359026
-p1665
-S'Ricky Martin'
-p1666
-sVMN0000790820
-p1667
-S'Tool'
-p1668
-sVMN0000597309
-p1669
-S'Tina Turner'
-p1670
-sVMN0000026825
-p1671
-S'Paula Cole'
-p1672
-sVMN0000087697
-p1673
-S'Kem'
-p1674
-sVMN0000271029
-p1675
-S'Esther Phillips'
-p1676
-sVMN0000376422
-p1677
-S'Queens Of The Stone Age'
-p1678
-sVMN0000690254
-p1679
-S'ZZ Top'
-p1680
-sVMN0000797452
-p1681
-S'Stage Dolls'
-p1682
-sVMN0000988005
-p1683
-S'Fotomaker'
-p1684
-sVMN0000655746
-p1685
-S'Ghostface Killah'
-p1686
-sVMN0000013589
-p1687
-S'Alvin Cash'
-p1688
-sVMN0001009342
-p1689
-S'Jake Owen'
-p1690
-sVMN0000610339
-p1691
-S'Toad The Wet Sprocket'
-p1692
-sVMN0000751019
-p1693
-S'The Animals'
-p1694
-sVMN0000266063
-p1695
-S'Chris Brown Featuring Jay Biz'
-p1696
-sVMN0000509356
-p1697
-S'Atlantic Starr'
-p1698
-sVMN0000773442
-p1699
-S'Chingy'
-p1700
-sVMN0000165011
-p1701
-S'Dionne Warwick'
-p1702
-sVMN0000136075
-p1703
-S'The Crusaders'
-p1704
-sVMN0000128143
-p1705
-S'Twista Featuring Trey Songz'
-p1706
-sVMN0000121236
-p1707
-S'Cartel'
-p1708
-sVMN0000082013
-p1709
-S'The Impressions'
-p1710
-sVMN0000185669
-p1711
-S'Mac Davis'
-p1712
-sVMN0000152023
-p1713
-S'Everclear'
-p1714
-sVMN0000017021
-p1715
-S'Tenacious D'
-p1716
-sVMN0000577627
-p1717
-S'The Who'
-p1718
-sVMN0000080494
-p1719
-S'Billy Gilman'
-p1720
-sVMN0000554963
-p1721
-S'Harry Chapin'
-p1722
-sVMN0000387720
-p1723
-S'Michael Bolton'
-p1724
-sVMN0000812711
-p1725
-S'Death Cab For Cutie'
-p1726
-sVMN0000098342
-p1727
-S'JC Chasez'
-p1728
-sVMN0000863790
-p1729
-S'Rage Against The Machine'
-p1730
-sVMN0000334770
-p1731
-S'Ramsey Lewis'
-p1732
-sVMN0000814606
-p1733
-S'Wanda Jackson'
-p1734
-sVMN0000325126
-p1735
-S'Phajja'
-p1736
-sVMN0000949630
-p1737
-S'Goo Goo Dolls'
-p1738
-sVMN0000929862
-p1739
-S'Afrika Bambaataa'
-p1740
-sVMN0000178799
-p1741
-S'Staind'
-p1742
-sVMN0000065231
-p1743
-S'Keith Martin'
-p1744
-sVMN0000403794
-p1745
-S'Michel Polnareff'
-p1746
-sVMN0000488908
-p1747
-S'Petey Pablo'
-p1748
-sVMN0000745964
-p1749
-S'The Allman Brothers Band'
-p1750
-sVMN0000846671
-p1751
-S'Mark-Almond'
-p1752
-sVMN0000746302
-p1753
-S'Train'
-p1754
-sVMN0000043444
-p1755
-S'Steve Martin'
-p1756
-sVMN0000619750
-p1757
-S'Tommy Shaw'
-p1758
-sVMN0000238322
-p1759
-S'De La Soul'
-p1760
-sVMN0000174557
-p1761
-S'Carole King'
-p1762
-sVMN0000204386
-p1763
-S'James Taylor'
-p1764
-sVMN0000895677
-p1765
-S'Teddy Geiger'
-p1766
-sVMN0000086065
-p1767
-S'Ice Cube Featuring Das EFX'
-p1768
-sVMN0000053739
-p1769
-S'Bette Midler'
-p1770
-sVMN0000002273
-p1771
-S'Allan Sherman'
-p1772
-sVMN0000210323
-p1773
-S'Joe Tex'
-p1774
-sVMN0000058361
-p1775
-S'Betty Everett'
-p1776
-sVMN0000777210
-p1777
-S'Kool & The Gang'
-p1778
-sVMN0000831733
-p1779
-S'Lindsay Lohan'
-p1780
-sVMN0000182900
-p1781
-S'Fleetwood Mac'
-p1782
-sVMN0000847006
-p1783
-S'D4L'
-p1784
-sVMN0000524050
-p1785
-S'Bryan Ferry'
-p1786
-sVMN0000156886
-p1787
-S'Spyro Gyra'
-p1788
-sVMN0000247250
-p1789
-S'When In Rome'
-p1790
+p30
+sVMN0000377891
+p31
+S'Nazareth'
+p32
+sVMN0000023010
+p33
+S'Terror Squad'
+p34
+sVMN0000838327
+p35
+S'Savage Garden'
+p36
+sVMN0000922471
+p37
+S'Sean Kingston Featuring Elan & Juelz Santana'
+p38
+sVMN0000136871
+p39
+S'The Doobie Brothers'
+p40
+sVMN0000932922
+p41
+S'Brass Construction'
+p42
+sVMN0000051736
+p43
+S'The Manhattans'
+p44
+sVMN0000750456
+p45
+S'Paul Revere & The Raiders'
+p46
 sVMN0000012472
-p1791
+p47
 S'Traffic'
-p1792
-sVMN0000303050
-p1793
-S'Rufus Thomas'
-p1794
-sVMN0000838195
-p1795
-S'Percy Sledge'
-p1796
-sVMN0000077264
-p1797
-S'Bad English'
-p1798
-sVMN0000167878
-p1799
-S'Frankie J'
-p1800
-sVMN0000814852
-p1801
-S'John Sebastian'
-p1802
-sVMN0000106514
-p1803
-S'Boots Randolph'
-p1804
-sVMN0000021128
-p1805
-S'Trillville'
-p1806
-sVMN0000953998
-p1807
-S'Mantovani'
-p1808
-sVMN0000747163
-p1809
-S'Amanda Perez'
-p1810
-sVMN0000239827
-p1811
-S'John Mayer'
-p1812
-sVMN0000174198
-p1813
-S'Edwin McCain'
-p1814
-sVMN0000314050
-p1815
-S'Narada Michael Walden'
-p1816
-sVMN0000748994
-p1817
-S'Trick Daddy Featuring LaTocha Scott'
-p1818
-sVMN0000165117
-p1819
-S'Tamia'
-p1820
-sVMN0000479687
-p1821
-S'Midge Ure'
-p1822
-sVMN0000029086
-p1823
-S'Snoop Dogg Featuring Master P'
-p1824
-sVMN0000015318
-p1825
-S'Travis Tritt'
-p1826
-sVMN0000005501
-p1827
-S'System Of A Down'
-p1828
-sVMN0000524837
-p1829
-S'Mrs. Miller'
-p1830
-sVMN0000124492
-p1831
-S'Beck'
-p1832
-sVMN0000778656
-p1833
-S'Cornelius Brothers & Sister Rose'
-p1834
-sVMN0000763798
-p1835
-S'Bobby Comstock'
-p1836
-sVMN0000070929
-p1837
-S'The Jacksons'
-p1838
-sVMN0000497426
-p1839
-S'The Singing Nun'
-p1840
-sVMN0000882956
-p1841
-S'Merry Clayton'
-p1842
-sVMN0000830464
-p1843
-S'Ron Holden'
-p1844
-sVMN0000128950
-p1845
-S'Earl-Jean'
-p1846
-sVMN0000467382
-p1847
-S'Michael Penn'
-p1848
-sVMN0000046814
-p1849
-S'Blake Shelton'
-p1850
-sVMN0000334193
-p1851
-S'New Order'
-p1852
-sVMN0000784814
-p1853
-S'The Cranberries'
-p1854
-sVMN0000163229
-p1855
-S'Electric Light Orchestra'
-p1856
-sVMN0000372322
-p1857
-S'Natalie Merchant'
-p1858
-sVMN0000087305
-p1859
-S'Kid Frost'
-p1860
-sVMN0000732652
-p1861
-S'Kellie Pickler'
-p1862
-sVMN0000837946
-p1863
-S'Juice Newton'
-p1864
-sVMN0000181817
-p1865
-S'Caron Wheeler'
-p1866
-sVMN0000775494
-p1867
-S'Cherish'
-p1868
-sVMN0000796741
-p1869
-S'Eddy Arnold'
-p1870
-sVMN0000170454
-p1871
-S'Carla Thomas'
-p1872
-sVMN0000852007
-p1873
-S'Roy Orbison'
-p1874
-sVMN0000753963
-p1875
-S'The Association'
-p1876
-sVMN0000193601
-p1877
-S'Gang Starr'
-p1878
-sVMN0000012180
-p1879
-S'Trace Adkins'
-p1880
-sVMN0000987777
-p1881
-S'Donell Jones'
-p1882
-sVMN0000181376
-p1883
-S'UB40'
-p1884
-sVMN0000961234
-p1885
-S'Dave Matthews Band'
-p1886
-sVMN0000921895
-p1887
-S'2Pac'
-p1888
-sVMN0000107090
-p1889
-S'Cher'
-p1890
-sVMN0000227988
-p1891
-S'House Of Pain'
-p1892
-sVMN0000674150
-p1893
-S'Helen Reddy'
-p1894
-sVMN0000069986
-p1895
-S'Kenny Rogers'
-p1896
-sVMN0000061480
-p1897
-S'The Guess Who'
-p1898
-sVMN0000182415
-p1899
-S'Fugees'
-p1900
-sVMN0000210991
-p1901
-S"Destiny's Child"
-p1902
-sVMN0000004553
-p1903
-S'T-Connection'
-p1904
-sVMN0000058549
-p1905
-S'Elvis Costello'
-p1906
-sVMN0000080780
-p1907
-S'Sheryl Crow'
-p1908
-sVMN0000812877
-p1909
-S'Deep Blue Something'
-p1910
-sVMN0000193025
-p1911
-S'Gregory Abbott'
-p1912
-sVMN0000020809
-p1913
-S'Shep & The Limelites'
-p1914
-sVMN0000628981
-p1915
-S'The Buckinghams'
-p1916
-sVMN0000031685
-p1917
-S'Paul Simon'
-p1918
-sVMN0000758943
-p1919
-S'Big Brother & The Holding Company'
-p1920
-sVMN0000414700
-p1921
-S'Mike Jones'
-p1922
-sVMN0000157314
-p1923
-S'Tag Team'
-p1924
-sVMN0000234384
-p1925
-S"Lil' Romeo"
-p1926
-sVMN0000090124
-p1927
-S'Black Box'
-p1928
-sVMN0000334644
-p1929
-S'Jerry Reed'
-p1930
-sVMN0000270162
-p1931
-S'Lil Scrappy'
-p1932
-sVMN0000020050
-p1933
-S'Ten Years After'
-p1934
-sVMN0000263271
-p1935
-S'Lifehouse'
-p1936
-sVMN0000533551
-p1937
-S'Buckcherry'
-p1938
-sVMN0001649799
-p1939
-S'Sonny Charles'
-p1940
-sVMN0000136640
-p1941
-S'The KLF Featuring Tammy Wynette'
-p1942
-sVMN0000044751
-p1943
-S'Steve Wariner'
-p1944
-sVMN0000245049
-p1945
-S'Johnny Cymbal'
-p1946
-sVMN0000393031
-p1947
-S'Ohio Express'
-p1948
-sVMN0000154544
-p1949
-S'Green Day'
-p1950
-sVMN0000665957
-p1951
-S'Harold Melvin & The Blue Notes'
-p1952
-sVMN0000258882
-p1953
-S'Jon Secada'
-p1954
-sVMN0000770059
-p1955
-S'Born Jamericans'
-p1956
-sVMN0000282752
-p1957
-S'Robbie Dupree'
-p1958
-sVMN0000224369
-p1959
-S'John Miles'
-p1960
-sVMN0000631774
-p1961
-S'The Byrds'
-p1962
-sVMN0000029884
-p1963
-S'Paul McCartney'
-p1964
-sVMN0000656081
-p1965
-S'Elliott Yamin'
-p1966
-sVMN0000390532
-p1967
-S'Oingo Boingo'
-p1968
-sVMN0000343947
-p1969
-S'Real Life'
-p1970
-sVMN0000745241
-p1971
-S'Status Quo'
-p1972
-sVMN0000201760
-p1973
-S'George Benson'
-p1974
-sVMN0000079960
-p1975
-S'Boston'
-p1976
-sVMN0000270497
-p1977
-S'Peter Schilling'
-p1978
-sVMN0000131681
-p1979
-S'Pat Boone'
-p1980
-sVMN0000013384
-p1981
-S'Tanya Tucker'
-p1982
-sVMN0000936206
-p1983
-S'Alabama'
-p1984
-sVMN0000599732
-p1985
-S'Arrested Development'
-p1986
-sVMN0000860561
-p1987
-S'The Fray'
-p1988
-sVMN0000270491
-p1989
-S'Joni Mitchell'
-p1990
-sVMN0000050520
-p1991
-S'Bettye Swann'
-p1992
-sVMN0000791483
-p1993
-S'Dwight Yoakam'
-p1994
-sVMN0000884962
-p1995
-S'Regina Belle'
-p1996
-sVMN0000802302
-p1997
-S'De La Soul Featuring Chaka Khan'
-p1998
-sVMN0000741718
-p1999
-S'P.M. Dawn'
-p2000
-sVMN0000184043
-p2001
-S'Foo Fighters'
-p2002
-sVMN0000817315
-p2003
-S'Weird Al Yankovic'
-p2004
-sVMN0000792530
-p2005
-S'Tori Amos'
-p2006
-sVMN0000068155
-p2007
-S'The Chantels'
-p2008
-sVMN0000016227
-p2009
-S'Tavares'
-p2010
-sVMN0000778344
-p2011
-S'LaVern Baker'
-p2012
-sVMN0000418981
-p2013
-S'The Shirelles'
-p2014
-sVMN0000562663
-p2015
-S'Harpers Bizarre'
-p2016
-sVMN0000556320
-p2017
-S'Glenn Yarbrough'
-p2018
-sVMN0000289599
-p2019
-S'Linkin Park'
-p2020
-sVMN0000419102
-p2021
-S'The Shins'
-p2022
-sVMN0000614598
-p2023
-S'Mystikal'
-p2024
-sVMN0000758630
-p2025
-S'Better Than Ezra'
-p2026
-sVMN0000061582
-p2027
-S'Bobby Freeman'
-p2028
-sVMN0000188467
-p2029
-S'John Parr'
-p2030
-sVMN0000581859
-p2031
-S'The Vogues'
-p2032
-sVMN0000024944
-p2033
-S'Amy Grant'
-p2034
-sVMN0000296487
-p2035
-S'Roger Daltrey'
-p2036
-sVMN0000355998
-p2037
-S'Ruben Studdard'
-p2038
-sVMN0000391586
-p2039
-S'James Blunt'
-p2040
-sVMN0000011597
-p2041
-S'The American Breed'
-p2042
-sVMN0000467203
-p2043
-S'Michael Jackson'
-p2044
-sVMN0000146841
-p2045
-S'Cyndi Thomson'
-p2046
-sVMN0002313776
-p2047
-S'Rhinoceros'
-p2048
-sVMN0000417598
-p2049
-S'The Premiers'
-p2050
-sVMN0000414251
-p2051
-S'Otis Redding'
-p2052
-sVMN0000251595
-p2053
-S'Whitesnake'
-p2054
-sVMN0000105129
-p2055
-S'Collective Soul'
-p2056
-sVMN0000806507
-p2057
-S'Tyrone Davis'
-p2058
-sVMN0000048300
-p2059
-S'Bar-Kays'
-p2060
-sVMN0000332257
-p2061
-S'Neneh Cherry'
-p2062
-sVMN0000811622
-p2063
-S'John Denver'
-p2064
-sVMN0000328014
-p2065
-S'Peter Tosh'
-p2066
-sVMN0000622805
-p2067
-S'Stevie Wonder'
-p2068
-sVMN0000210830
-p2069
-S'Jamie Foxx Featuring Twista'
-p2070
-sVMN0000094813
-p2071
-S'Black Rob'
-p2072
-sVMN0000266151
-p2073
-S'Little Texas'
-p2074
-sVMN0000238069
-p2075
-S'Robin S.'
-p2076
-sVMN0000071812
-p2077
-S'The Four Tops'
-p2078
-sVMN0000040124
-p2079
-S'The Ataris'
-p2080
-sVMN0000898479
-p2081
-S'The Smithereens'
-p2082
-sVMN0000604852
-p2083
-S'Aerosmith'
-p2084
-sVMN0000072003
-p2085
-S'Ice-T'
-p2086
-sVMN0000138332
-p2087
-S'The Crystals'
-p2088
-sVMN0000151979
-p2089
-S'Bay City Rollers'
-p2090
-sVMN0000743623
-p2091
-S'Spacehog'
-p2092
-sVMN0000294377
-p2093
-S'Linda Clifford'
-p2094
-sVMN0000064509
-p2095
-S'Bobby Womack'
-p2096
-sVMN0000673933
-p2097
-S'Mandy Moore'
-p2098
-sVMN0000014651
-p2099
-S'Patsy Cline'
-p2100
-sVMN0000934069
-p2101
-S'Brenda Lee'
-p2102
-sVMN0000811897
-p2103
-S'John Michael Montgomery'
-p2104
-sVMN0000327735
-p2105
-S'REO Speedwagon'
-p2106
-sVMN0000898188
-p2107
-S'Mint Condition'
-p2108
-sVMN0000818200
-p2109
-S'Westside Connection'
-p2110
-sVMN0001497537
-p2111
-S'John Mayer Trio'
-p2112
-sVMN0000308871
-p2113
-S'Little Anthony & The Imperials'
-p2114
-sVMN0000756380
-p2115
-S'Blues Magoos'
-p2116
-sVMN0000084209
-p2117
-S'Kiss'
-p2118
-sVMN0000407986
-p2119
-S'Melissa Manchester'
-p2120
-sVMN0000542976
-p2121
-S'Candi Staton'
-p2122
-sVMN0000052900
-p2123
-S"The Lovin' Spoonful"
-p2124
-sVMN0000112360
-p2125
-S'Kon Kan'
-p2126
-sVMN0000049367
-p2127
-S'The Blackbyrds'
-p2128
-sVMN0000371582
-p2129
-S'Nappy Roots'
-p2130
-sVMN0000858375
-p2131
-S'Mary Chapin Carpenter'
-p2132
-sVMN0000022928
-p2133
-S'Steppenwolf'
-p2134
-sVMN0000227352
-p2135
-S'Hugo Montenegro'
-p2136
-sVMN0000069645
-p2137
-S'The Fireballs'
-p2138
-sVMN0000926428
-p2139
-S'Thomas Dolby'
-p2140
-sVMN0000143216
-p2141
-S'James Otto'
-p2142
-sVMN0000798801
-p2143
-S'Don Ho'
-p2144
+p48
+sVMN0000011754
+p49
+S'Sheena Easton'
+p50
+sVMN0000354581
+p51
+S'Men Of Vizion'
+p52
+sVMN0000034382
+p53
+S'Paul Young'
+p54
+sVMN0000117272
+p55
+S'Connie Stevens'
+p56
+sVMN0001930721
+p57
+S'The Winstons'
+p58
+sVMN0000796281
+p59
+S'Five For Fighting'
+p60
+sVMN0000137474
+p61
+S'Laura Nyro'
+p62
+sVMN0000127451
+p63
+S'Jackie DeShannon'
+p64
 sVMN0000123754
-p2145
+p65
 S'Christopher Cross'
-p2146
-sVMN0000226869
-p2147
-S'John Paul Young'
-p2148
-sVMN0000772526
-p2149
-S'Irma Thomas'
-p2150
-sVMN0000463435
-p2151
-S'Michael Nesmith'
-p2152
-sVMN0001572321
-p2153
-S'Tourists'
-p2154
-sVMN0000678167
-p2155
-S'Das EFX'
-p2156
-sVMN0000664378
-p2157
-S'Glen Campbell'
-p2158
-sVMN0000814220
-p2159
-S'Debby Boone'
-p2160
-sVMN0000133987
-p2161
-S'Clint Holmes'
-p2162
-sVMN0000030928
-p2163
-S'Tevin Campbell'
-p2164
-sVMN0000359613
-p2165
-S'Rick Springfield'
-p2166
-sVMN0000205180
-p2167
-S'Dr. John'
-p2168
-sVMN0000377035
-p2169
-S'Mass Production'
-p2170
-sVMN0000892827
-p2171
-S'The Notorious B.I.G.'
-p2172
-sVMN0000383889
-p2173
-S'matchbox twenty'
-p2174
-sVMN0000895074
-p2175
-S'The Romantics'
-p2176
-sVMN0000725395
-p2177
-S'Fergie'
-p2178
-sVMN0000738402
-p2179
-S'Grandmaster Flash'
-p2180
-sVMN0000301404
-p2181
-S'Rick Derringer'
-p2182
-sVMN0000349555
-p2183
-S'Jimmy Holiday'
-p2184
-sVMN0000376204
-p2185
-S'Mary J. Blige'
-p2186
-sVMN0000674332
-p2187
-S'Herb Alpert'
-p2188
-sVMN0000508449
-p2189
-S"Alan O'Day"
-p2190
-sVMN0000359179
-p2191
-S'Karla Bonoff'
-p2192
-sVMN0000147315
-p2193
-S'Cypress Hill'
-p2194
-sVMN0000329468
-p2195
-S'Jerry Butler'
-p2196
-sVMN0000459616
-p2197
-S'Michael McDonald'
-p2198
-sVMN0000225930
-p2199
-S'Liz Phair'
-p2200
-sVMN0000086729
-p2201
-S'Bill Pursell'
-p2202
-sVMN0000738674
-p2203
-S'Donna Fargo'
-p2204
-sVMN0000286115
-p2205
-S'Lorrie Morgan'
-p2206
-sVMN0000342004
-p2207
-S'Phil Vassar'
-p2208
-sVMN0000600264
-p2209
-S'Mr. Big'
-p2210
-sVMN0000466759
-p2211
-S'Michael W. Smith'
-p2212
-sVMN0000000534
-p2213
-S'All Saints'
-p2214
-sVMN0000206241
-p2215
-S'Eurythmics'
-p2216
-sVMN0000026952
-p2217
-S'Smokie Norful'
-p2218
-sVMN0000520545
-p2219
-S'My Chemical Romance'
-p2220
-sVMN0000840050
-p2221
-S'Jefferson Starship'
-p2222
-sVMN0000612716
-p2223
-S'Tom Petty'
-p2224
-sVMN0000479772
-p2225
-S'The Motels'
-p2226
-sVMN0000038466
-p2227
-S'Andy Williams'
-p2228
-sVMN0000011707
-p2229
-S'Steely Dan'
-p2230
-sVMN0000096613
-p2231
-S'Bonnie Raitt'
-p2232
-sVMN0000125352
-p2233
-S'Barbara Fairchild'
-p2234
-sVMN0000375239
-p2235
-S'Marty Wilde'
-p2236
-sVMN0000894465
-p2237
-S'The Rolling Stones'
-p2238
-sVMN0000137390
-p2239
-S'The Cure'
-p2240
-sVMN0000645474
-p2241
-S'David Essex'
-p2242
-sVMN0000297990
-p2243
-S'The Poppy Family'
-p2244
-sVMN0000846113
-p2245
-S"Philly's Most Wanted"
-p2246
-sVMN0000175579
-p2247
-S'Disturbed'
-p2248
-sVMN0000767016
-p2249
-S'Keith Sweat'
-p2250
-sVMN0000049062
-p2251
-S'Simple Plan'
-p2252
-sVMN0000196976
-p2253
-S'Gretchen Wilson'
-p2254
-sVMN0000640261
-p2255
-S'Buddy Jewell'
-p2256
-sVMN0000113753
-p2257
-S'Lauryn Hill'
-p2258
-sVMN0000354733
-p2259
-S'Los Lobos'
-p2260
-sVMN0000144458
-p2261
-S'Curtis Mayfield'
-p2262
-sVMN0002447909
-p2263
-S'Haircut One Hundred'
-p2264
-sVMN0000608945
-p2265
-S'Brandy'
-p2266
-sVMN0000291687
-p2267
-S'Robert Tepper'
-p2268
-sVMN0000347151
-p2269
-S'Jewel'
-p2270
-sVMN0000119651
-p2271
-S'J.J. Cale'
-p2272
-sVMN0000820232
-p2273
-S'Dick Dale'
-p2274
-sVMN0000303626
-p2275
-S'Kansas'
-p2276
-sVMN0000260212
-p2277
-S'Pet Shop Boys'
-p2278
-sVMN0000844707
-p2279
-S'Ronnie Carroll'
-p2280
-sVMN0000163213
-p2281
-S'Tweet'
-p2282
-sVMN0000073806
-p2283
-S'The Highwaymen'
-p2284
-sVMN0000128099
-p2285
-S'James Brown'
-p2286
-sVMN0000565242
-p2287
-S'Hedgehoppers Anonymous'
-p2288
-sVMN0000857203
-p2289
-S'Kay Starr'
-p2290
-sVMN0000085410
-p2291
-S'Billy Joe Royal'
-p2292
-sVMN0000316834
-p2293
-S'Marvin Gaye'
-p2294
-sVMN0000785101
-p2295
-S'Bananarama'
-p2296
-sVMN0000853492
-p2297
-S'Marshall Crenshaw'
-p2298
-sVMN0000037730
-p2299
-S'Pearl Jam'
-p2300
-sVMN0000078044
-p2301
-S'Bill Withers'
-p2302
-sVMN0000224345
-p2303
-S'Vitamin C'
-p2304
-sVMN0000158540
-p2305
-S'Gavin DeGraw'
-p2306
-sVMN0000007689
-p2307
-S'TLC'
-p2308
-sVMN0000861351
-p2309
-S'Fat Joe Featuring Nelly'
-p2310
-sVMN0000674749
-p2311
-S'The Manhattan Transfer'
-p2312
-sVMN0000262794
-p2313
-S'Hootie & The Blowfish'
-p2314
-sVMN0000682056
-p2315
-S'Xzibit'
-p2316
-sVMN0000081316
-p2317
-S'Bone Thugs-N-Harmony'
-p2318
-sVMN0000890724
-p2319
-S'The Originals'
-p2320
-sVMN0000001418
-p2321
-S'T.I.'
-p2322
-sVMN0000169677
-p2323
-S'Ernie K-Doe'
-p2324
-sVMN0000543055
-p2325
-S'Georgie Fame'
-p2326
-sVMN0000094205
-p2327
-S'Chet Atkins'
-p2328
-sVMN0000927555
-p2329
-S'Aretha Franklin'
-p2330
-sVMN0000139655
-p2331
-S'Laura Branigan'
-p2332
-sVMN0000568709
-p2333
-S'Darren Hayes'
-p2334
-sVMN0000567624
-p2335
-S'The Stylistics'
-p2336
-sVMN0000210143
-p2337
-S'Lou Bega'
-p2338
-sVMN0000537548
-p2339
-S'Busta Rhymes'
-p2340
-sVMN0000673486
-p2341
-S'Marc Anthony'
-p2342
-sVMN0000495508
-p2343
-S'Troy Shondell'
-p2344
-sVMN0000018513
-p2345
-S'Paul Hardcastle'
-p2346
-sVMN0000765595
-p2347
-S'Backstreet Boys'
-p2348
-sVMN0000213212
-p2349
-S'Janis Ian'
-p2350
-sVMN0000144847
-p2351
-S'Eagles'
-p2352
-sVMN0000171889
-p2353
-S'Elephant Man'
-p2354
-sVMN0000378624
-p2355
-S'Quincy Jones Featuring Ray Charles '
-p2356
-sVMN0000853629
-p2357
-S'Ruff Endz'
-p2358
-sVMN0000133719
-p2359
-S'Fatboy Slim'
-p2360
-sVMN0000665908
-p2361
-S'Good Charlotte'
-p2362
-sVMN0000075747
-p2363
-S'The Clash'
-p2364
-sVMN0001317177
-p2365
-S'Drafi'
-p2366
-sVMN0000258276
-p2367
-S'Digital Underground'
-p2368
-sVMN0000019740
-p2369
-S'Amerie'
-p2370
-sVMN0000006334
-p2371
-S'Tony Bennett'
-p2372
-sVMN0000262255
-p2373
-S'Mariah Carey'
-p2374
-sVMN0000692251
-p2375
-S'The Youngbloods'
-p2376
-sVMN0000012128
-p2377
-S'All-4-One'
-p2378
-sVMN0000130689
-p2379
-S'Jackson Browne'
-p2380
-sVMN0000045972
-p2381
-S'Swing Out Sister'
-p2382
-sVMN0000591104
-p2383
-S'Mongo Santamaria'
-p2384
-sVMN0000138699
-p2385
-S'Frank Zappa'
-p2386
-sVMN0000924176
-p2387
-S'Aaron Lines'
-p2388
-sVMN0000183311
-p2389
-S'Fine Young Cannibals'
-p2390
-sVMN0000072041
-p2391
-S'Bob Seger'
-p2392
-sVMN0000740499
-p2393
-S'Grand Puba'
-p2394
-sVMN0000228099
-p2395
-S'Howard Jones'
-p2396
-sVMN0003014650
-p2397
-S'The Regents'
-p2398
-sVMN0000359966
-p2399
-S'Rickie Lee Jones'
-p2400
-sVMN0000495288
-p2401
-S'The Rentals'
-p2402
-sVMN0000065397
-p2403
-S'Bobbie Gentry'
-p2404
-sVMN0000153590
-p2405
-S'Graham Nash'
-p2406
-sVMN0000686897
-p2407
-S'Linda Ronstadt'
-p2408
-sVMN0000816538
-p2409
-S'Johnny Bristol'
-p2410
-sVMN0000064303
-p2411
-S'Badfinger'
-p2412
+p66
+sVMN0000755776
+p67
+S'Simon Stokes'
+p68
+sVMN0000201716
+p69
+S'Ty Herndon'
+p70
+sVMN0000776371
+p71
+S'Color Me Badd'
+p72
+sVMN0000234647
+p73
+S'Deborah Cox'
+p74
+sVMN0000016235
+p75
+S'Tony Orlando'
+p76
+sVMN0000792507
+p77
+S'Frank Sinatra'
+p78
+sVMN0000502806
+p79
+S'The Rivingtons'
+p80
+sVMN0000766893
+p81
+S'The Isley Brothers'
+p82
+sVMN0000533117
+p83
+S'Ice Cube Featuring George Clinton'
+p84
+sVMN0000020278
+p85
+S'Teddy Pendergrass'
+p86
+sVMN0000317020
+p87
+S"Quad City DJ's"
+p88
+sVMN0000180617
+p89
+S'Carolyn Dawn Johnson'
+p90
+sVMN0000188432
+p91
+S'David Sanborn'
+p92
+sVMN0000624504
+p93
+S'The Box Tops'
+p94
+sVMN0000039637
+p95
+S'Survivor'
+p96
+sVMN0000749175
+p97
+S'Skeeter Davis'
+p98
+sVMN0000105354
+p99
+S'Cheap Trick'
+p100
+sVMN0000122754
+p101
+S'Cyndi Lauper'
+p102
+sVMN0000678408
+p103
+S'Herbie Mann'
+p104
+sVMN0000102835
+p105
+S'Chocolate Milk'
+p106
+sVMN0000073666
+p107
+S'Baby Washington'
+p108
+sVMN0000192143
+p109
+S'The Gregg Allman Band'
+p110
+sVMN0000632986
+p111
+S'Jordan Pruitt'
+p112
+sVMN0000850692
+p113
+S'Jethro Tull'
+p114
+sVMN0000125749
+p115
+S'Barbara Mason'
+p116
+sVMN0000988692
+p117
+S'Grapefruit'
+p118
+sVMN0000266129
+p119
+S'Jennifer Hudson'
+p120
+sVMN0000263271
+p121
+S'Lifehouse'
+p122
+sVMN0000177122
+p123
+S'Fat Joe'
+p124
+sVMN0000794449
+p125
+S'Frankie Valli'
+p126
+sVMN0000624215
+p127
+S'The Brothers Johnson'
+p128
+sVMN0000087985
+p129
+S'The Hollies'
+p130
+sVMN0000450947
+p131
+S'Unk'
+p132
+sVMN0000178122
+p133
+S'Filter'
+p134
+sVMN0000125561
+p135
+S'Cinderella'
+p136
+sVMN0000104714
+p137
+S'Kraftwerk'
+p138
+sVMN0000090803
+p139
+S'King Curtis'
+p140
 sVMN0000621639
-p2413
+p141
 S'Tone-Loc'
-p2414
-sVMN0000633078
-p2415
-S'Bruce Hornsby'
-p2416
-sVMN0000233228
-p2417
-S'Lou Rawls'
-p2418
+p142
+sVMN0000020809
+p143
+S'Shep & The Limelites'
+p144
+sVMN0000201022
+p145
+S'Lenny Welch'
+p146
+sVMN0000087965
+p147
+S'Kevon Edmonds'
+p148
+sVMN0000010155
+p149
+S'Paper Lace'
+p150
+sVMN0000019241
+p151
+S'Patty Loveless'
+p152
+sVMN0000039917
+p153
+S'The Beatnuts Featuring Yellaklaw'
+p154
+sVMN0000616296
+p155
+S'Ashlee Simpson'
+p156
+sVMN0000118544
+p157
+S'The Drifters'
+p158
+sVMN0000281376
+p159
+S'Lords Of The Underground'
+p160
+sVMN0000507975
+p161
+S'Al Hirt'
+p162
+sVMN0000832341
+p163
+S'Robert Goulet'
+p164
+sVMN0000096744
+p165
+S'Chris Rea'
+p166
+sVMN0000425543
+p167
+S'Mista Grimm'
+p168
+sVMN0000888484
+p169
+S'Michelle Branch'
+p170
+sVMN0000208997
+p171
+S'Rita Coolidge'
+p172
+sVMN0000193963
+p173
+S'Warrant'
+p174
+sVMN0000478603
+p175
+S'The Monkees'
+p176
+sVMN0000153103
+p177
+S'Donald Fagen'
+p178
+sVMN0000772526
+p179
+S'Irma Thomas'
+p180
+sVMN0000746666
+p181
+S'Sister Sledge'
+p182
+sVMN0000577235
+p183
+S'The Staple Singers'
+p184
+sVMN0000162820
+p185
+S'Gene Chandler'
+p186
+sVMN0000676313
+p187
+S'Hi-Five'
+p188
+sVMN0000078467
+p189
+S'The Communards'
+p190
+sVMN0000492331
+p191
+S'Pretenders'
+p192
+sVMN0000085806
+p193
+S'Billy Thorpe'
+p194
+sVMN0000005953
+p195
+S'Alice Cooper'
+p196
+sVMN0000667622
+p197
+S'Heatwave'
+p198
+sVMN0000033666
+p199
+S'Supertramp'
+p200
+sVMN0000166291
+p201
+S'Eagle-Eye Cherry'
+p202
+sVMN0000049026
+p203
+S'Switchfoot'
+p204
+sVMN0000614598
+p205
+S'Mystikal'
+p206
+sVMN0000691616
+p207
+S'Ryan Cabrera'
+p208
+sVMN0000852688
+p209
+S'Jimmy Eat World'
+p210
+sVMN0000087179
+p211
+S'The Knack'
+p212
+sVMN0000572579
+p213
+S'Anita Baker'
+p214
+sVMN0000059101
+p215
+S'Bobby Byrd'
+p216
+sVMN0000033481
+p217
+S'Andy Griggs'
+p218
+sVMN0000382734
+p219
+S'Matt Monro'
+p220
+sVMN0000098342
+p221
+S'JC Chasez'
+p222
+sVMN0000172770
+p223
+S'Carl Butler'
+p224
+sVMN0000338887
+p225
+S'Jerry Vale'
+p226
+sVMN0000093872
+p227
+S'Koffee Brown'
+p228
+sVMN0000325126
+p229
+S'Phajja'
+p230
+sVMN0000112789
+p231
+S'Korn'
+p232
+sVMN0000419102
+p233
+S'The Shins'
+p234
+sVMN0000391003
+p235
+S'Norman Greenbaum'
+p236
+sVMN0000790732
+p237
+S'Squeeze'
+p238
+sVMN0000937584
+p239
+S'Charlie Ryan'
+p240
+sVMN0000083095
+p241
+S'Kirk Franklin'
+p242
+sVMN0000227544
+p243
+S'Walter Egan'
+p244
+sVMN0000816387
+p245
+S'Leon Russell'
+p246
+sVMN0000190632
+p247
+S'Dottie West'
+p248
+sVMN0000156886
+p249
+S'Spyro Gyra'
+p250
+sVMN0000113300
+p251
+S'Kool Moe Dee'
+p252
+sVMN0000864209
+p253
+S'Neil Diamond'
+p254
+sVMN0000863790
+p255
+S'Rage Against The Machine'
+p256
+sVMN0000816701
+p257
+S'Deniece Williams'
+p258
+sVMN0000352992
+p259
+S'Jimmy Dean'
+p260
+sVMN0000184091
+p261
+S'Don Henley'
+p262
+sVMN0000796763
+p263
+S'Eddy Grant'
+p264
+sVMN0000120005
+p265
+S'Corina'
+p266
+sVMN0000165818
+p267
+S'Charley Pride'
+p268
+sVMN0000319347
+p269
+S'R. Kelly'
+p270
+sVMN0000681956
+p271
+S'Xscape'
+p272
+sVMN0000067631
+p273
+S'The Chemical Brothers'
+p274
+sVMN0000833802
+p275
+S'Sarah Dash'
+p276
+sVMN0000091983
+p277
+S'The Black Eyed Peas'
+p278
+sVMN0000266952
+p279
+S'Livingston Taylor'
+p280
+sVMN0000284882
+p281
+S'Josie Cotton'
+p282
+sVMN0000031380
+p283
+S'Paula Abdul'
+p284
+sVMN0000290590
+p285
+S'Samantha Fox'
+p286
+sVMN0000137401
+p287
+S'The Cyrkle'
+p288
+sVMN0000565388
+p289
+S'The Swinging Blue Jeans'
+p290
+sVMN0000103391
+p291
+S'Kris Jensen'
+p292
+sVMN0000205254
+p293
+S'Vic Damone'
+p294
+sVMN0000208774
+p295
+S'Janet Jackson'
+p296
+sVMN0000176332
+p297
+S'Right Said Fred'
+p298
+sVMN0000606283
+p299
+S'Al Jarreau'
+p300
+sVMN0000477834
+p301
+S'The New Seekers'
+p302
+sVMN0000564631
+p303
+S'The Sugarhill Gang'
+p304
+sVMN0000585896
+p305
+S'The Wallflowers'
+p306
+sVMN0000500889
+p307
+S'Minnie Riperton'
+p308
+sVMN0000478932
+p309
+S'504 Boyz'
+p310
+sVMN0000814387
+p311
+S'John Legend'
+p312
+sVMN0000165663
+p313
+S'Twisted Sister'
+p314
+sVMN0000689891
+p315
+S'Young MC'
+p316
+sVMN0000233147
+p317
+S'Howie Day'
+p318
+sVMN0000074195
+p319
+S'Natalie Cole'
+p320
+sVMN0000745915
+p321
+S'Paul Anka'
+p322
+sVMN0000780346
+p323
+S'Coolio'
+p324
+sVMN0000570046
+p325
+S'Marc Almond'
+p326
+sVMN0000524050
+p327
+S'Bryan Ferry'
+p328
+sVMN0000092189
+p329
+S'Inoj'
+p330
+sVMN0000036849
+p331
+S'Sonny James'
+p332
+sVMN0000177060
+p333
+S'Janis Joplin'
+p334
+sVMN0000775494
+p335
+S'Cherish'
+p336
+sVMN0000132305
+p337
+S'Clarence Reid'
+p338
+sVMN0000173563
+p339
+S'Freak Nasty'
+p340
+sVMN0000227675
+p341
+S'Walter Jackson'
+p342
+sVMN0000327765
+p343
+S'John Barry'
+p344
+sVMN0000552576
+p345
+S'Gino Soccio'
+p346
+sVMN0000019297
+p347
+S'America'
+p348
+sVMN0000180449
+p349
+S'Freddie Jackson'
+p350
+sVMN0000845662
+p351
+S'Jill Scott'
+p352
+sVMN0000420381
+p353
+S'OutKast'
+p354
+sVMN0000244048
+p355
+S'Sammie'
+p356
+sVMN0000857597
+p357
+S'E-40 Featuring Keak Da Sneak'
+p358
+sVMN0000383853
+p359
+S'Neal McCoy'
+p360
+sVMN0001759424
+p361
+S'The Glass Bottle'
+p362
+sVMN0000658950
+p363
+S'DJ Quik'
+p364
+sVMN0000743175
+p365
+S'Serj Tankian'
+p366
+sVMN0000651972
+p367
+S'H-Town'
+p368
+sVMN0000226556
+p369
+S'Dead Or Alive'
+p370
+sVMN0002344193
+p371
+S'Michael Holm'
+p372
+sVMN0000326964
+p373
+S'Jeremy Jordan'
+p374
+sVMN0000187907
+p375
+S'Aventura Featuring Don Omar'
+p376
+sVMN0000022255
+p377
+S'Paul Evans'
+p378
+sVMN0000022257
+p379
+S'Patty Smyth'
+p380
+sVMN0000605375
+p381
+S'Alan Jackson'
+p382
+sVMN0000936425
+p383
+S'Todd Rundgren'
+p384
+sVMN0000496487
+p385
+S'Adam Ant'
+p386
+sVMN0000312890
+p387
+S'Justin Timberlake'
+p388
+sVMN0000061172
+p389
+S'The Cars'
+p390
+sVMN0000024944
+p391
+S'Amy Grant'
+p392
+sVMN0000005307
+p393
+S'Alicia Keys'
+p394
+sVMN0000936190
+p395
+S'Stevie Nicks'
+p396
+sVMN0000143216
+p397
+S'James Otto'
+p398
+sVMN0000516202
+p399
+S'Brian Hyland'
+p400
+sVMN0000495201
+p401
+S'Mims'
+p402
+sVMN0000402872
+p403
+S'The Meters'
+p404
+sVMN0000807041
+p405
+S'Joey Scarbury'
+p406
+sVMN0000578031
+p407
+S'The Statler Brothers'
+p408
+sVMN0000545074
+p409
+S'George Michael'
+p410
+sVMN0000101946
+p411
+S'Isaac Hayes'
+p412
+sVMN0000275335
+p413
+S'Josh Groban'
+p414
+sVMN0000747506
+p415
+S'Patti Page'
+p416
+sVMN0000017929
+p417
+S'Patti Austin'
+p418
+sVMN0000146242
+p419
+S'Le Click'
+p420
+sVMN0000165117
+p421
+S'Tamia'
+p422
+sVMN0000414889
+p423
+S'The Presidents Of The United States Of America'
+p424
+sVMN0000068934
+p425
+S'Kenny G'
+p426
+sVMN0000002330
+p427
+S'Sergio Mendes'
+p428
+sVMN0000026825
+p429
+S'Paula Cole'
+p430
+sVMN0000685647
+p431
+S'Yes'
+p432
+sVMN0000120010
+p433
+S'Jack Johnson'
+p434
+sVMN0000665860
+p435
+S'Godsmack'
+p436
+sVMN0000653626
+p437
+S'DJ Company'
+p438
+sVMN0000811897
+p439
+S'John Michael Montgomery'
+p440
+sVMN0000081316
+p441
+S'Bone Thugs-N-Harmony'
+p442
+sVMN0000184043
+p443
+S'Foo Fighters'
+p444
+sVMN0000089710
+p445
+S'Billy Paul'
+p446
+sVMN0000180030
+p447
+S'For Real'
+p448
+sVMN0000040743
+p449
+S'Audioslave'
+p450
+sVMN0000354722
+p451
+S'Rick Astley'
+p452
+sVMN0000137390
+p453
+S'The Cure'
+p454
+sVMN0000234004
+p455
+S'Jeannie Seely'
+p456
+sVMN0000118189
+p457
+S'Clay Walker'
+p458
+sVMN0000143781
+p459
+S'The Del Fuegos'
+p460
+sVMN0000490304
+p461
+S'Thee Midniters'
+p462
+sVMN0000149044
+p463
+S'Barry White'
+p464
+sVMN0000051118
+p465
+S'The Marathons'
+p466
+sVMN0000361014
+p467
+S'Brandy Featuring Kanye West'
+p468
+sVMN0000502398
+p469
+S'Archie Bell & The Drells'
+p470
+sVMN0001193500
+p471
+S'Hughes/Thrall'
+p472
+sVMN0000632233
+p473
+S'Eric Church'
+p474
+sVMN0000560719
+p475
+S'High School Musical 2 Cast'
+p476
+sVMN0000128495
+p477
+S'Counting Crows Featuring Vanessa Carlton'
+p478
+sVMN0000617104
+p479
+S'Tommy Shane Steiner'
+p480
+sVMN0000745100
+p481
+S'Pajama Party'
+p482
+sVMN0000497236
+p483
+S'Adina Howard'
+p484
+sVMN0000771010
+p485
+S'The Left Banke'
+p486
+sVMN0000834314
+p487
+S'Jude Cole'
+p488
+sVMN0000171889
+p489
+S'Elephant Man'
+p490
+sVMN0000142545
+p491
+S'JoBoxers'
+p492
+sVMN0000006320
+p493
+S'Toto'
+p494
+sVMN0000154967
+p495
+S'Shades Of Blue'
+p496
+sVMN0000075747
+p497
+S'The Clash'
+p498
+sVMN0000597309
+p499
+S'Tina Turner'
+p500
+sVMN0000376422
+p501
+S'Queens Of The Stone Age'
+p502
+sVMN0000749734
+p503
+S'Slade'
+p504
+sVMN0000423267
+p505
+S'Small Faces'
+p506
+sVMN0000678339
+p507
+S'XTC'
+p508
+sVMN0000128143
+p509
+S'Twista Featuring Trey Songz'
+p510
+sVMN0000172772
+p511
+S'Ed Ames'
+p512
+sVMN0000370484
+p513
+S'Martika'
+p514
+sVMN0000554963
+p515
+S'Harry Chapin'
+p516
+sVMN0000026227
+p517
+S'Smokie'
+p518
+sVMN0000814606
+p519
+S'Wanda Jackson'
+p520
+sVMN0000745964
+p521
+S'The Allman Brothers Band'
+p522
+sVMN0000846671
+p523
+S'Mark-Almond'
+p524
+sVMN0000619750
+p525
+S'Tommy Shaw'
+p526
+sVMN0000204386
+p527
+S'James Taylor'
+p528
+sVMN0000575051
+p529
+S"Herman's Hermits"
+p530
+sVMN0000247250
+p531
+S'When In Rome'
+p532
+sVMN0000838195
+p533
+S'Percy Sledge'
+p534
+sVMN0000167878
+p535
+S'Frankie J'
+p536
+sVMN0000212614
+p537
+S'Deodato'
+p538
+sVMN0000106514
+p539
+S'Boots Randolph'
+p540
+sVMN0000021128
+p541
+S'Trillville'
+p542
+sVMN0000953998
+p543
+S'Mantovani'
+p544
+sVMN0000239827
+p545
+S'John Mayer'
+p546
+sVMN0000748994
+p547
+S'Trick Daddy Featuring LaTocha Scott'
+p548
+sVMN0000255576
+p549
+S'Honeymoon Suite'
+p550
+sVMN0000479687
+p551
+S'Midge Ure'
+p552
+sVMN0000390532
+p553
+S'Oingo Boingo'
+p554
+sVMN0000124492
+p555
+S'Beck'
+p556
+sVMN0000924318
+p557
+S'Monchy & Alexandra'
+p558
+sVMN0000763798
+p559
+S'Bobby Comstock'
+p560
+sVMN0000314505
+p561
+S'Vanessa Williams'
+p562
+sVMN0000087305
+p563
+S'Kid Frost'
+p564
+sVMN0000813392
+p565
+S'Dean Martin'
+p566
+sVMN0000391933
+p567
+S'Rainbow'
+p568
+sVMN0000170454
+p569
+S'Carla Thomas'
+p570
+sVMN0000753963
+p571
+S'The Association'
+p572
+sVMN0000181376
+p573
+S'UB40'
+p574
+sVMN0000303061
+p575
+S'Junior M.A.F.I.A.'
+p576
+sVMN0000138332
+p577
+S'The Crystals'
+p578
+sVMN0000004553
+p579
+S'T-Connection'
+p580
+sVMN0000080780
+p581
+S'Sheryl Crow'
+p582
+sVMN0000251595
+p583
+S'Whitesnake'
+p584
+sVMN0000258882
+p585
+S'Jon Secada'
+p586
+sVMN0000325459
+p587
+S'R.E.M.'
+p588
+sVMN0000014651
+p589
+S'Patsy Cline'
+p590
+sVMN0000551115
+p591
+S'J. Holiday'
+p592
+sVMN0000013384
+p593
+S'Tanya Tucker'
+p594
+sVMN0000147785
+p595
+S'Eve 6'
+p596
+sVMN0000418981
+p597
+S'The Shirelles'
+p598
+sVMN0000562663
+p599
+S'Harpers Bizarre'
+p600
+sVMN0000809702
+p601
+S'David Hudson'
+p602
+sVMN0000414251
+p603
+S'Otis Redding'
+p604
+sVMN0000084446
+p605
+S'India.Arie'
+p606
+sVMN0000806507
+p607
+S'Tyrone Davis'
+p608
+sVMN0000664093
+p609
+S'Hamilton Bohannon'
+p610
+sVMN0000157314
+p611
+S'Tag Team'
+p612
+sVMN0000094813
+p613
+S'Black Rob'
+p614
+sVMN0000238069
+p615
+S'Robin S.'
+p616
+sVMN0000040124
+p617
+S'The Ataris'
+p618
+sVMN0000898479
+p619
+S'The Smithereens'
+p620
+sVMN0000571797
+p621
+S'Daryl Braithwaite'
+p622
+sVMN0000072003
+p623
+S'Ice-T'
+p624
+sVMN0000058361
+p625
+S'Betty Everett'
+p626
+sVMN0000898188
+p627
+S'Mint Condition'
+p628
+sVMN0000046120
+p629
+S'The Amboy Dukes'
+p630
+sVMN0000084209
+p631
+S'Kiss'
+p632
+sVMN0000052900
+p633
+S"The Lovin' Spoonful"
+p634
+sVMN0000112360
+p635
+S'Kon Kan'
+p636
+sVMN0000549192
+p637
+S"Ghost Town DJ's"
+p638
+sVMN0000463435
+p639
+S'Michael Nesmith'
+p640
+sVMN0000029808
+p641
+S'Tesla'
+p642
+sVMN0000987621
+p643
+S'Foreigner'
+p644
+sVMN0000903609
+p645
+S'Jim Reeves'
+p646
+sVMN0000892827
+p647
+S'The Notorious B.I.G.'
+p648
+sVMN0000892823
+p649
+S'Mick Jagger'
+p650
+sVMN0000725395
+p651
+S'Fergie'
+p652
+sVMN0000301404
+p653
+S'Rick Derringer'
+p654
+sVMN0000674332
+p655
+S'Herb Alpert'
+p656
+sVMN0000508449
+p657
+S"Alan O'Day"
+p658
+sVMN0000148477
+p659
+S'Clarence Carter'
+p660
+sVMN0000508443
+p661
+S'Air Supply'
+p662
+sVMN0000926108
+p663
+S'Montgomery Gentry'
+p664
+sVMN0000286115
+p665
+S'Lorrie Morgan'
+p666
+sVMN0000342004
+p667
+S'Phil Vassar'
+p668
+sVMN0000600264
+p669
+S'Mr. Big'
+p670
+sVMN0000466759
+p671
+S'Michael W. Smith'
+p672
+sVMN0000206241
+p673
+S'Eurythmics'
+p674
+sVMN0000038469
+p675
+S'Beastie Boys'
+p676
+sVMN0000840050
+p677
+S'Jefferson Starship'
+p678
+sVMN0000800614
+p679
+S'2nd II None'
+p680
+sVMN0000868456
+p681
+S'Melba Montgomery'
+p682
+sVMN0000812241
+p683
+S'Wade Hayes'
+p684
+sVMN0000038466
+p685
+S'Andy Williams'
+p686
+sVMN0000011707
+p687
+S'Steely Dan'
+p688
+sVMN0000090169
+p689
+S'King Floyd'
+p690
+sVMN0000808546
+p691
+S'Joe Public'
+p692
+sVMN0000093632
+p693
+S'Robert Palmer'
+p694
+sVMN0000049062
+p695
+S'Simple Plan'
+p696
+sVMN0000234384
+p697
+S"Lil' Romeo"
+p698
+sVMN0000354733
+p699
+S'Los Lobos'
+p700
+sVMN0000932665
+p701
+S'Alanis Morissette'
+p702
+sVMN0000291687
+p703
+S'Robert Tepper'
+p704
+sVMN0000260212
+p705
+S'Pet Shop Boys'
+p706
+sVMN0000163213
+p707
+S'Tweet'
+p708
+sVMN0000242211
+p709
+S'Saliva'
+p710
+sVMN0000411689
+p711
+S'Ray Peterson'
+p712
+sVMN0000092942
+p713
+S'Chic'
+p714
+sVMN0000037730
+p715
+S'Pearl Jam'
+p716
+sVMN0000078044
+p717
+S'Bill Withers'
+p718
+sVMN0000007689
+p719
+S'TLC'
+p720
+sVMN0000317417
+p721
+S'Quicksilver Messenger Service'
+p722
+sVMN0000169677
+p723
+S'Ernie K-Doe'
+p724
+sVMN0000543055
+p725
+S'Georgie Fame'
+p726
+sVMN0000568709
+p727
+S'Darren Hayes'
+p728
+sVMN0000422891
+p729
+S'Nivea'
+p730
+sVMN0000387720
+p731
+S'Michael Bolton'
+p732
+sVMN0000537548
+p733
+S'Busta Rhymes'
+p734
+sVMN0000673486
+p735
+S'Marc Anthony'
+p736
+sVMN0000314050
+p737
+S'Narada Michael Walden'
+p738
+sVMN0000378624
+p739
+S'Quincy Jones Featuring Ray Charles '
+p740
+sVMN0000665908
+p741
+S'Good Charlotte'
+p742
+sVMN0000037931
+p743
+S'The Alarm'
+p744
+sVMN0000089042
+p745
+S'Coko'
+p746
+sVMN0000006334
+p747
+S'Tony Bennett'
+p748
+sVMN0000848688
+p749
+S'J.J. Fad'
+p750
+sVMN0000366407
+p751
+S'Nancy Sinatra'
+p752
+sVMN0000738402
+p753
+S'Grandmaster Flash'
+p754
 sVMN0000768321
-p2419
+p755
 S'INXS'
-p2420
-sVMN0000757328
-p2421
-S'The Marketts'
-p2422
+p756
 sVMN0000822837
-p2423
+p757
 S'Dickie Goodman'
-p2424
-sVMN0000620386
-p2425
-S'Tommy James'
-p2426
-sVMN0000045313
-p2427
-S'Steve Winwood'
-p2428
+p758
 sVMN0000768328
-p2429
+p759
 S'Kellie Coffey'
-p2430
+p760
 sVMN0000007448
-p2431
+p761
 S'The Delfonics'
-p2432
+p762
+sVMN0000270064
+p763
+S'Lil Rob'
+p764
+sVMN0002453941
+p765
+S'Portrait'
+p766
+sVMN0000196544
+p767
+S'Della Reese'
+p768
+sVMN0000344609
+p769
+S'Jesus Jones'
+p770
+sVMN0000478833
+p771
+S'The Outhere Brothers'
+p772
+sVMN0000051909
+p773
+S'Carpenters'
+p774
+sVMN0000167517
+p775
+S'Dire Straits'
+p776
+sVMN0000299668
+p777
+S'KC & The Sunshine Band'
+p778
+sVMN0000739041
+p779
+S'Fountains Of Wayne'
+p780
+sVMN0000768926
+p781
+S'Bill Quateman'
+p782
+sVMN0000008828
+p783
+S'Spice Girls'
+p784
+sVMN0000677781
+p785
+S'Wilson Pickett'
+p786
+sVMN0000239921
+p787
+S'Depeche Mode'
+p788
+sVMN0000744573
+p789
+S'TKA'
+p790
+sVMN0000913490
+p791
+S'Cheyenne Kimball'
+p792
+sVMN0000866491
+p793
+S'Maxwell'
+p794
+sVMN0000511235
+p795
+S'Alana Davis'
+p796
+sVMN0000633358
+p797
+S'Danity Kane'
+p798
+sVMN0000018977
+p799
+S'Barry Manilow'
+p800
+sVMN0000036641
+p801
+S'Paul Wall Featuring Big Pokey'
+p802
+sVMN0000209142
+p803
+S'George Harrison'
+p804
+sVMN0000567153
+p805
+S'Daughtry'
+p806
+sVMN0000114342
+p807
+S'The Doors'
+p808
+sVMN0000018419
+p809
+S'Patti Drew'
+p810
+sVMN0000141838
+p811
+S'Eddie Money'
+p812
+sVMN0000824022
+p813
+S'Little Richard'
+p814
+sVMN0000186185
+p815
+S'Celine Dion'
+p816
+sVMN0000103484
+p817
+S'Indigo Girls'
+p818
+sVMN0000078532
+p819
+S'Inner Circle'
+p820
+sVMN0000226312
+p821
+S'Lil Suzy'
+p822
+sVMN0000475209
+p823
+S'The Strangeloves'
+p824
+sVMN0000340152
+p825
+S'Ratt'
+p826
+sVMN0000930722
+p827
+S'Timi Yuro'
+p828
+sVMN0000765011
+p829
+S'Ian Whitcomb'
+p830
+sVMN0000033580
+p831
+S'Super Cat'
+p832
+sVMN0000147468
+p833
+S'Clay Aiken'
+p834
+sVMN0000614830
+p835
+S'Metro Station'
+p836
+sVMN0000481057
+p837
+S'Orchestral Manoeuvres In The Dark'
+p838
+sVMN0000342834
+p839
+S'Mel Carter'
+p840
+sVMN0000315336
+p841
+S'Perry Como'
+p842
+sVMN0000130028
+p843
+S'Freddie Mercury'
+p844
+sVMN0000119469
+p845
+S'Corey Hart'
+p846
+sVMN0000222748
+p847
+S'Vixen'
+p848
+sVMN0000152228
+p849
+S'Club Nouveau'
+p850
+sVMN0000228444
+p851
+S'Lee Ritenour'
+p852
+sVMN0000618713
+p853
+S'Aldo Nova'
+p854
+sVMN0000195368
+p855
+S'Dorothy Norwood'
+p856
+sVMN0000013393
+p857
+S'Tower Of Power'
+p858
+sVMN0000784122
+p859
+S'Cupid'
+p860
+sVMN0000028619
+p861
+S'Steve Arrington'
+p862
+sVMN0000664883
+p863
+S'Gloria Lynne'
+p864
+sVMN0000600075
+p865
+S'Adam Wade'
+p866
+sVMN0000043714
+p867
+S'Bee Gees'
+p868
+sVMN0000610339
+p869
+S'Toad The Wet Sprocket'
+p870
+sVMN0000806991
+p871
+S'Vikki Carr'
+p872
+sVMN0000334193
+p873
+S'New Order'
+p874
+sVMN0000135306
+p875
+S"The Cryan' Shames"
+p876
+sVMN0000346336
+p877
+S'Pink Floyd'
+p878
+sVMN0000383056
+p879
+S'The Click Five'
+p880
+sVMN0000131681
+p881
+S'Pat Boone'
+p882
+sVMN0003116716
+p883
+S'Eye To Eye'
+p884
+sVMN0000179021
+p885
+S'Don Fardon'
+p886
+sVMN0000090389
+p887
+S'Idris Muhammad'
+p888
+sVMN0000756380
+p889
+S'Blues Magoos'
+p890
+sVMN0000232564
+p891
+S'John Lennon'
+p892
+sVMN0000249559
+p893
+S'Deryl Dodd'
+p894
+sVMN0000495861
+p895
+S'Mindy McCready'
+p896
+sVMN0000147315
+p897
+S'Cypress Hill'
+p898
+sVMN0000625203
+p899
+S'Britny Fox'
+p900
+sVMN0000945196
+p901
+S'Gerry Rafferty'
+p902
+sVMN0000797452
+p903
+S'Stage Dolls'
+p904
+sVMN0000393789
+p905
+S'Restless Heart Featuring Warren Hill'
+p906
+sVMN0000923033
+p907
+S'Styx'
+p908
+sVMN0000567624
+p909
+S'The Stylistics'
+p910
+sVMN0002907557
+p911
+S'The Raindrops'
+p912
+sVMN0000124881
+p913
+S'Craig Morgan'
+p914
+sVMN0000936009
+p915
+S'Heather Headley'
+p916
+sVMN0000411761
+p917
+S'Nina Simone'
+p918
+sVMN0000825883
+p919
+S'Dierks Bentley'
+p920
+sVMN0000791483
+p921
+S'Dwight Yoakam'
+p922
+sVMN0000760977
+p923
+S'The Five Stairsteps'
+p924
+sVMN0000080494
+p925
+S'Billy Gilman'
+p926
+sVMN0000135059
+p927
+S'Classics IV'
+p928
+sVMN0000283405
+p929
+S'Mark Chesnutt'
+p930
+sVMN0000017387
+p931
+S'Sixpence None The Richer'
+p932
+sVMN0000210830
+p933
+S'Jamie Foxx Featuring Twista'
+p934
+sVMN0000961234
+p935
+S'Dave Matthews Band'
+p936
+sVMN0000812920
+p937
+S'Dee Dee Sharp'
+p938
+sVMN0000543595
+p939
+S'Candlebox'
+p940
+sVMN0000102050
+p941
+S'The Kingston Trio'
+p942
+sVMN0000123132
+p943
+S'Barbara Lewis'
+p944
+sVMN0000897205
+p945
+S'Miki Howard'
+p946
+sVMN0002855999
+p947
+S'Freddy King'
+p948
+sVMN0000955647
+p949
+S'Mason Williams'
+p950
+sVMN0000771638
+p951
+S'Bonnie Guitar'
+p952
+sVMN0000137430
+p953
+S'The Cover Girls'
+p954
+sVMN0000260206
+p955
+S'Van Halen'
+p956
+sVMN0000011821
+p957
+S'American Idol Finalists'
+p958
+sVMN0000409670
+p959
+S'Melanie'
+p960
+sVMN0000053190
+p961
+S'The Castells'
+p962
+sVMN0000243008
+p963
+S'Weezer'
+p964
+sVMN0000662692
+p965
+S'Glenn Medeiros'
+p966
+sVMN0000574102
+p967
+S'Dashboard Confessional'
+p968
+sVMN0000350139
+p969
+S"Plain White T's"
+p970
+sVMN0000198426
+p971
+S'Changing Faces'
+p972
+sVMN0000921965
+p973
+S'The Ventures'
+p974
+sVMN0000089058
+p975
+S'Billy Ocean'
+p976
+sVMN0000149973
+p977
+S'Barbara Lynn'
+p978
+sVMN0000025335
+p979
+S'Trina'
+p980
+sVMN0000051828
+p981
+S'Cassidy Featuring Swizz Beatz'
+p982
+sVMN0000100160
+p983
+S'The Kinks'
+p984
+sVMN0000182897
+p985
+S'Carrie Lucas'
+p986
+sVMN0000226869
+p987
+S'John Paul Young'
+p988
+sVMN0000869487
+p989
+S'Ray Conniff'
+p990
+sVMN0000861687
+p991
+S'Nelly Furtado'
+p992
+sVMN0000021744
+p993
+S'Stephen Stills'
+p994
+sVMN0000567570
+p995
+S'Thompson Twins'
+p996
+sVMN0000169795
+p997
+S'Fiona Apple'
+p998
+sVMN0000758630
+p999
+S'Better Than Ezra'
+p1000
+sVMN0000267505
+p1001
+S'Jennifer Warnes'
+p1002
+sVMN0000000674
+p1003
+S'P.J. Proby'
+p1004
+sVMN0000219203
+p1005
+S'U2'
+p1006
+sVMN0000330575
+p1007
+S'Neil Sedaka'
+p1008
+sVMN0000481827
+p1009
+S'The Tractors'
+p1010
+sVMN0000045972
+p1011
+S'Swing Out Sister'
+p1012
+sVMN0000891911
+p1013
+S'Midnight Star'
+p1014
+sVMN0000166033
+p1015
+S'Elvis Crespo'
+p1016
+sVMN0000074520
+p1017
+S'The Hives'
+p1018
+sVMN0000343947
+p1019
+S'Real Life'
+p1020
+sVMN0000020984
+p1021
+S'Shelley Fabares'
+p1022
+sVMN0001772529
+p1023
+S'Pockets'
+p1024
+sVMN0000188342
+p1025
+S'Freddy Fender'
+p1026
+sVMN0000814974
+p1027
+S'Del Reeves'
+p1028
+sVMN0000041874
+p1029
+S'The Beach Boys'
+p1030
+sVMN0000677575
+p1031
+S'Blaine Larsen'
+p1032
+sVMN0000696015
+p1033
+S'Phoebe Snow'
+p1034
+sVMN0000097654
+p1035
+S'Kim Carnes'
+p1036
+sVMN0000070715
+p1037
+S'Bobby Darin'
+p1038
+sVMN0000258955
+p1039
+S'Juvenile'
+p1040
+sVMN0000792839
+p1041
+S'Shanice'
+p1042
+sVMN0000837886
+p1043
+S'Lit'
+p1044
+sVMN0000874289
+p1045
+S'Menudo'
+p1046
+sVMN0000162487
+p1047
+S'Dixie Chicks'
+p1048
+sVMN0000289058
+p1049
+S'Saigon Kick'
+p1050
+sVMN0000930642
+p1051
+S'Morris Day'
+p1052
+sVMN0000480086
+p1053
+S'Modest Mouse'
+p1054
+sVMN0000671746
+p1055
+S'Major Lance'
+p1056
+sVMN0000355616
+p1057
+S'Poison'
+p1058
+sVMN0000192436
+p1059
+S'Chairmen Of The Board'
+p1060
+sVMN0000186978
+p1061
+S'Mack 10'
+p1062
+sVMN0000170381
+p1063
+S'Europe'
+p1064
+sVMN0000162269
+p1065
+S'Faith Hill'
+p1066
+sVMN0000323652
+p1067
+S'Ned Miller'
+p1068
+sVMN0000224369
+p1069
+S'John Miles'
+p1070
+sVMN0000890799
+p1071
+S'The McCoys'
+p1072
+sVMN0000898275
+p1073
+S'Missing Persons'
+p1074
+sVMN0000366681
+p1075
+S'Paramore'
+p1076
+sVMN0000649435
+p1077
+S'Gerald Levert'
+p1078
+sVMN0000801971
+p1079
+S'Bob Geldof'
+p1080
+sVMN0000490852
+p1081
+S'Our Lady Peace'
+p1082
+sVMN0000784759
+p1083
+S'Joanie Sommers'
+p1084
+sVMN0000033206
+p1085
+S'Andrea Martin'
+p1086
+sVMN0000364572
+p1087
+S'Kathy Troccoli'
+p1088
+sVMN0000154927
+p1089
+S'Tony Terry'
+p1090
+sVMN0000032401
+p1091
+S'Triumph'
+p1092
+sVMN0000325366
+p1093
+S'R.B. Greaves'
+p1094
+sVMN0000291043
+p1095
+S'Journey'
+p1096
+sVMN0000028772
+p1097
+S'The 5th Dimension'
+p1098
+sVMN0000477068
+p1099
+S'4 The Cause'
+p1100
+sVMN0000548338
+p1101
+S'Cannonball Adderley'
+p1102
+sVMN0000565727
+p1103
+S'Darrell Banks'
+p1104
+sVMN0000944349
+p1105
+S'Cameo'
+p1106
+sVMN0000264350
+p1107
+S'Sean Paul'
+p1108
+sVMN0000667794
+p1109
+S'Gordon Lightfoot'
+p1110
+sVMN0000294923
+p1111
+S'Judy Collins'
+p1112
+sVMN0000147635
+p1113
+S'Carly Simon'
+p1114
+sVMN0000937703
+p1115
+S'The Brothers Four'
+p1116
+sVMN0000572106
+p1117
+S'The Three Degrees'
+p1118
+sVMN0000048622
+p1119
+S'The Marcels'
+p1120
+sVMN0000317093
+p1121
+S'Nat King Cole'
+p1122
+sVMN0000868616
+p1123
+S'Nickelback'
+p1124
+sVMN0000252495
+p1125
+S'Wayne Newton'
+p1126
+sVMN0000500612
+p1127
+S'Adam Sandler'
+p1128
+sVMN0000569256
+p1129
+S'The Tams'
+p1130
+sVMN0000287407
+p1131
+S'Jessica Simpson'
+p1132
+sVMN0000831448
+p1133
+S'Romeo Void'
+p1134
+sVMN0000044764
+p1135
+S'Blondie'
+p1136
+sVMN0000058549
+p1137
+S'Elvis Costello'
+p1138
+sVMN0000136640
+p1139
+S'The KLF Featuring Tammy Wynette'
+p1140
+sVMN0000585690
+p1141
+S'Yankee Grey'
+p1142
+sVMN0000674662
+p1143
+S'Manfred Mann'
+p1144
+sVMN0000664459
+p1145
+S'Da Brat'
+p1146
+sVMN0000799100
+p1147
+S'Great White'
+p1148
+sVMN0000279337
+p1149
+S'Sade'
+p1150
+sVMN0000498484
+p1151
+S'The Rembrandts'
+p1152
+sVMN0000520545
+p1153
+S'My Chemical Romance'
+p1154
+sVMN0000375239
+p1155
+S'Marty Wilde'
+p1156
+sVMN0000297894
+p1157
+S'Poco'
+p1158
+sVMN0000201983
+p1159
+S'Westlife'
+p1160
+sVMN0000242543
+p1161
+S'West Street Mob'
+p1162
+sVMN0000768010
+p1163
+S'The Ides Of March'
+p1164
+sVMN0000938878
+p1165
+S'Brownsville Station'
+p1166
+sVMN0000178775
+p1167
+S'Figures On A Beach'
+p1168
+sVMN0000661795
+p1169
+S'DMX'
+p1170
+sVMN0000221059
+p1171
+S'Jason Mraz'
+p1172
+sVMN0000029600
+p1173
+S'Smash Mouth'
+p1174
+sVMN0000203639
+p1175
+S'Johnny Rivers'
+p1176
+sVMN0000477875
+p1177
+S'The Supremes'
+p1178
+sVMN0000758444
+p1179
+S'Blur'
+p1180
+sVMN0000270667
+p1181
+S'Live'
+p1182
+sVMN0000894962
+p1183
+S'The Postal Service'
+p1184
+sVMN0000815236
+p1185
+S'Delbert McClinton'
+p1186
+sVMN0000143951
+p1187
+S'Faron Young'
+p1188
+sVMN0000776093
+p1189
+S'Kylie Minogue'
+p1190
+sVMN0000754251
+p1191
+S'Suzanne Vega'
+p1192
+sVMN0000100116
+p1193
+S'Charlie Wilson'
+p1194
+sVMN0000838524
+p1195
+S'Savoy Brown'
+p1196
+sVMN0000222436
+p1197
+S'David Lee Roth'
+p1198
+sVMN0000065231
+p1199
+S'Keith Martin'
+p1200
+sVMN0000010458
+p1201
+S'Alison Moyet'
+p1202
+sVMN0000475650
+p1203
+S'The Outfield'
+p1204
+sVMN0000158309
+p1205
+S'Pat Benatar'
+p1206
+sVMN0000156950
+p1207
+S'Chad Brock'
+p1208
+sVMN0000201297
+p1209
+S'Foghat'
+p1210
+sVMN0000175286
+p1211
+S'Dolly Parton'
+p1212
+sVMN0000030928
+p1213
+S'Tevin Campbell'
+p1214
+sVMN0000000441
+p1215
+S'P.O.D.'
+p1216
+sVMN0000920939
+p1217
+S'The Undisputed Truth'
+p1218
+sVMN0000953430
+p1219
+S'Haysi Fantayzee'
+p1220
+sVMN0000284667
+p1221
+S'Robbie Nevil'
+p1222
+sVMN0000503242
+p1223
+S'Miranda Lambert'
+p1224
+sVMN0000315142
+p1225
+S'Scandal'
+p1226
+sVMN0000599389
+p1227
+S"Mother's Finest"
+p1228
+sVMN0000215513
+p1229
+S'Ciara'
+p1230
+sVMN0000221235
+p1231
+S'David Laflamme'
+p1232
+sVMN0000115554
+p1233
+S'LSG'
+p1234
+sVMN0000473554
+p1235
+S'Olivia Newton-John'
+p1236
+sVMN0000772567
+p1237
+S'Iron Butterfly'
+p1238
+sVMN0001176481
+p1239
+S'The Alan Parsons Project'
+p1240
+sVMN0000804289
+p1241
+S'Lynn Anderson'
+p1242
+sVMN0000046814
+p1243
+S'Blake Shelton'
+p1244
+sVMN0000762929
+p1245
+S'B.G. The Prince Of Rap'
+p1246
+sVMN0000607028
+p1247
+S'Arthur Lyman'
+p1248
+sVMN0000293779
+p1249
+S'Royal Scots Dragoon Guards'
+p1250
+sVMN0000085915
+p1251
+S'Billy Joel'
+p1252
+sVMN0000091549
+p1253
+S'Chevelle'
+p1254
+sVMN0000322027
+p1255
+S'Nelson Riddle'
+p1256
+sVMN0000604489
+p1257
+S'Timmy T'
+p1258
+sVMN0000046727
+p1259
+S'Edwin Starr'
+p1260
+sVMN0000772745
+p1261
+S'Incubus'
+p1262
+sVMN0000152023
+p1263
+S'Everclear'
+p1264
+sVMN0000479149
+p1265
+S'A Perfect Circle'
+p1266
+sVMN0000005501
+p1267
+S'System Of A Down'
+p1268
+sVMN0000033560
+p1269
+S'Suzi Quatro'
+p1270
+sVMN0000373634
+p1271
+S'Nas'
+p1272
+sVMN0000359119
+p1273
+S'KRS-One'
+p1274
+sVMN0000619536
+p1275
+S'Pretty Ricky'
+p1276
+sVMN0000471156
+p1277
+S'Mickey Gilley'
+p1278
+sVMN0000390477
+p1279
+S'New Kids On The Block'
+p1280
+sVMN0000069153
+p1281
+S'Joan Baez'
+p1282
+sVMN0000673933
+p1283
+S'Mandy Moore'
+p1284
+sVMN0000591104
+p1285
+S'Mongo Santamaria'
+p1286
+sVMN0000022928
+p1287
+S'Steppenwolf'
+p1288
+sVMN0000472440
+p1289
+S'The Olympics'
+p1290
+sVMN0000322733
+p1291
+S'Jermaine Dupri Featuring Nate Dogg'
+p1292
+sVMN0000611797
+p1293
+S'Lady Sovereign'
+p1294
+sVMN0000393106
+p1295
+S'The Newbeats'
+p1296
+sVMN0000858710
+p1297
+S'Marty Robbins'
+p1298
+sVMN0000737886
+p1299
+S'Enrique Iglesias'
+p1300
+sVMN0000160690
+p1301
+S'En Vogue'
+p1302
+sVMN0000483563
+p1303
+S'The Verve Pipe'
+p1304
+sVMN0000852656
+p1305
+S'RuPaul'
+p1306
+sVMN0000061226
+p1307
+S'Babyface'
+p1308
+sVMN0000077283
+p1309
+S'Geto Boys Featuring Flaj'
+p1310
+sVMN0000312782
+p1311
+S'Keith Carradine'
+p1312
+sVMN0000194018
+p1313
+S'Del Shannon'
+p1314
+sVMN0000059156
+p1315
+S'B.B. King'
+p1316
+sVMN0000490860
+p1317
+S'Three Days Grace'
+p1318
+sVMN0000068551
+p1319
+S'Kenny Chesney'
+p1320
+sVMN0000061045
+p1321
+S'Bobby Caldwell'
+p1322
+sVMN0000805661
+p1323
+S'Humble Pie'
+p1324
+sVMN0000765075
+p1325
+S'The Honeycombs'
+p1326
+sVMN0000195729
+p1327
+S'Champaign'
+p1328
+sVMN0000220590
+p1329
+S'MC Lyte'
+p1330
+sVMN0000144847
+p1331
+S'Eagles'
+p1332
+sVMN0000689326
+p1333
+S'Will To Power'
+p1334
+sVMN0000087697
+p1335
+S'Kem'
+p1336
+sVMN0000153443
+p1337
+S'Fabolous'
+p1338
+sVMN0000146755
+p1339
+S'Cutting Crew'
+p1340
+sVMN0001009342
+p1341
+S'Jake Owen'
+p1342
+sVMN0000164156
+p1343
+S'Tammy Cochran'
+p1344
+sVMN0000121236
+p1345
+S'Cartel'
+p1346
+sVMN0000185669
+p1347
+S'Mac Davis'
+p1348
+sVMN0000577627
+p1349
+S'The Who'
+p1350
+sVMN0000746302
+p1351
+S'Train'
+p1352
+sVMN0000550120
+p1353
+S'High School Musical Cast'
+p1354
+sVMN0000210323
+p1355
+S'Joe Tex'
+p1356
+sVMN0000796734
+p1357
+S'Elton John'
+p1358
+sVMN0000796736
+p1359
+S'Elvin Bishop'
+p1360
+sVMN0000847006
+p1361
+S'D4L'
+p1362
+sVMN0000944241
+p1363
+S'George Hamilton IV'
+p1364
+sVMN0000077264
+p1365
+S'Bad English'
+p1366
+sVMN0000869649
+p1367
+S'No Mercy'
+p1368
+sVMN0000524837
+p1369
+S'Mrs. Miller'
+p1370
+sVMN0000882956
+p1371
+S'Merry Clayton'
+p1372
+sVMN0000467382
+p1373
+S'Michael Penn'
+p1374
+sVMN0000163229
+p1375
+S'Electric Light Orchestra'
+p1376
+sVMN0000181817
+p1377
+S'Caron Wheeler'
+p1378
+sVMN0000674011
+p1379
+S'Manu Dibango'
+p1380
+sVMN0000921895
+p1381
+S'2Pac'
+p1382
+sVMN0001572321
+p1383
+S'Tourists'
+p1384
+sVMN0000069986
+p1385
+S'Kenny Rogers'
+p1386
+sVMN0000182415
+p1387
+S'Fugees'
+p1388
+sVMN0000351227
+p1389
+S'Richard Marx'
+p1390
+sVMN0000812877
+p1391
+S'Deep Blue Something'
+p1392
+sVMN0000858827
+p1393
+S'Queen'
+p1394
+sVMN0000031685
+p1395
+S'Paul Simon'
+p1396
+sVMN0000758943
+p1397
+S'Big Brother & The Holding Company'
+p1398
+sVMN0000057827
+p1399
+S'The Main Ingredient'
+p1400
+sVMN0000154544
+p1401
+S'Green Day'
+p1402
+sVMN0000665957
+p1403
+S'Harold Melvin & The Blue Notes'
+p1404
+sVMN0000770059
+p1405
+S'Born Jamericans'
+p1406
+sVMN0000270497
+p1407
+S'Peter Schilling'
+p1408
+sVMN0000599732
+p1409
+S'Arrested Development'
+p1410
+sVMN0000270491
+p1411
+S'Joni Mitchell'
+p1412
+sVMN0000884962
+p1413
+S'Regina Belle'
+p1414
+sVMN0000367188
+p1415
+S'Rihanna'
+p1416
+sVMN0000068155
+p1417
+S'The Chantels'
+p1418
+sVMN0000581859
+p1419
+S'The Vogues'
+p1420
+sVMN0000011597
+p1421
+S'The American Breed'
+p1422
+sVMN0000123268
+p1423
+S'Webbie'
+p1424
+sVMN0000122023
+p1425
+S'Cilla Black'
+p1426
+sVMN0000178345
+p1427
+S'Jane Child'
+p1428
+sVMN0000946137
+p1429
+S'Canned Heat'
+p1430
+sVMN0000815575
+p1431
+S'Lena Horne'
+p1432
+sVMN0000502371
+p1433
+S'Ciara Featuring Missy Elliott'
+p1434
+sVMN0000604924
+p1435
+S'Arthur Conley'
+p1436
+sVMN0000818200
+p1437
+S'Westside Connection'
+p1438
+sVMN0000407986
+p1439
+S'Melissa Manchester'
+p1440
+sVMN0000129817
+p1441
+S'Shabba Ranks'
+p1442
+sVMN0000590285
+p1443
+S'Billy Preston'
+p1444
+sVMN0000041857
+p1445
+S'Souls Of Mischief'
+p1446
+sVMN0000405968
+p1447
+S'The Real Thing'
+p1448
+sVMN0000814220
+p1449
+S'Debby Boone'
+p1450
+sVMN0000359613
+p1451
+S'Rick Springfield'
+p1452
+sVMN0000205180
+p1453
+S'Dr. John'
+p1454
+sVMN0000377035
+p1455
+S'Mass Production'
+p1456
+sVMN0000383889
+p1457
+S'matchbox twenty'
+p1458
+sVMN0000349555
+p1459
+S'Jimmy Holiday'
+p1460
+sVMN0000376204
+p1461
+S'Mary J. Blige'
+p1462
+sVMN0000571394
+p1463
+S'A Few Good Men'
+p1464
+sVMN0000192382
+p1465
+S'Deep Purple'
+p1466
+sVMN0000738674
+p1467
+S'Donna Fargo'
+p1468
+sVMN0000132449
+p1469
+S'Crystal Gayle'
+p1470
+sVMN0000064303
+p1471
+S'Badfinger'
+p1472
+sVMN0000306258
+p1473
+S'Ludacris'
+p1474
+sVMN0000282766
+p1475
+S'Loudon Wainwright III'
+p1476
+sVMN0000479772
+p1477
+S'The Motels'
+p1478
+sVMN0000293896
+p1479
+S'Rod Stewart'
+p1480
+sVMN0000096613
+p1481
+S'Bonnie Raitt'
+p1482
+sVMN0000196976
+p1483
+S'Gretchen Wilson'
+p1484
+sVMN0003389510
+p1485
+S'Marc Nelson'
+p1486
+sVMN0000168173
+p1487
+S'Maria Mena'
+p1488
+sVMN0000144458
+p1489
+S'Curtis Mayfield'
+p1490
+sVMN0000119651
+p1491
+S'J.J. Cale'
+p1492
+sVMN0000303626
+p1493
+S'Kansas'
+p1494
+sVMN0000604852
+p1495
+S'Aerosmith'
+p1496
+sVMN0000073806
+p1497
+S'The Highwaymen'
+p1498
+sVMN0000316834
+p1499
+S'Marvin Gaye'
+p1500
+sVMN0000224345
+p1501
+S'Vitamin C'
+p1502
+sVMN0000262794
+p1503
+S'Hootie & The Blowfish'
+p1504
+sVMN0000001418
+p1505
+S'T.I.'
+p1506
+sVMN0000139655
+p1507
+S'Laura Branigan'
+p1508
+sVMN0000210143
+p1509
+S'Lou Bega'
+p1510
+sVMN0000156484
+p1511
+S'Sponge'
+p1512
+sVMN0000495508
+p1513
+S'Troy Shondell'
+p1514
+sVMN0000018513
+p1515
+S'Paul Hardcastle'
+p1516
+sVMN0000765595
+p1517
+S'Backstreet Boys'
+p1518
+sVMN0000853629
+p1519
+S'Ruff Endz'
+p1520
+sVMN0000133719
+p1521
+S'Fatboy Slim'
+p1522
+sVMN0000202344
+p1523
+S'Vicki Sue Robinson'
+p1524
+sVMN0001317177
+p1525
+S'Drafi'
+p1526
+sVMN0000072041
+p1527
+S'Bob Seger'
+p1528
+sVMN0000228099
+p1529
+S'Howard Jones'
+p1530
+sVMN0003014650
+p1531
+S'The Regents'
+p1532
+sVMN0000329468
+p1533
+S'Jerry Butler'
+p1534
+sVMN0000633078
+p1535
+S'Bruce Hornsby'
+p1536
 sVMN0000127063
-p2433
+p1537
 S'Bell Biv Devoe'
-p2434
-sVMN0000384883
-p2435
-S'Mary Travers'
-p2436
-sVMN0000546214
-p2437
-S'Moby Featuring Gwen Stefani'
-p2438
-sVMN0000110011
-p2439
-S'Crazy Town'
-p2440
-sVMN0000280061
-p2441
-S'Joshua Kadison'
-p2442
+p1538
 sVMN0000106882
-p2443
+p1539
 S'Lamont Dozier'
-p2444
+p1540
 sVMN0000038805
-p2445
+p1541
 S'Angie Stone'
-p2446
+p1542
+sVMN0000274637
+p1543
+S'Mario'
+p1544
+sVMN0000661318
+p1545
+S'Giggles'
+p1546
+sVMN0000472925
+p1547
+S'The Offspring'
+p1548
+sVMN0000596126
+p1549
+S'Mott The Hoople'
+p1550
+sVMN0000260038
+p1551
+S'Dinah Washington'
+p1552
+sVMN0000076658
+p1553
+S'Jimmy McGriff'
+p1554
+sVMN0000665835
+p1555
+S'Goose Creek Symphony'
+p1556
+sVMN0000151431
+p1557
+S'Roger Miller'
+p1558
+sVMN0000035338
+p1559
+S'Peabo Bryson'
+p1560
+sVMN0000121357
+p1561
+S'J.D. Souther'
+p1562
+sVMN0000540010
+p1563
+S'Capleton'
+p1564
+sVMN0000799053
+p1565
+S'Donovan'
+p1566
+sVMN0000012128
+p1567
+S'All-4-One'
+p1568
+sVMN0000166785
+p1569
+S'Dan Fogelberg'
+p1570
+sVMN0000485135
+p1571
+S'311'
+p1572
+sVMN0000068896
+p1573
+S'B2K'
+p1574
+sVMN0000069702
+p1575
+S'Choirboys'
+p1576
+sVMN0000175049
+p1577
+S'Firehouse'
+p1578
+sVMN0000240503
+p1579
+S'Leon Redbone'
+p1580
+sVMN0000503913
+p1581
+S'Mountain'
+p1582
+sVMN0001002843
+p1583
+S'Keith Anderson'
+p1584
+sVMN0000796690
+p1585
+S'Don Covay'
+p1586
+sVMN0000064509
+p1587
+S'Bobby Womack'
+p1588
+sVMN0000284263
+p1589
+S'Lorne Greene'
+p1590
+sVMN0000662067
+p1591
+S'Gravediggaz'
+p1592
+sVMN0000011052
+p1593
+S'Tracy Byrd'
+p1594
+sVMN0000068097
+p1595
+S'Bob Lind'
+p1596
+sVMN0000584923
+p1597
+S'Dave Edmunds'
+p1598
+sVMN0000554804
+p1599
+S'The Wreckers'
+p1600
+sVMN0000774588
+p1601
+S'Kris Kristofferson'
+p1602
+sVMN0000695401
+p1603
+S'Yvonne Fair'
+p1604
+sVMN0000590524
+p1605
+S'Young-Holt Unlimited'
+p1606
+sVMN0000358408
+p1607
+S'Run-D.M.C.'
+p1608
+sVMN0000814898
+p1609
+S'Lee Dorsey'
+p1610
+sVMN0000925635
+p1611
+S'Sunshine Anderson'
+p1612
+sVMN0000181321
+p1613
+S'Graham Parker'
+p1614
+sVMN0000094752
+p1615
+S'LL Cool J'
+p1616
+sVMN0000864973
+p1617
+S'NewSong'
+p1618
+sVMN0000662797
+p1619
+S'Ginuwine'
+p1620
+sVMN0000630603
+p1621
+S'The Browns'
+p1622
+sVMN0000266063
+p1623
+S'Chris Brown Featuring Jay Biz'
+p1624
+sVMN0000840907
+p1625
+S'Jennifer Rush'
+p1626
+sVMN0000172582
+p1627
+S'Franz Ferdinand'
+p1628
+sVMN0000108256
+p1629
+S'Cheryl Lynn'
+p1630
+sVMN0000021050
+p1631
+S'Paul Lekakis'
+p1632
+sVMN0000372322
+p1633
+S'Natalie Merchant'
+p1634
+sVMN0000820434
+p1635
+S'Whitney Houston'
+p1636
+sVMN0000808304
+p1637
+S'Lou Gramm'
+p1638
+sVMN0000178750
+p1639
+S'Stacy Lattisaw'
+p1640
+sVMN0000155116
+p1641
+S'Spyder Turner'
+p1642
+sVMN0000106540
+p1643
+S'Kris Kross'
+p1644
+sVMN0000861252
+p1645
+S'Carrie Underwood'
+p1646
+sVMN0000576979
+p1647
+S'The Wombles'
+p1648
+sVMN0000840348
+p1649
+S'Velvet Revolver'
+p1650
+sVMN0000634180
+p1651
+S'Brownstone'
+p1652
+sVMN0000950805
+p1653
+S'Glass Tiger'
+p1654
+sVMN0000339624
+p1655
+S'Meat Loaf'
+p1656
+sVMN0000833539
+p1657
+S'Mark Morrison'
+p1658
+sVMN0000221894
+p1659
+S'MFSB'
+p1660
+sVMN0000988627
+p1661
+S'Fuel'
+p1662
+sVMN0000118664
+p1663
+S'Basia'
+p1664
+sVMN0000504815
+p1665
+S'Art Garfunkel'
+p1666
+sVMN0000477410
+p1667
+S'The Orlons'
+p1668
+sVMN0000788126
+p1669
+S'Clay Davidson'
+p1670
+sVMN0000115140
+p1671
+S'Commander Cody And His Lost Planet Airmen'
+p1672
+sVMN0000325401
+p1673
+S'Petula Clark'
+p1674
+sVMN0000465822
+p1675
+S'Michael Peterson'
+p1676
+sVMN0000311674
+p1677
+S'Vanilla Fudge'
+p1678
+sVMN0000038321
+p1679
+S'Snow Patrol'
+p1680
+sVMN0000816890
+p1681
+S'Johnny Cash'
+p1682
+sVMN0000134729
+p1683
+S'Faith No More'
+p1684
+sVMN0000156161
+p1685
+S'Funkdoobiest'
+p1686
+sVMN0000801762
+p1687
+S'Floyd Cramer'
+p1688
+sVMN0000178536
+p1689
+S'Edgar Winter'
+p1690
+sVMN0000594665
+p1691
+S'Diana Ross'
+p1692
+sVMN0000857203
+p1693
+S'Kay Starr'
+p1694
+sVMN0000935330
+p1695
+S'Toni Braxton'
+p1696
+sVMN0000762496
+p1697
+S'Folk Implosion'
+p1698
+sVMN0000026367
+p1699
+S'Skid Row'
+p1700
+sVMN0000531986
+p1701
+S'David Bowie'
+p1702
+sVMN0000934367
+p1703
+S'Breaking Benjamin'
+p1704
+sVMN0000312522
+p1705
+S'Van McCoy'
+p1706
+sVMN0000228715
+p1707
+S'Looking Glass'
+p1708
+sVMN0000732709
+p1709
+S'Taylor Hicks'
+p1710
+sVMN0000747967
+p1711
+S'Shelby Flint'
+p1712
+sVMN0000859868
+p1713
+S'Quiet Riot'
+p1714
+sVMN0000226714
+p1715
+S'Dem Franchize Boyz'
+p1716
+sVMN0000495288
+p1717
+S'The Rentals'
+p1718
+sVMN0000405655
+p1719
+S'Michael Stanley Band'
+p1720
+sVMN0000400322
+p1721
+S'The Neon Philharmonic'
+p1722
+sVMN0000274822
+p1723
+S'Lonnie Mack'
+p1724
+sVMN0000625731
+p1725
+S'Seether'
+p1726
+sVMN0000059537
+p1727
+S'Blue Cheer'
+p1728
+sVMN0000098081
+p1729
+S'Engelbert Humperdinck'
+p1730
+sVMN0000165624
+p1731
+S'Change'
+p1732
+sVMN0000806645
+p1733
+S'Dr. Hook'
+p1734
+sVMN0000171117
+p1735
+S'Eddie Lovette'
+p1736
+sVMN0000246611
+p1737
+S'Judas Priest'
+p1738
+sVMN0000142106
+p1739
+S'Lauren Wood'
+p1740
+sVMN0000044751
+p1741
+S'Steve Wariner'
+p1742
+sVMN0000583959
+p1743
+S'Willie Nelson'
+p1744
+sVMN0000943827
+p1745
+S'Cake'
+p1746
+sVMN0000217792
+p1747
+S'Ringo Starr'
+p1748
+sVMN0000066915
+p1749
+S'Bob Dylan'
+p1750
+sVMN0000856640
+p1751
+S"Lil' Kim Featuring Puff Daddy"
+p1752
+sVMN0000626774
+p1753
+S'BulletBoys'
+p1754
+sVMN0000164594
+p1755
+S'Ben E. King'
+p1756
+sVMN0000449578
+p1757
+S'Miami Sound Machine'
+p1758
+sVMN0000368522
+p1759
+S'Nancy Martinez'
+p1760
+sVMN0000149605
+p1761
+S'Clipse'
+p1762
+sVMN0000569685
+p1763
+S'The Temptations'
+p1764
+sVMN0000065590
+p1765
+S'The Flaming Lips'
+p1766
+sVMN0000290502
+p1767
+S'Limp Bizkit'
+p1768
+sVMN0000345355
+p1769
+S'Melissa Etheridge'
+p1770
+sVMN0000137494
+p1771
+S'Fats Domino'
+p1772
+sVMN0000116178
+p1773
+S'Culture Club'
+p1774
+sVMN0000145920
+p1775
+S'The Ebonys'
+p1776
+sVMN0000792370
+p1777
+S'Clint Black'
+p1778
+sVMN0000013825
+p1779
+S'Splender'
+p1780
+sVMN0000919853
+p1781
+S'The Tokens'
+p1782
+sVMN0000403184
+p1783
+S'The Osmonds'
+p1784
+sVMN0000662438
+p1785
+S'Donnie Brooks'
+p1786
+sVMN0000585249
+p1787
+S'Annie Lennox'
+p1788
+sVMN0000198480
+p1789
+S'Cat Stevens'
+p1790
+sVMN0000413000
+p1791
+S'The Notorious B.I.G. Featuring Diddy'
+p1792
+sVMN0000265456
+p1793
+S'Dion'
+p1794
+sVMN0000478982
+p1795
+S'A Tribe Called Quest'
+p1796
+sVMN0000208076
+p1797
+S'Luther Vandross'
+p1798
+sVMN0000493122
+p1799
+S'The Rascals'
+p1800
+sVMN0000826762
+p1801
+S'Digable Planets'
+p1802
+sVMN0000256349
+p1803
+S'Peggy Lee'
+p1804
+sVMN0000305468
+p1805
+S'Lita Ford'
+p1806
+sVMN0000865016
+p1807
+S'New Edition'
+p1808
+sVMN0000109025
+p1809
+S'Larry Groce'
+p1810
+sVMN0000894847
+p1811
+S'The Pointer Sisters'
+p1812
+sVMN0000678009
+p1813
+S'Henry Mancini'
+p1814
+sVMN0000075473
+p1815
+S'The Honeydrippers'
+p1816
+sVMN0000639304
+p1817
+S'Groove Theory'
+p1818
+sVMN0000020812
+p1819
+S'Slaughter'
+p1820
+sVMN0000350685
+p1821
+S'Twista Featuring Pitbull'
+p1822
+sVMN0000667669
+p1823
+S'Daft Punk'
+p1824
+sVMN0000790833
+p1825
+S'Shalamar'
+p1826
+sVMN0000827367
+p1827
+S'Long John Baldry'
+p1828
+sVMN0000590575
+p1829
+S'YoungBloodZ Featuring Lil Jon'
+p1830
+sVMN0000358055
+p1831
+S'Kandi'
+p1832
+sVMN0000804703
+p1833
+S'GTR'
+p1834
+sVMN0000748222
+p1835
+S'Siouxsie and The Banshees'
+p1836
+sVMN0000945798
+p1837
+S'Candyman'
+p1838
+sVMN0000822910
+p1839
+S'Hoobastank'
+p1840
+sVMN0000057663
+p1841
+S'Blessid Union Of Souls'
+p1842
+sVMN0000254827
+p1843
+S'Diamond Rio'
+p1844
+sVMN0000851745
+p1845
+S'Jewel Akens'
+p1846
+sVMN0001009627
+p1847
+S'Rob Thomas'
+p1848
+sVMN0000584041
+p1849
+S'Ying Yang Twins'
+p1850
+sVMN0000546214
+p1851
+S'Moby Featuring Gwen Stefani'
+p1852
+sVMN0000638960
+p1853
+S'Buddy Greco'
+p1854
+sVMN0000148066
+p1855
+S'D.C. LaRue'
+p1856
+sVMN0000134600
+p1857
+S"D'Angelo"
+p1858
+sVMN0000751019
+p1859
+S'The Animals'
+p1860
+sVMN0000093215
+p1861
+S'Black Moon'
+p1862
+sVMN0000739702
+p1863
+S'Frozen Ghost'
+p1864
+sVMN0000019133
+p1865
+S'Ambrosia'
+p1866
+sVMN0000669303
+p1867
+S'Golden Earring'
+p1868
+sVMN0000570400
+p1869
+S'The Tuesdays'
+p1870
+sVMN0000162197
+p1871
+S'Ben Folds'
+p1872
+sVMN0000072999
+p1873
+S'The Happenings'
+p1874
+sVMN0000061582
+p1875
+S'Bobby Freeman'
+p1876
+sVMN0000196993
+p1877
+S'England Dan & John Ford Coley'
+p1878
+sVMN0000752470
+p1879
+S'The Ad Libs'
+p1880
+sVMN0000722133
+p1881
+S'Boys Like Girls'
+p1882
+sVMN0000218994
+p1883
+S'John Anderson'
+p1884
+sVMN0000502163
+p1885
+S'10cc'
+p1886
+sVMN0000597585
+p1887
+S'Tina Arena'
+p1888
+sVMN0000413753
+p1889
+S'The Persuaders'
+p1890
+sVMN0000298764
+p1891
+S'Roxette'
+p1892
+sVMN0000046823
+p1893
+S'Benzino'
+p1894
+sVMN0000410219
+p1895
+S'Merle Haggard'
+p1896
+sVMN0000159805
+p1897
+S'Beats International'
+p1898
+sVMN0000762731
+p1899
+S'The Chi-Lites'
+p1900
+sVMN0000158407
+p1901
+S'Beau Coup'
+p1902
+sVMN0000492249
+p1903
+S'Anything Box'
+p1904
+sVMN0000835585
+p1905
+S'Loverboy'
+p1906
+sVMN0000957296
+p1907
+S'Herbie Hancock'
+p1908
+sVMN0000186597
+p1909
+S'Don Johnson'
+p1910
+sVMN0000962339
+p1911
+S'Dave Mason'
+p1912
+sVMN0000062002
+p1913
+S'Bachman-Turner Overdrive'
+p1914
+sVMN0000096679
+p1915
+S'Blackfoot'
+p1916
+sVMN0000317865
+p1917
+S'Jennifer Lopez Featuring Big Pun '
+p1918
+sVMN0000170214
+p1919
+S'Ferrante & Teicher'
+p1920
+sVMN0000468938
+p1921
+S'Omarion'
+p1922
+sVMN0000258000
+p1923
+S'T-Pain'
+p1924
+sVMN0000949780
+p1925
+S'Hanson'
+p1926
+sVMN0000220946
+p1927
+S'David Houston'
+p1928
+sVMN0000956093
+p1929
+S'Henry Lee Summer'
+p1930
+sVMN0000184811
+p1931
+S'Erasure'
+p1932
+sVMN0000375782
+p1933
+S'N2Deep'
+p1934
+sVMN0000369133
+p1935
+S'Niteflyte'
+p1936
+sVMN0000886961
+p1937
+S'Relient K'
+p1938
+sVMN0000014784
+p1939
+S'Amanda Marshall'
+p1940
+sVMN0000042768
+p1941
+S'Benny Spellman'
+p1942
+sVMN0000251358
+p1943
+S'Leschea'
+p1944
+sVMN0000227527
+p1945
+S'Flatt & Scruggs'
+p1946
+sVMN0000167361
+p1947
+S'Dru Hill'
+p1948
+sVMN0000139089
+p1949
+S'Barenaked Ladies'
+p1950
+sVMN0000965206
+p1951
+S'Garnet Mimms'
+p1952
+sVMN0000048507
+p1953
+S'Sweet Sensation'
+p1954
+sVMN0000664817
+p1955
+S'Gloria Estefan'
+p1956
+sVMN0000773642
+p1957
+S'The Kingsmen'
+p1958
+sVMN0000875049
+p1959
+S'Rayvon'
+p1960
+sVMN0000817011
+p1961
+S'Was (Not Was)'
+p1962
+sVMN0000491288
+p1963
+S'Mike Post'
+p1964
+sVMN0000164053
+p1965
+S'Faith Evans'
+p1966
+sVMN0000136971
+p1967
+S'Tamiko Jones'
+p1968
+sVMN0000131650
+p1969
+S'Talking Heads'
+p1970
+sVMN0000012491
+p1971
+S'Taylor Dayne'
+p1972
+sVMN0000933772
+p1973
+S'Brand Nubian'
+p1974
+sVMN0000621869
+p1975
+S'Bobby Pinson'
+p1976
+sVMN0000675710
+p1977
+S'Marc Cohn'
+p1978
+sVMN0000945900
+p1979
+S'George McCrae'
+p1980
+sVMN0000200679
+p1981
+S'Twista'
+p1982
+sVMN0000213212
+p1983
+S'Janis Ian'
+p1984
+sVMN0000941579
+p1985
+S'Buck Owens'
+p1986
+sVMN0000670057
+p1987
+S'Dan Hartman'
+p1988
+sVMN0000768737
+p1989
+S'Icehouse'
+p1990
+sVMN0000933883
+p1991
+S'Al Stewart'
+p1992
+sVMN0000490004
+p1993
+S'The Ramones'
+p1994
+sVMN0000757085
+p1995
+S'Bangles'
+p1996
+sVMN0000592098
+p1997
+S'Sam Brown'
+p1998
+sVMN0000189644
+p1999
+S'Doris Day'
+p2000
+sVMN0000811622
+p2001
+S'John Denver'
+p2002
+sVMN0000210991
+p2003
+S"Destiny's Child"
+p2004
+sVMN0000926237
+p2005
+S'Third Eye Blind'
+p2006
+sVMN0000349180
+p2007
+S'Jimmy Barnes'
+p2008
+sVMN0000656081
+p2009
+S'Elliott Yamin'
+p2010
+sVMN0000256974
+p2011
+S'Wild Cherry'
+p2012
+sVMN0000090276
+p2013
+S'King Harvest'
+p2014
+sVMN0000171637
+p2015
+S'Duane Eddy'
+p2016
+sVMN0000129775
+p2017
+S'Parliament'
+p2018
+sVMN0000200074
+p2019
+S'Lenny Kravitz'
+p2020
+sVMN0000469519
+p2021
+S'Ashley Tisdale'
+p2022
+sVMN0000010412
+p2023
+S'Spin Doctors'
+p2024
+sVMN0000142531
+p2025
+S'James Darren'
+p2026
+sVMN0000820636
+p2027
+S'Diana DeGarmo'
+p2028
+sVMN0000328014
+p2029
+S'Peter Tosh'
+p2030
+sVMN0000029086
+p2031
+S'Snoop Dogg Featuring Master P'
+p2032
+sVMN0000159214
+p2033
+S'Dusty Springfield'
+p2034
+sVMN0000412538
+p2035
+S'Nine Days'
+p2036
+sVMN0000665364
+p2037
+S'Goanna'
+p2038
+sVMN0000057907
+p2039
+S'Betty Boo'
+p2040
+sVMN0000774145
+p2041
+S'Kimberley Locke'
+p2042
+sVMN0000085397
+p2043
+S'Kelis'
+p2044
+sVMN0000241498
+p2045
+S'Sam Salter'
+p2046
+sVMN0000127220
+p2047
+S'Jackie Moore'
+p2048
+sVMN0000379125
+p2049
+S'Neil Young'
+p2050
+sVMN0000175939
+p2051
+S'David Geddes'
+p2052
+sVMN0000645474
+p2053
+S'David Essex'
+p2054
+sVMN0000787940
+p2055
+S'Levert'
+p2056
+sVMN0000655346
+p2057
+S'Gwen Guthrie'
+p2058
+sVMN0000359026
+p2059
+S'Ricky Martin'
+p2060
+sVMN0000790820
+p2061
+S'Tool'
+p2062
+sVMN0000648765
+p2063
+S'George LaMond'
+p2064
+sVMN0000690254
+p2065
+S'ZZ Top'
+p2066
+sVMN0000988005
+p2067
+S'Fotomaker'
+p2068
+sVMN0000655746
+p2069
+S'Ghostface Killah'
+p2070
+sVMN0000240999
+p2071
+S'Mark Lindsay'
+p2072
+sVMN0000744265
+p2073
+S'Tony Joe White'
+p2074
+sVMN0000188467
+p2075
+S'John Parr'
+p2076
+sVMN0000337119
+p2077
+S'Phil Collins'
+p2078
+sVMN0000176358
+p2079
+S'Jamiroquai'
+p2080
+sVMN0000295756
+p2081
+S'Santana'
+p2082
+sVMN0000178799
+p2083
+S'Staind'
+p2084
+sVMN0000057124
+p2085
+S'The Chambers Brothers'
+p2086
+sVMN0000403794
+p2087
+S'Michel Polnareff'
+p2088
+sVMN0000152597
+p2089
+S'Before Dark'
+p2090
+sVMN0000086065
+p2091
+S'Ice Cube Featuring Das EFX'
+p2092
+sVMN0000576718
+p2093
+S'Seal'
+p2094
+sVMN0000082013
+p2095
+S'The Impressions'
+p2096
+sVMN0000303050
+p2097
+S'Rufus Thomas'
+p2098
+sVMN0000814852
+p2099
+S'John Sebastian'
+p2100
+sVMN0000747163
+p2101
+S'Amanda Perez'
+p2102
+sVMN0000174198
+p2103
+S'Edwin McCain'
+p2104
+sVMN0000015318
+p2105
+S'Travis Tritt'
+p2106
+sVMN0000778656
+p2107
+S'Cornelius Brothers & Sister Rose'
+p2108
+sVMN0000784814
+p2109
+S'The Cranberries'
+p2110
+sVMN0000732652
+p2111
+S'Kellie Pickler'
+p2112
+sVMN0000837946
+p2113
+S'Juice Newton'
+p2114
+sVMN0000193601
+p2115
+S'Gang Starr'
+p2116
+sVMN0000671953
+p2117
+S'Heart'
+p2118
+sVMN0000107090
+p2119
+S'Cher'
+p2120
+sVMN0000061480
+p2121
+S'The Guess Who'
+p2122
+sVMN0000238322
+p2123
+S'De La Soul'
+p2124
+sVMN0000241813
+p2125
+S'Johnny Burnette'
+p2126
+sVMN0000193025
+p2127
+S'Gregory Abbott'
+p2128
+sVMN0000128950
+p2129
+S'Earl-Jean'
+p2130
+sVMN0000334644
+p2131
+S'Jerry Reed'
+p2132
+sVMN0000852855
+p2133
+S'Roxy Music'
+p2134
+sVMN0000533551
+p2135
+S'Buckcherry'
+p2136
+sVMN0000219655
+p2137
+S'Little River Band'
+p2138
+sVMN0000393031
+p2139
+S'Ohio Express'
+p2140
+sVMN0000364878
+p2141
+S'Marvin Sapp'
+p2142
+sVMN0000282752
+p2143
+S'Robbie Dupree'
+p2144
+sVMN0000631774
+p2145
+S'The Byrds'
+p2146
+sVMN0000858375
+p2147
+S'Mary Chapin Carpenter'
+p2148
+sVMN0000082955
+p2149
+S'The Intruders'
+p2150
+sVMN0000079960
+p2151
+S'Boston'
+p2152
+sVMN0001649799
+p2153
+S'Sonny Charles'
+p2154
+sVMN0000936206
+p2155
+S'Alabama'
+p2156
+sVMN0000577261
+p2157
+S'Mitch Miller'
+p2158
+sVMN0000817315
+p2159
+S'Weird Al Yankovic'
+p2160
+sVMN0000296487
+p2161
+S'Roger Daltrey'
+p2162
+sVMN0000610880
+p2163
+S'Brad Paisley'
+p2164
+sVMN0000417598
+p2165
+S'The Premiers'
+p2166
+sVMN0000923745
+p2167
+S'Aaron Carter'
+p2168
+sVMN0000062729
+p2169
+S'Bobby Sherman'
+p2170
+sVMN0000048300
+p2171
+S'Bar-Kays'
+p2172
+sVMN0000637022
+p2173
+S'The Capitols'
+p2174
+sVMN0000151979
+p2175
+S'Bay City Rollers'
+p2176
+sVMN0000778344
+p2177
+S'LaVern Baker'
+p2178
+sVMN0000077732
+p2179
+S'Bobby Vee'
+p2180
+sVMN0000308871
+p2181
+S'Little Anthony & The Imperials'
+p2182
+sVMN0000542976
+p2183
+S'Candi Staton'
+p2184
+sVMN0000509367
+p2185
+S'Al Martino'
+p2186
+sVMN0000227352
+p2187
+S'Hugo Montenegro'
+p2188
+sVMN0000069645
+p2189
+S'The Fireballs'
+p2190
+sVMN0000926428
+p2191
+S'Thomas Dolby'
+p2192
+sVMN0000798801
+p2193
+S'Don Ho'
+p2194
+sVMN0000544965
+p2195
+S'Daniel Powter'
+p2196
+sVMN0000664378
+p2197
+S'Glen Campbell'
+p2198
+sVMN0000039300
+p2199
+S'Peter Nero'
+p2200
+sVMN0000163264
+p2201
+S'Cassidy'
+p2202
+sVMN0000086729
+p2203
+S'Bill Pursell'
+p2204
+sVMN0000035076
+p2205
+S'Soul II Soul'
+p2206
+sVMN0000612716
+p2207
+S'Tom Petty'
+p2208
+sVMN0000827760
+p2209
+S'Loose Ends'
+p2210
+sVMN0000237205
+p2211
+S'Madonna'
+p2212
+sVMN0000154297
+p2213
+S'Anna Nalick'
+p2214
+sVMN0000200791
+p2215
+S'Waylon Jennings'
+p2216
+sVMN0000894465
+p2217
+S'The Rolling Stones'
+p2218
+sVMN0000294085
+p2219
+S'Rodney Crowell'
+p2220
+sVMN0000297990
+p2221
+S'The Poppy Family'
+p2222
+sVMN0000200882
+p2223
+S'Gene Pitney'
+p2224
+sVMN0000844707
+p2225
+S'Ronnie Carroll'
+p2226
+sVMN0000128099
+p2227
+S'James Brown'
+p2228
+sVMN0000565242
+p2229
+S'Hedgehoppers Anonymous'
+p2230
+sVMN0000085410
+p2231
+S'Billy Joe Royal'
+p2232
+sVMN0000674749
+p2233
+S'The Manhattan Transfer'
+p2234
+sVMN0000173647
+p2235
+S'Firefall'
+p2236
+sVMN0000074853
+p2237
+S'The KLF'
+p2238
+sVMN0000556320
+p2239
+S'Glenn Yarbrough'
+p2240
+sVMN0000559405
+p2241
+S'Daddy Yankee'
+p2242
+sVMN0000252315
+p2243
+S'Diana King'
+p2244
+sVMN0000933781
+p2245
+S'Albert Hammond'
+p2246
+sVMN0000182900
+p2247
+S'Fleetwood Mac'
+p2248
+sVMN0000924176
+p2249
+S'Aaron Lines'
+p2250
+sVMN0000065397
+p2251
+S'Bobbie Gentry'
+p2252
+sVMN0000686897
+p2253
+S'Linda Ronstadt'
+p2254
+sVMN0000233228
+p2255
+S'Lou Rawls'
+p2256
+sVMN0000620386
+p2257
+S'Tommy James'
+p2258
+sVMN0000045313
+p2259
+S'Steve Winwood'
+p2260
+sVMN0000384883
+p2261
+S'Mary Travers'
+p2262
+sVMN0000280061
+p2263
+S'Joshua Kadison'
+p2264
 sVMN0000830653
-p2447
+p2265
 S'Sailcat'
-p2448
+p2266
 sVMN0000168958
-p2449
+p2267
 S'Eddie Floyd'
+p2268
+sVMN0001162681
+p2269
+S'C+C Music Factory'
+p2270
+sVMN0000245760
+p2271
+S'Les McCann'
+p2272
+sVMN0000677241
+p2273
+S'Lyfe Jennings'
+p2274
+sVMN0000752673
+p2275
+S'Steve Forbert'
+p2276
+sVMN0000216978
+p2277
+S'U.N.V.'
+p2278
+sVMN0000053606
+p2279
+S'Bloodstone'
+p2280
+sVMN0000475459
+p2281
+S'The String-A-Longs'
+p2282
+sVMN0000133626
+p2283
+S'Jake Holmes'
+p2284
+sVMN0000020050
+p2285
+S'Ten Years After'
+p2286
+sVMN0000883318
+p2287
+S'Red Hot Chili Peppers'
+p2288
+sVMN0000861351
+p2289
+S'Fat Joe Featuring Nelly'
+p2290
+sVMN0000322092
+p2291
+S'Peter Cetera'
+p2292
+sVMN0000527463
+p2293
+S'Bull Moose Jackson'
+p2294
+sVMN0000553483
+p2295
+S'Happy Mondays'
+p2296
+sVMN0000794306
+p2297
+S'EMF'
+p2298
+sVMN0000546678
+p2299
+S'Lonnie Gordon'
+p2300
+sVMN0000060476
+p2301
+S'The Friends Of Distinction'
+p2302
+sVMN0000752789
+p2303
+S'Smif-N-Wessun'
+p2304
+sVMN0000304401
+p2305
+S'Procol Harum'
+p2306
+sVMN0000321321
+p2307
+S'Lulu'
+p2308
+sVMN0000959876
+p2309
+S'Wu-Tang Clan'
+p2310
+sVMN0000381689
+p2311
+S'Bo Bice'
+p2312
+sVMN0000357419
+p2313
+S'Jimmy Elledge'
+p2314
+sVMN0000942580
+p2315
+S'Burton Cummings'
+p2316
+sVMN0000215058
+p2317
+S'Jars Of Clay'
+p2318
+sVMN0000002923
+p2319
+S"T'Pau"
+p2320
+sVMN0000199995
+p2321
+S'Genesis'
+p2322
+sVMN0000106916
+p2323
+S'Chris Cagle'
+p2324
+sVMN0000747757
+p2325
+S'Split Enz'
+p2326
+sVMN0000224257
+p2327
+S'Jay-Z'
+p2328
+sVMN0000740499
+p2329
+S'Grand Puba'
+p2330
+sVMN0000193320
+p2331
+S'Def Leppard'
+p2332
+sVMN0000334740
+p2333
+S'Ronnie Milsap'
+p2334
+sVMN0000509156
+p2335
+S'Mudvayne'
+p2336
+sVMN0000929862
+p2337
+S'Afrika Bambaataa'
+p2338
+sVMN0000488908
+p2339
+S'Petey Pablo'
+p2340
+sVMN0000153526
+p2341
+S'Cliff Richard'
+p2342
+sVMN0000012307
+p2343
+S'Tracie Spencer'
+p2344
+sVMN0000852007
+p2345
+S'Roy Orbison'
+p2346
+sVMN0000180228
+p2347
+S'Elvis Presley'
+p2348
+sVMN0000246628
+p2349
+S'Johnny Nash'
+p2350
+sVMN0000361393
+p2351
+S'Prince'
+p2352
+sVMN0000080428
+p2353
+S'The Lettermen'
+p2354
+sVMN0000536275
+p2355
+S'Sweet'
+p2356
+sVMN0000234844
+p2357
+S'Debbie Harry'
+p2358
+sVMN0000317108
+p2359
+S'Jeffrey Osborne'
+p2360
+sVMN0000352575
+p2361
+S'Men At Large'
+p2362
+sVMN0000414700
+p2363
+S'Mike Jones'
+p2364
+sVMN0000165076
+p2365
+S'Stacey Q'
+p2366
+sVMN0000165077
+p2367
+S'Stacie Orrico'
+p2368
+sVMN0000314346
+p2369
+S'Little Jimmy Dickens'
+p2370
+sVMN0000368112
+p2371
+S'Martina McBride'
+p2372
+sVMN0000807361
+p2373
+S'Tyrese'
+p2374
+sVMN0000757136
+p2375
+S'The Blackout Allstars'
+p2376
+sVMN0000248920
+p2377
+S'Sara Evans'
+p2378
+sVMN0000842802
+p2379
+S'Peter Gabriel'
+p2380
+sVMN0000610706
+p2381
+S'Bread'
+p2382
+sVMN0000294891
+p2383
+S'Salt-N-Pepa'
+p2384
+sVMN0000059819
+p2385
+S'Betty Wright'
+p2386
+sVMN0000830538
+p2387
+S'Robert Plant'
+p2388
+sVMN0000521674
+p2389
+S'The Brecker Brothers'
+p2390
+sVMN0000805208
+p2391
+S'Joe Simon'
+p2392
+sVMN0000795053
+p2393
+S'Fantasia'
+p2394
+sVMN0000027136
+p2395
+S'Paulina Rubio'
+p2396
+sVMN0000929043
+p2397
+S'After The Fire'
+p2398
+sVMN0000934069
+p2399
+S'Brenda Lee'
+p2400
+sVMN0000286518
+p2401
+S'Platinum Blonde'
+p2402
+sVMN0000986573
+p2403
+S'The Red Jumpsuit Apparatus'
+p2404
+sVMN0000754055
+p2405
+S'Sophie B. Hawkins'
+p2406
+sVMN0000327735
+p2407
+S'REO Speedwagon'
+p2408
+sVMN0000049374
+p2409
+S'Simple Minds'
+p2410
+sVMN0000026504
+p2411
+S'Slum Village Featuring Dwele'
+p2412
+sVMN0000510805
+p2413
+S'Toby Keith'
+p2414
+sVMN0000497426
+p2415
+S'The Singing Nun'
+p2416
+sVMN0000129551
+p2417
+S'Crossfade'
+p2418
+sVMN0000919805
+p2419
+S"Lil' Kim Featuring 50 Cent"
+p2420
+sVMN0000490738
+p2421
+S'Monica'
+p2422
+sVMN0000058035
+p2423
+S'The Chiffons'
+p2424
+sVMN0002556485
+p2425
+S'Surface'
+p2426
+sVMN0000797431
+p2427
+S'Elastica'
+p2428
+sVMN0000882782
+p2429
+S'Noel Harrison'
+p2430
+sVMN0000050656
+p2431
+S'B. Bumble & The Stingers'
+p2432
+sVMN0000190946
+p2433
+S'Lefty Frizzell'
+p2434
+sVMN0000409954
+p2435
+S'Ray Price'
+p2436
+sVMN0000156938
+p2437
+S'Shaggy'
+p2438
+sVMN0000290390
+p2439
+S'Los Bravos'
+p2440
+sVMN0000656130
+p2441
+S'Chuck Wicks'
+p2442
+sVMN0001523463
+p2443
+S'O.M.D.'
+p2444
+sVMN0000424244
+p2445
+S'Ozzy Osbourne'
+p2446
+sVMN0000359559
+p2447
+S'Karyn White'
+p2448
+sVMN0000069813
+p2449
+S'Paula DeAnda Featuring Baby Bash'
 p2450
-sVMN0000169228
+sVMN0000849405
 p2451
-S'Dionne Farris'
+S'Marques Houston'
 p2452
+sVMN0000343930
+p2453
+S'The Jesus and Mary Chain'
+p2454
+sVMN0000866417
+p2455
+S'Maxi Priest'
+p2456
+sVMN0000775323
+p2457
+S'Chris Isaak'
+p2458
+sVMN0000123360
+p2459
+S'Chris Walker'
+p2460
+sVMN0000198162
+p2461
+S'Johnnie Taylor'
+p2462
+sVMN0000281254
+p2463
+S'Lonestar'
+p2464
+sVMN0000495366
+p2465
+S'The S.O.S. Band'
+p2466
+sVMN0000780258
+p2467
+S'Christina Aguilera'
+p2468
+sVMN0000587982
+p2469
+S'Abra Moore'
+p2470
+sVMN0000766066
+p2471
+S'Bobby Vinton'
+p2472
+sVMN0000046784
+p2473
+S'Syl Johnson'
+p2474
+sVMN0000371582
+p2475
+S'Nappy Roots'
+p2476
+sVMN0000110161
+p2477
+S'Chicago'
+p2478
+sVMN0000169124
+p2479
+S'Eddie Harris'
+p2480
+sVMN0000100196
+p2481
+S'Chubb Rock'
+p2482
+sVMN0000140608
+p2483
+S"dog's eye view"
+p2484
+sVMN0002479562
+p2485
+S'Whistle'
+p2486
+sVMN0000126048
+p2487
+S'The Fabulous Thunderbirds'
+p2488
+sVMN0000787960
+p2489
+S'Joe Diffie'
+p2490
+sVMN0000097173
+p2491
+S'Bonnie Tyler'
+p2492
+sVMN0000774941
+p2493
+S'Collin Raye'
+p2494
+sVMN0000607448
+p2495
+S'Al Green'
+p2496
+sVMN0000806829
+p2497
+S"Jane's Addiction"
+p2498
+sVMN0000134761
+p2499
+S'Pat Green'
+p2500
+sVMN0000006987
+p2501
+S'Alias'
+p2502
+sVMN0000782285
+p2503
+S'Crucial Conflict'
+p2504
+sVMN0000873085
+p2505
+S'Men At Work'
+p2506
+sVMN0000303506
+p2507
+S'Usher'
+p2508
+sVMN0000898828
+p2509
+S'The Searchers'
+p2510
+sVMN0000047789
+p2511
+S'Bodeans'
+p2512
+sVMN0000179205
+p2513
+S'Don McLean'
+p2514
+sVMN0001497537
+p2515
+S'John Mayer Trio'
+p2516
+sVMN0000173925
+p2517
+S'Eddie Holman'
+p2518
+sVMN0000018258
+p2519
+S'Teena Marie'
+p2520
+sVMN0000621112
+p2521
+S'Mya'
+p2522
+sVMN0000099888
+p2523
+S'The Knickerbockers'
+p2524
+sVMN0000931015
+p2525
+S'Tom Cochrane'
+p2526
+sVMN0000292243
+p2527
+S'Polly Brown'
+p2528
+sVMN0000187478
+p2529
+S'Eric Clapton'
+p2530
+sVMN0000567862
+p2531
+S'A Flock Of Seagulls'
+p2532
+sVMN0000802302
+p2533
+S'De La Soul Featuring Chaka Khan'
+p2534
+sVMN0000099246
+p2535
+S'Concrete Blonde'
+p2536
+sVMN0000232679
+p2537
+S'John Kongos'
+p2538
+sVMN0000174155
+p2539
+S'Fred Schneider'
+p2540
+sVMN0000066429
+p2541
+S'Bobby Bare'
+p2542
+sVMN0000368367
+p2543
+S'Nancy Wilson'
+p2544
+sVMN0000189582
+p2545
+S'LeToya'
+p2546
+sVMN0000043444
+p2547
+S'Steve Martin'
+p2548
+sVMN0000112462
+p2549
+S'Cream'
+p2550
+sVMN0000084458
+p2551
+S"Cam'Ron Featuring Juelz Santana"
+p2552
+sVMN0000307461
+p2553
+S'Van Morrison'
+p2554
+sVMN0000302106
+p2555
+S'Lisa Stansfield'
+p2556
+sVMN0000480108
+p2557
+S'A-Ha'
+p2558
+sVMN0000075100
+p2559
+S'Bad Company'
+p2560
+sVMN0000263019
+p2561
+S'Jonathan King'
+p2562
+sVMN0000135032
+p2563
+S'The Beau Brummels'
+p2564
+sVMN0000923384
+p2565
+S'Molly Hatchet'
+p2566
+sVMN0000289685
+p2567
+S'Robyn'
+p2568
+sVMN0000498987
+p2569
+S'SWV'
+p2570
+sVMN0000659517
+p2571
+S'Grand Funk Railroad'
+p2572
+sVMN0000944084
+p2573
+S'George Strait'
+p2574
+sVMN0000758453
+p2575
+S'Blues Traveler'
+p2576
+sVMN0000179730
+p2577
+S'Charlie Rich'
+p2578
+sVMN0000069534
+p2579
+S'Bon Jovi'
+p2580
+sVMN0000031008
+p2581
+S'Andrew Gold'
+p2582
+sVMN0000057840
+p2583
+S'B.J. Thomas'
+p2584
+sVMN0000049367
+p2585
+S'The Blackbyrds'
+p2586
+sVMN0000633313
+p2587
+S'Katharine McPhee'
+p2588
+sVMN0000626939
+p2589
+S'Stone Sour'
+p2590
+sVMN0000855531
+p2591
+S'Barbra Streisand'
+p2592
+sVMN0000768584
+p2593
+S'Billy Swan'
+p2594
+sVMN0000094205
+p2595
+S'Chet Atkins'
+p2596
+sVMN0000220194
+p2597
+S'MC Eiht'
+p2598
+sVMN0000182360
+p2599
+S'Donny Hathaway'
+p2600
+sVMN0000086927
+p2601
+S'Kelly Clarkson'
+p2602
+sVMN0000837486
+p2603
+S'Utopia'
+p2604
+sVMN0000568861
+p2605
+S'The Sweet Inspirations'
+p2606
+sVMN0000869409
+p2607
+S'Melba Moore'
+p2608
+sVMN0000635466
+p2609
+S'Bubba Sparxxx'
+p2610
+sVMN0000829523
+p2611
+S'Londonbeat'
+p2612
+sVMN0000070800
+p2613
+S'Billy Idol'
+p2614
+sVMN0000376613
+p2615
+S'Q-Tip'
+p2616
+sVMN0000406657
+p2617
+S'Meredith Brooks'
+p2618
+sVMN0000379669
+p2619
+S'Naughty By Nature'
+p2620
+sVMN0000662545
+p2621
+S'Glenn Lewis'
+p2622
+sVMN0000689606
+p2623
+S'Christina Milian Featuring Young Jeezy'
+p2624
+sVMN0000038182
+p2625
+S'The Bachelors'
+p2626
+sVMN0000524239
+p2627
+S'Brook Benton'
+p2628
+sVMN0000341672
+p2629
+S'No Doubt'
+p2630
+sVMN0000290072
+p2631
+S'Roberta Flack'
+p2632
+sVMN0000861757
+p2633
+S'David Foster'
+p2634
+sVMN0000023925
+p2635
+S'Stephen Bishop'
+p2636
+sVMN0000270162
+p2637
+S'Lil Scrappy'
+p2638
+sVMN0000075540
+p2639
+S'Bobby Goldsboro'
+p2640
+sVMN0000813463
+p2641
+S'John Waite'
+p2642
+sVMN0000073682
+p2643
+S'Trina Featuring Kelly Rowland'
+p2644
+sVMN0000771905
+p2645
+S'Bowling For Soup'
+p2646
+sVMN0000463803
+p2647
+S"Ol' Dirty Bastard"
+p2648
+sVMN0000628467
+p2649
+S'Britney Spears'
+p2650
+sVMN0000412710
+p2651
+S'Milli Vanilli'
+p2652
+sVMN0000563349
+p2653
+S'Dan Seals'
+p2654
+sVMN0000475431
+p2655
+S'Stray Cats'
+p2656
+sVMN0000149515
+p2657
+S'Joe Cocker'
+p2658
+sVMN0000219287
+p2659
+S'Jane Olivor'
+p2660
+sVMN0000988471
+p2661
+S'Enya'
+p2662
+sVMN0000197867
+p2663
+S'The Hullaballoos'
+p2664
+sVMN0000075308
+p2665
+S'The Jeff Healey Band'
+p2666
+sVMN0000267814
+p2667
+S'Hot Chocolate'
+p2668
+sVMN0000145180
+p2669
+S'The Emotions'
+p2670
+sVMN0000036106
+p2671
+S'Steve Miller Band'
+p2672
+sVMN0000841286
+p2673
+S'Jenny Burton'
+p2674
+sVMN0000407101
+p2675
+S'Nicolette Larson'
+p2676
+sVMN0000774956
+p2677
+S'Chris Kenner'
+p2678
+sVMN0000125506
+p2679
+S'Jagged Edge'
+p2680
+sVMN0000977198
+p2681
+S'Vanessa Hudgens'
+p2682
+sVMN0000757157
+p2683
+S'Simply Red'
+p2684
+sVMN0000963005
+p2685
+S'Will Smith Featuring Dru Hill '
+p2686
+sVMN0000390390
+p2687
+S'Ohio Players'
+p2688
+sVMN0000297702
+p2689
+S'Sammy Hagar'
+p2690
+sVMN0000749970
+p2691
+S'Ted Nugent'
+p2692
+sVMN0000169228
+p2693
+S'Dionne Farris'
+p2694
+sVMN0000832833
+p2695
+S'Samantha Mumba'
+p2696
+sVMN0000424296
+p2697
+S'The Righteous Brothers'
+p2698
+sVMN0000081619
+p2699
+S'Keith Urban'
+p2700
+sVMN0000046861
+p2701
+S'Ray Charles'
+p2702
+sVMN0000608945
+p2703
+S'Brandy'
+p2704
+sVMN0000575012
+p2705
+S'Darlene Love'
+p2706
+sVMN0000892771
+p2707
+S"The O'Jays"
+p2708
+sVMN0000194063
+p2709
+S'Lee Ann Womack'
+p2710
+sVMN0000205851
+p2711
+S'Grin'
+p2712
+sVMN0000186805
+p2713
+S'Eric Carmen'
+p2714
+sVMN0000813731
+p2715
+S'Debbie Gibson'
+p2716
+sVMN0000219428
+p2717
+S'Uncle Kracker'
+p2718
+sVMN0003018652
+p2719
+S'Peter Shelley'
+p2720
+sVMN0000128440
+p2721
+S'Duran Duran'
+p2722
+sVMN0000019083
+p2723
+S'Paul Davis'
+p2724
+sVMN0000158540
+p2725
+S'Gavin DeGraw'
+p2726
+sVMN0000802464
+p2727
+S'Freedy Johnston'
+p2728
+sVMN0000307049
+p2729
+S'Public Announcement'
+p2730
+sVMN0000798809
+p2731
+S'Freddie Scott'
+p2732
+sVMN0000931202
+p2733
+S'Arthur Alexander'
+p2734
+sVMN0000138407
+p2735
+S'The Dramatics'
+p2736
+sVMN0000193305
+p2737
+S'Cassie'
+p2738
+sVMN0000088778
+p2739
+S'Jimmy Ray'
+p2740
+sVMN0000651549
+p2741
+S'Gwen McCrae'
+p2742
+sVMN0000619388
+p2743
+S'Alejandro Sanz'
+p2744
+sVMN0000672656
+p2745
+S'Crime Mob Featuring Lil Scrappy'
+p2746
+sVMN0000081832
+p2747
+S'Kenny Loggins'
+p2748
+sVMN0000049774
+p2749
+S'BLACKstreet'
+p2750
+sVMN0000667738
+p2751
+S'Dan Hill'
+p2752
+sVMN0000566430
+p2753
+S'Mobb Deep Featuring Vita & Noyd'
+p2754
+sVMN0000224186
+p2755
+S'John Mellencamp'
+p2756
+sVMN0000743968
+p2757
+S'Patrice Rushen'
+p2758
+sVMN0000271029
+p2759
+S'Esther Phillips'
+p2760
+sVMN0000194246
+p2761
+S'Garbage'
+p2762
+sVMN0000246885
+p2763
+S'Johnny Mathis'
+p2764
+sVMN0000013589
+p2765
+S'Alvin Cash'
+p2766
+sVMN0000509356
+p2767
+S'Atlantic Starr'
+p2768
+sVMN0000773442
+p2769
+S'Chingy'
+p2770
+sVMN0000165011
+p2771
+S'Dionne Warwick'
+p2772
+sVMN0000136075
+p2773
+S'The Crusaders'
+p2774
+sVMN0000017021
+p2775
+S'Tenacious D'
+p2776
+sVMN0000812711
+p2777
+S'Death Cab For Cutie'
+p2778
+sVMN0000692251
+p2779
+S'The Youngbloods'
+p2780
+sVMN0000949630
+p2781
+S'Goo Goo Dolls'
+p2782
+sVMN0000245049
+p2783
+S'Johnny Cymbal'
+p2784
+sVMN0000806542
+p2785
+S'Etta James'
+p2786
+sVMN0000174557
+p2787
+S'Carole King'
+p2788
+sVMN0000895677
+p2789
+S'Teddy Geiger'
+p2790
+sVMN0000002273
+p2791
+S'Allan Sherman'
+p2792
+sVMN0000774807
+p2793
+S'Cold Blood'
+p2794
+sVMN0000777210
+p2795
+S'Kool & The Gang'
+p2796
+sVMN0000831733
+p2797
+S'Lindsay Lohan'
+p2798
+sVMN0000151549
+p2799
+S'Belinda Carlisle'
+p2800
+sVMN0000807949
+p2801
+S'Underworld'
+p2802
+sVMN0000640261
+p2803
+S'Buddy Jewell'
+p2804
+sVMN0000070929
+p2805
+S'The Jacksons'
+p2806
+sVMN0000310941
+p2807
+S'Puff Johnson'
+p2808
+sVMN0000830464
+p2809
+S'Ron Holden'
+p2810
+sVMN0000260384
+p2811
+S'Julian Lennon'
+p2812
+sVMN0000796741
+p2813
+S'Eddy Arnold'
+p2814
+sVMN0000012180
+p2815
+S'Trace Adkins'
+p2816
+sVMN0000987777
+p2817
+S'Donell Jones'
+p2818
+sVMN0000227988
+p2819
+S'House Of Pain'
+p2820
+sVMN0000674150
+p2821
+S'Helen Reddy'
+p2822
+sVMN0000628981
+p2823
+S'The Buckinghams'
+p2824
+sVMN0000090124
+p2825
+S'Black Box'
+p2826
+sVMN0000560079
+p2827
+S'Godspell'
+p2828
+sVMN0000332257
+p2829
+S'Neneh Cherry'
+p2830
+sVMN0000199090
+p2831
+S'Denise LaSalle'
+p2832
+sVMN0000745241
+p2833
+S'Status Quo'
+p2834
+sVMN0000201760
+p2835
+S'George Benson'
+p2836
+sVMN0000860561
+p2837
+S'The Fray'
+p2838
+sVMN0000050520
+p2839
+S'Bettye Swann'
+p2840
+sVMN0000029884
+p2841
+S'Paul McCartney'
+p2842
+sVMN0000113753
+p2843
+S'Lauryn Hill'
+p2844
+sVMN0000792530
+p2845
+S'Tori Amos'
+p2846
+sVMN0000731084
+p2847
+S'Ann-Margret'
+p2848
+sVMN0000016227
+p2849
+S'Tavares'
+p2850
+sVMN0000289599
+p2851
+S'Linkin Park'
+p2852
+sVMN0000749167
+p2853
+S'Trini Lopez'
+p2854
+sVMN0000199162
+p2855
+S'Vicious'
+p2856
+sVMN0000841870
+p2857
+S'Jennifer Paige'
+p2858
+sVMN0000355998
+p2859
+S'Ruben Studdard'
+p2860
+sVMN0000391586
+p2861
+S'James Blunt'
+p2862
+sVMN0000467203
+p2863
+S'Michael Jackson'
+p2864
+sVMN0000146841
+p2865
+S'Cyndi Thomson'
+p2866
+sVMN0002313776
+p2867
+S'Rhinoceros'
+p2868
+sVMN0000105129
+p2869
+S'Collective Soul'
+p2870
+sVMN0000305541
+p2871
+S'Percy Faith'
+p2872
+sVMN0000622805
+p2873
+S'Stevie Wonder'
+p2874
+sVMN0000266151
+p2875
+S'Little Texas'
+p2876
+sVMN0000071812
+p2877
+S'The Four Tops'
+p2878
+sVMN0000743623
+p2879
+S'Spacehog'
+p2880
+sVMN0000294377
+p2881
+S'Linda Clifford'
+p2882
+sVMN0000162415
+p2883
+S'Dorothy Moore'
+p2884
+sVMN0000578999
+p2885
+S'Aaliyah'
+p2886
+sVMN0000355208
+p2887
+S'Porno For Pyros'
+p2888
+sVMN0000198783
+p2889
+S'Johnny Horton'
+p2890
+sVMN0000324854
+p2891
+S'Jermaine Jackson'
+p2892
+sVMN0000758317
+p2893
+S'Bertha Tillman'
+p2894
+sVMN0000678167
+p2895
+S'Das EFX'
+p2896
+sVMN0000133987
+p2897
+S'Clint Holmes'
+p2898
+sVMN0000053739
+p2899
+S'Bette Midler'
+p2900
+sVMN0000895074
+p2901
+S'The Romantics'
+p2902
+sVMN0000814657
+p2903
+S'Mahalia Jackson'
+p2904
+sVMN0000785585
+p2905
+S'Claude Gray'
+p2906
+sVMN0000359179
+p2907
+S'Karla Bonoff'
+p2908
+sVMN0000459616
+p2909
+S'Michael McDonald'
+p2910
+sVMN0000225930
+p2911
+S'Liz Phair'
+p2912
+sVMN0000000534
+p2913
+S'All Saints'
+p2914
+sVMN0000026952
+p2915
+S'Smokie Norful'
+p2916
+sVMN0000150048
+p2917
+S'Enigma'
+p2918
+sVMN0000118791
+p2919
+S'LeAnn Rimes'
+p2920
+sVMN0000125352
+p2921
+S'Barbara Fairchild'
+p2922
+sVMN0000927555
+p2923
+S'Aretha Franklin'
+p2924
+sVMN0000846113
+p2925
+S"Philly's Most Wanted"
+p2926
+sVMN0000175579
+p2927
+S'Disturbed'
+p2928
+sVMN0000767016
+p2929
+S'Keith Sweat'
+p2930
+sVMN0002447909
+p2931
+S'Haircut One Hundred'
+p2932
+sVMN0000347151
+p2933
+S'Jewel'
+p2934
+sVMN0000820232
+p2935
+S'Dick Dale'
+p2936
+sVMN0000053428
+p2937
+S'Blue Magic'
+p2938
+sVMN0000019323
+p2939
+S'Tatyana Ali'
+p2940
+sVMN0000785101
+p2941
+S'Bananarama'
+p2942
+sVMN0000853492
+p2943
+S'Marshall Crenshaw'
+p2944
+sVMN0000246960
+p2945
+S'Wham!'
+p2946
+sVMN0000227088
+p2947
+S'Deana Carter'
+p2948
+sVMN0000682056
+p2949
+S'Xzibit'
+p2950
+sVMN0000334770
+p2951
+S'Ramsey Lewis'
+p2952
+sVMN0000191006
+p2953
+S'Gary Wright'
+p2954
+sVMN0000258276
+p2955
+S'Digital Underground'
+p2956
+sVMN0000019740
+p2957
+S'Amerie'
+p2958
+sVMN0000262255
+p2959
+S'Mariah Carey'
+p2960
+sVMN0000741718
+p2961
+S'P.M. Dawn'
+p2962
+sVMN0000130689
+p2963
+S'Jackson Browne'
+p2964
+sVMN0000138699
+p2965
+S'Frank Zappa'
+p2966
+sVMN0000183311
+p2967
+S'Fine Young Cannibals'
+p2968
+sVMN0000359966
+p2969
+S'Rickie Lee Jones'
+p2970
+sVMN0000153590
+p2971
+S'Graham Nash'
+p2972
+sVMN0000816538
+p2973
+S'Johnny Bristol'
+p2974
+sVMN0001824897
+p2975
+S'Kimberly Scott'
+p2976
+sVMN0000075825
+p2977
+S'The Coasters'
+p2978
+sVMN0000757328
+p2979
+S'The Marketts'
+p2980
+sVMN0000890724
+p2981
+S'The Originals'
+p2982
+sVMN0000048903
+p2983
+S'Blu Cantrell'
+p2984
+sVMN0000110011
+p2985
+S'Crazy Town'
+p2986
 s.
