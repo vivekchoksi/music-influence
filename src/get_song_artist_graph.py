@@ -6,6 +6,7 @@ import generate_edgelist as ge
 import pickle
 import os.path
 import copy
+import ast
 
 genres = {}
 time_active = {}
@@ -92,12 +93,14 @@ def add_song(artist_to_songs, artist_name, song_index):
     artist_to_songs[artist_name] = [song_index]
 
 def get_artist_to_songs_dict():
+  if not os.path.isfile('../data/artist_to_songs.csv'):
+    return {}
   file_open = open('../data/artist_to_songs.csv', 'r')
   to_return = {}
   next(file_open)
   for line in file_open:
     tokens = line.split(';')
-    to_return[tokens[0].strip()] = tokens[1].strip()
+    to_return[tokens[0].strip()] = ast.literal_eval(tokens[1].strip())
   return to_return
   #if os.path.isfile('../data/artist_to_songs.pickle'):
   #  return pickle.load(open('../data/artist_to_songs.pickle', 'r'))
@@ -137,21 +140,24 @@ def generate_influencers_graph(to_populate, all_influencers_pickle, artist_ids):
 
 def main():
   load_genres()
+  names = []
   load_time_active()
   song_file = open('../data/evolution.csv', 'r')
-  num_already_looked_at = 5612+1 #how many songs i've already looked at (first line is just column titles)
+  num_already_looked_at = 5870+1 #how many songs i've already looked at (first line is just column titles)
+  print 'looked at %d songs' %(num_already_looked_at-1)
   for i in range(num_already_looked_at): 
     next(song_file)
   artist_to_songs = get_artist_to_songs_dict() #read from pickle file (if exists)
   song_to_artist = {}
   num_lines = 0
   for line in song_file:
-    if num_lines == 500: #how many we want to scrape this time (for query limit)
+    if num_lines == 300: #how many we want to scrape this time (for query limit)
       break
     num_lines += 1
     artist_name, song_title = get_artist_and_song(line)
     add_song(artist_to_songs, artist_name, num_already_looked_at+num_lines)
     song_to_artist[song_title] = artist_name
+    names.append(artist_name)
     # THIS ASSUMES THAT EVERY SONG HAS A DATE AND AN ARTIST NAME, AND SONG TITLE IS ALWAYS BEFORE DATE
   scraper = sc.Scraper()
   artist_ids = set()
@@ -160,11 +166,14 @@ def main():
   has_followers_dict = {}
   for song in song_to_artist: 
     artist_name = song_to_artist[song]
-    is_found, artist_id = find_artist(copy.deepcopy(artist_name), scraper, has_influencers_dict, has_followers_dict)
+    is_found, artist_id = find_artist(artist_name, scraper, has_influencers_dict, has_followers_dict)
     if artist_id in artist_ids: continue
     if artist_id != None:
-      artist_to_songs[artist_id] = artist_to_songs[artist_name]
-    artist_to_songs.pop(artist_name, None)
+      if not artist_id in artist_to_songs:
+        artist_to_songs[artist_id] = artist_to_songs[artist_name]
+      else:
+        artist_to_songs[artist_id].extend(artist_to_songs[artist_name])
+    #artist_to_songs.pop(artist_name, None)
     if not is_found:
       print 'Artist was not found: %s' %artist_name
     else:
@@ -173,6 +182,8 @@ def main():
       artist_ids.add(artist_id)
       artist_dict[artist_id] = artist_name
   print 'FINISHED'
+  for name in names:
+    artist_to_songs.pop(name, None)
   labels_already_generated = get_artist_labels()
   # add all the artists we've already seen, so we include them in our regenerated influence graph
   for artist_id in labels_already_generated:
