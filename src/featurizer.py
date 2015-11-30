@@ -44,6 +44,7 @@ class FeatureGenerator(object):
 
     def get_feature_mappers(self, features_to_use):
         abbreviation_map = {
+            "rdn": "random",
             "nc": "ncommon_neighbors",
             "jc": "jaccard_coefficient",
             "aa": "adamic_adar",
@@ -56,6 +57,7 @@ class FeatureGenerator(object):
 
         }
         feature_mappers = {
+            "random": self._random,
             "ncommon_neighbors": self._ncommon_neighbors,
             "jaccard_coefficient": self._jaccard_coeff,
             "adamic_adar": self._adamic_adar,

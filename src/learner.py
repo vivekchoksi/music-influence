@@ -34,22 +34,22 @@ class EdgePredictor(object):
         self.featurizer = FeatureGenerator(features_to_use=features_to_use)
         self.verbose = verbose
 
-    def _total_edges(self):
-        return len(self.IG.nodes()) * (len(self.IG.nodes())-1)  # N * N-1 total possible directed edges
+    def _total_edges(self, IG):
+        return len(IG.nodes()) * (len(IG.nodes())-1)  # N * N-1 total possible directed edges
 
-    def all_negative_examples(self):
+    def all_negative_examples(self, IG):
         examples = []
         percent = int(self._total_edges()/10)
-        self.log("Generating all {} negative training examples".format(self._total_edges()))
-        for ni in self.IG.node:
-            for nj in self.IG.node:
-                if ni==nj or self.IG.has_edge(ni, nj): continue
+        self.log("Generating all {} negative training examples".format(self._total_edges(IG)))
+        for ni in IG.node:
+            for nj in IG.node:
+                if ni==nj or IG.has_edge(ni, nj): continue
                 if len(examples) % percent == 0:
                     self.log("\t...{}% progress".format((len(examples)/percent)*10))
                 examples.append((ni, nj))
         return examples
 
-    def nrandom_negative_examples(self, m):
+    def nrandom_negative_examples(self, m, IG):
         """
         :return: list of m, (u,v) randomly selected negative examples (edges that don't exist in the graph)
         """
@@ -57,8 +57,8 @@ class EdgePredictor(object):
         self.log("Generating {} negative training examples".format(m))
         percent = int(m/10)
         while len(examples) < m:
-            u, v = random.sample(self.IG.node, 2)
-            if self.IG.has_edge(u,v):  continue
+            u, v = random.sample(IG.node, 2)
+            if IG.has_edge(u,v):  continue
             examples.append((u,v))
             if len(examples) % percent == 0:
                 self.log("\t...{}% progress".format((len(examples)/percent)*10))
@@ -75,7 +75,7 @@ class EdgePredictor(object):
     def _ensure_dir_exists(self, path):
         if not os.path.exists(path): os.makedirs(path)
 
-    def load_cache_successful(self):
+    def load_cache_features_successful(self):
         self.log("Loading features")
         features_path = os.path.join(self.basepath, "data", "features")
         self._ensure_dir_exists(features_path)
@@ -97,12 +97,29 @@ class EdgePredictor(object):
 
         return True
 
-    def _cache_intermediate(self, allpos, allneg):
+    def load_cached_examples_succesful(self):
+        self.log("Loading examples")
+        features_path = os.path.join(self.basepath, "data", "features")
+        self._ensure_dir_exists(features_path)
+
+        self.log("\tloading pos_examples.pickle")
+        pos_path = os.path.join(features_path, "pos_examples.pickle")
+        if not os.path.exists(pos_path): return False, None, None
+        pos = cPickle.load(open(pos_path))
+
+        self.log("\tloading neg_examples.pickle")
+        neg_path= os.path.join(features_path, "neg_examples.pickle")
+        if not os.path.exists(neg_path): return False, None, None
+        neg = cPickle.load(open(neg_path))
+
+        return True, pos, neg
+
+    def _cache_examples(self, allpos, allneg):
         self.log("Caching nonsplit features in permanent storage")
         features_path = os.path.join(self.basepath, "data", "features")
-        pos_path = os.path.join(features_path, "pos.pickle")
+        pos_path = os.path.join(features_path, "pos_examples.pickle")
         cPickle.dump(allpos, open(pos_path, 'wb'))
-        neg_path = os.path.join(features_path, "neg.pickle")
+        neg_path = os.path.join(features_path, "neg_examples.pickle")
         cPickle.dump(allneg, open(neg_path, 'wb'))
 
     def _cache_features(self):
@@ -121,10 +138,30 @@ class EdgePredictor(object):
         test_path = os.path.join(features_path, "test.pickle")
         cPickle.dump(self.test_data, open(test_path, 'wb'))
 
-    def _delete_edges(self, ebunch):
-        self.IG.remove_edges_from(ebunch)
+    def _delete_edges(self, ebunch, IG):
+        IG.remove_edges_from(ebunch)
+        return IG
 
-    def preprocess(self, ptrain=.8, pvalidation=.05, use_cache=True, scale=.1):
+    def _generate_examples(self, scale, IG, ptrain, pvalidation):
+         # Positive examples
+        npos = len(IG.edges())
+        pos = list(IG.edges())
+        # Randomize Positive
+        random.shuffle(pos)
+        # Select Subset
+        pos = pos[0:int(npos*scale)]
+        m = len(pos)
+
+        # Negative examples
+        if scale == 1:
+            allneg = self.all_negative_examples(IG)  # Faster than self.nrandom_negative_examples when scale ~ 1
+        else:
+            nnegative = self._num_neg_needed_to_calibrate_dataset(m, IG)
+            allneg = self.nrandom_negative_examples(nnegative, IG)
+
+        return pos, allneg
+
+    def preprocess(self, ptrain=.8, pvalidation=.05, use_cache_features=True, use_cache_examples=True, scale=.0005):
         """
         Generates features, randomly splits datasets into train, validation, test, and fits classifier.
         Suppose there are m' edges in the dataset, then we generate m=scale*m' positive training examples and m negative training examples. This function sets
@@ -140,25 +177,26 @@ class EdgePredictor(object):
         :scale: The scale of the dataset to use, needed because running the entire dataset is too slow (4 hours)
         """
         assert pvalidation + ptrain < 1; assert scale < 1;
-        if use_cache and self.load_cache_successful(): return
 
-        # Positive examples
-        npos = len(self.IG.edges())
-        pos = list(self.IG.edges())
-        # Randomize Positive
-        random.shuffle(pos)
-        # Select Subset
-        pos = pos[0:int(npos*scale)]
-        m = len(pos)
+        # Try loading feature matrices
+        if use_cache_features and self.load_cache_features_successful(): return
 
-        # Negative examples
-        if scale == 1:
-            allneg = self.all_negative_examples()  # Faster than self.nrandom_negative_examples when scale ~ 1
+        # Copy influence graph
+        IGcp = self.IG.copy()
+
+        # Generate Examples
+        # Try loading randomized examples
+        if use_cache_examples:
+            loadsucess, pos, allneg = self.load_cached_examples_succesful()
+            if not loadsucess:
+                self.log("Loading examples failed")
+                pos, allneg = self._generate_examples(scale, IGcp, ptrain, pvalidation)
+                self._cache_examples(pos, allneg)
         else:
-            extra_negative = self._num_neg_needed_to_calibrate_test_data(m - (int(m*ptrain)+int(m*pvalidation)))
-            allneg = self.nrandom_negative_examples(extra_negative)
+            pos, allneg = self._generate_examples(scale, IGcp, ptrain, pvalidation)
+
         # Select subset
-        neg = allneg[0:m]
+        neg = allneg[0:len(pos)]
 
         # Split
         self.log("Splitting")
@@ -166,8 +204,8 @@ class EdgePredictor(object):
         negtr, negvalid, negtst = self._split(neg, ptrain, pvalidation)  # negative train, negative test
 
         # Delete Test Edges from Graph
-        self._delete_edges(posvalid+postst+negvalid+negtst)     # Note this mutates self.IG
-        self.featurizer.set_graph(self.IG)                      # featurizer should use pruned graph
+        IGcp = self._delete_edges(posvalid+postst+negvalid+negtst, IGcp)     # Note this mutates
+        self.featurizer.set_graph(IGcp)                      # featurizer should use pruned graph
 
         # Generate Features
         postr = zip(postr, self.featurizer.feature_matrix(postr))
@@ -188,12 +226,14 @@ class EdgePredictor(object):
         self.validation_data = (Xvalid, Yvalid)
         # Test
         Xtst = postst + negtst
-        Ytst  = [1 for _ in xrange(len(postst))] + [0 for _ in xrange(len(negvalid))]
-        Xtst += zip(allneg[m:len(allneg)], self.featurizer.feature_matrix(allneg[m:len(allneg)]))
+        Ytst  = [1 for _ in xrange(len(postst))] + [0 for _ in xrange(len(negtst))]
+        numneg = self._num_neg_needed_to_calibrate_dataset(len(postst), IGcp)
+        Xtst += zip(allneg[len(pos):numneg-len(negtst)], self.featurizer.feature_matrix(allneg[len(pos):numneg-len(negtst)]))
         Ytst += [0 for _ in xrange(len(Xtst) - len(Ytst))]
+        print("Ratio pos/all in tst: {}".format(float(len(postst)) / float(len(Xtst))))
         self.test_data = (Xtst, Ytst)
 
-        if use_cache: self._cache_features()
+        if use_cache_features: self._cache_features()
 
     def tune_model(self):
         """
@@ -225,14 +265,15 @@ class EdgePredictor(object):
     def predict_proba_from_features(self, feats):
         return self.classifier.predict_proba(feats)[0][1]
 
-    def _num_neg_needed_to_calibrate_test_data(self, pos_in_tst):
+    def _num_neg_needed_to_calibrate_dataset(self, npos_in_set, IG):
         """
         Get number negative examples needed to ensure that the overall distribution of test set is the same as the original
         """
         # Compute number of negative examples needed to calibrate the ratio
-        total_pos = len(self.IG.edges())
-        total_neg = self._total_edges()-total_pos
-        numneg_needed = int(total_neg * pos_in_tst / float(total_pos))
+        total_pos = len(IG.edges())
+        total_neg = self._total_edges(IG)-total_pos
+        self.log("Original Ration Pos/All: {}".format(total_pos / float(total_neg+total_pos)))
+        numneg_needed = int(total_neg * npos_in_set / float(total_pos))
         return numneg_needed
 
     def evaluate_model(self):
@@ -260,9 +301,9 @@ if __name__ == '__main__':
     IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=False)
 
     # Initialize and train Predictor
-    features = ["nc", "jc", "aa", "pa", "ra", "si", "lh"]
+    features = ["nc", "jc", "aa", "pa", "ra", "si", "lh", "rdn"] # This list here for reference
     ep = EdgePredictor(IG, features_to_use=["nc"])
-    ep.preprocess(use_cache=False)
+    ep.preprocess(use_cache_features=False, use_cache_examples=True)
 
     # Fit
     ep.fit()
