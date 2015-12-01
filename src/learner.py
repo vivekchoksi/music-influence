@@ -4,6 +4,7 @@ from loader import GraphLoader
 import random
 import cPickle
 from sklearn.ensemble import ExtraTreesClassifier
+import numpy as np
 from sklearn.metrics.ranking import roc_auc_score, average_precision_score
 import os
 
@@ -249,7 +250,7 @@ class EdgePredictor(object):
         phis_ys = zip(phi, self.train_data[1])
         random.shuffle(phis_ys)
         phi, y = zip(*phis_ys)
-        self.classifier.fit(phi, y)
+        self.classifier.fit(np.asarray(phi).reshape(-1,1), np.asarray(y))
         self.log("done")
 
     def predict(self, u, v):
@@ -303,7 +304,7 @@ if __name__ == '__main__':
     # Initialize and train Predictor
     features = ["nc", "jc", "aa", "pa", "ra", "si", "lh", "rdn"] # This list here for reference
     ep = EdgePredictor(IG, features_to_use=["nc"])
-    ep.preprocess(use_cache_features=False, use_cache_examples=True)
+    ep.preprocess(use_cache_features=False, use_cache_examples=False)
 
     # Fit
     ep.fit()
