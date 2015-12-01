@@ -8,6 +8,9 @@ from loader import GraphLoader
 import random
 import math
 import logging
+import warnings
+
+
 
 class FeatureGenerator(object):
     """
@@ -74,7 +77,6 @@ class FeatureGenerator(object):
                 feature_name = abbreviation_map[abbrv]
                 result.append( (feature_name, feature_mappers[feature_name]) )
         return result
-
 
     def compute_features(self, u, v):
         """

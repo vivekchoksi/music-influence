@@ -3,10 +3,16 @@ import logging
 from loader import GraphLoader
 import random
 import cPickle
-from sklearn.ensemble import ExtraTreesClassifier
 import numpy as np
-from sklearn.metrics.ranking import roc_auc_score, average_precision_score
 import os
+import warnings
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn import svm
+
+with warnings.catch_warnings():
+    # sklearn is complaining about having 1 feature
+    warnings.filterwarnings("ignore",category=DeprecationWarning)
+    from sklearn.metrics.ranking import roc_auc_score, average_precision_score
 
 class EdgePredictor(object):
     # FeatureGenerator from featurizer.py
@@ -16,7 +22,8 @@ class EdgePredictor(object):
     IG = None
 
     # For now just easy ensemble method
-    classifier = ExtraTreesClassifier()
+    classifier = svm.SVC(class_weight="balanced")
+    #classifier = ExtraTreesClassifier()
 
     # Tuple Xtrain, Phitrain, Ytrain, set when self.train() is called by the client
     train_data = None
@@ -162,6 +169,11 @@ class EdgePredictor(object):
 
         return pos, allneg
 
+    def _positive_rate(self, IG):
+        total_pos = len(IG.edges())
+        total_neg = self._total_edges(IG)-total_pos
+        return total_pos / float(total_neg+total_pos)
+
     def preprocess(self, ptrain=.8, pvalidation=.05, use_cache_features=True, use_cache_examples=True, scale=.0005):
         """
         Generates features, randomly splits datasets into train, validation, test, and fits classifier.
@@ -184,6 +196,11 @@ class EdgePredictor(object):
 
         # Copy influence graph
         IGcp = self.IG.copy()
+        posrate = self._positive_rate(IGcp)
+
+        # Compute Class Weights (for cost-sensitive learning)
+        c1, c0 = 1.0 / posrate, 1.0 / (1-posrate)
+        weights = [c0, c1]
 
         # Generate Examples
         # Try loading randomized examples
@@ -236,6 +253,9 @@ class EdgePredictor(object):
 
         if use_cache_features: self._cache_features()
 
+        # Return class weights
+        return weights
+
     def tune_model(self):
         """
         TODO use validation set to tune hyperparameters
@@ -286,6 +306,7 @@ class EdgePredictor(object):
         ypreds = []
         for i, phi in enumerate(phis):
             ypreds.append(self.predict_proba_from_features(phi))
+            #ypreds.append(0)
             if i % percent == 0:
                 self.log("\t...{}% progress".format((i/percent)*10))
         print("Features Used: {}".format(self.featurizer.get_feature_names()))
