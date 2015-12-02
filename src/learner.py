@@ -302,18 +302,21 @@ class EdgePredictor(object):
         return numneg_needed
 
     def precision_topk(self, ys, ypreds, class_weights, suffix):
+        ypreds = np.asarray(ypreds)
+        ys = np.asarray(ys)
         c0, c1 = class_weights
         posrate = 1.0 / c1
         maxk = int(posrate*len(ys))  # Max topk is 2 times the distribution we'd expect
         maxkpow =  math.ceil(np.log10(2*maxk))
-        ks = map(int, np.logspace(maxkpow-1, maxkpow, num=100))
+        ks = np.array(list(set(map(int, np.logspace(0, maxkpow, num=100)))))
 
         precisions_at_k = []
         for k in ks:
-            ypreds_y = sorted(zip(ypreds, ys), reverse=True)[0:k]
-            ypredsk, ysk = zip(*ypreds_y)
+            idices = np.argsort(ypreds)[::-1][0:k]
+            ysk = ys[idices]
             yscore = np.ones((len(ysk), 1))
             precisions_at_k.append(precision_score(ysk, yscore))
+
         plt.figure()
         plt.semilogx(ks, precisions_at_k, 'bo', alpha=.9)
         plt.axvline(x=maxk, ymin=0, linewidth=2, color='r', alpha=.2)
@@ -340,18 +343,12 @@ class EdgePredictor(object):
                 self.log("\t...{}% progress".format((i/percent)*10))
         return ys, ypreds
 
-if __name__ == '__main__':
-    # Setup logging
-    logging.basicConfig(format="[%(name)s %(asctime)s]\t%(msg)s", level=logging.INFO)
-
-    # Load IG graph
-    IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=False)
-
-    # Initialize and train Predictor
-    features = ["nc", "jc", "aa", "pa", "ra", "si", "lh"] # This list here for reference
-    # for f in features:
-    ep = EdgePredictor(IG, features_to_use=["rdn"])
-    class_weights = ep.preprocess(use_cache_features=False, use_cache_examples=False, balanced=True, scale=.8)
+def run(IG, features_to_use, scale=0.1):
+    """
+    Train Learner, Make Predictions, Show AUC metrics, plot
+    """
+    ep = EdgePredictor(IG, features_to_use=features_to_use)
+    class_weights = ep.preprocess(use_cache_features=False, use_cache_examples=False, balanced=True, scale=scale)
 
     # Fit
     ep.fit(class_weights)
@@ -364,4 +361,22 @@ if __name__ == '__main__':
 
     # Topk Metrics
     ep.precision_topk(ys, ypreds, class_weights, '_'.join(ep.featurizer.get_feature_names()))
+
+if __name__ == '__main__':
+    # Setup logging
+    logging.basicConfig(format="[%(name)s %(asctime)s]\t%(msg)s", level=logging.INFO)
+
+    # Load IG graph
+    IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=False)
+
+    # Initialize and train Predictor
+    features = ["nc", "jc", "aa", "pa", "ra", "si", "lh", "rdn"] # This list here for reference
+
+    # Run Each feature Independently
+    for f in features:
+        run(IG, [f])
+
+
+    #run(IG, ["rdn"])
+
 
