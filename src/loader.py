@@ -45,7 +45,7 @@ class GraphLoader(object):
         """
         :return: snap.TNGraph read from default path, or absolute path if passed in
         """
-        filepath = os.path.join(self.basepath, "data", "song_artists_only_edges.csv") if path is None else path
+        filepath = os.path.join(self.basepath, "data", "edges.csv") if path is None else path
         self.log('Loading graph from file:{}...'.format(filepath))
         Graph = snap.TNGraph.New()
         ids = {}
@@ -75,7 +75,7 @@ class GraphLoader(object):
         :return: networkx influence graph there id is rovicorp id and each node has
         the artist name as one of its attributes
         """
-        filepath = os.path.join(self.basepath, "data", "song_artists_only_edges.csv") if path is None else path
+        filepath = os.path.join(self.basepath, "data", "edges.csv") if path is None else path
         G = nx.read_edgelist(filepath, delimiter=';', comments="Source")
         names = self.get_artist_ids_to_names()
         for nid in G.node:
@@ -113,7 +113,7 @@ class GraphLoader(object):
         """
         :return: Returns dict from rovicorp artist ids to names
         """
-        filepath = os.path.join(self.basepath, "data", "song_artists_only_labels.csv") if path is None else path
+        filepath = os.path.join(self.basepath, "data", "node_labels.csv") if path is None else path
         names = {}  # Rovicorp ids => names
         with codecs.open(filepath, encoding="utf-8") as fin:
             for line in fin.readlines():

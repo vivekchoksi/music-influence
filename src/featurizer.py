@@ -8,7 +8,9 @@ from loader import GraphLoader
 import random
 import math
 import logging
-import pickle
+import warnings
+
+
 
 class FeatureGenerator(object):
     """
@@ -17,8 +19,6 @@ class FeatureGenerator(object):
     basepath = None
     IG = None  # All Music Influence Graph
     sdf = None  # Song DataFrame with audio features
-    genres = {}
-    time_active = {}
 
     def __init__(self, verbose=True, features_to_use=None):
         """
@@ -31,21 +31,15 @@ class FeatureGenerator(object):
         features_to_use = ["nc"] if features_to_use is None else features_to_use
         self.feature_mappers = self.get_feature_mappers(features_to_use)
         self.log("Featurizer will use: {}".format(self.get_feature_names()))
-        self.load_genres()
-        self.load_time_active()
 
     def log(self, *args, **kwargs):
         if self.verbose: logging.info(*args, **kwargs)
+
 
     def set_graph(self, IG):
         self.IG = IG
         self.UIG = IG.to_undirected()
 
-    def load_genres(self):
-        self.genres = pickle.load(open('../data/genres.pickle', 'rb'))
-
-    def load_time_active(self):
-        self.time_active = pickle.load(open('../data/time_active.pickle', 'rb'))
 
     def get_feature_names(self):
         names, funcs = zip(*self.feature_mappers)
@@ -53,6 +47,7 @@ class FeatureGenerator(object):
 
     def get_feature_mappers(self, features_to_use):
         abbreviation_map = {
+            "rdn": "random",
             "nc": "ncommon_neighbors",
             "jc": "jaccard_coefficient",
             "aa": "adamic_adar",
@@ -61,12 +56,11 @@ class FeatureGenerator(object):
             #"sp": "len_shortest_undirected_path",
             "ra": "resource_allocation",
             "si": "sorensen_index",
-            "lh": "leicht_holme_newman",
-            "g": "genres", 
-            "ta":"time_active"
+            "lh": "leicht_holme_newman"
 
         }
         feature_mappers = {
+            "random": self._random,
             "ncommon_neighbors": self._ncommon_neighbors,
             "jaccard_coefficient": self._jaccard_coeff,
             "adamic_adar": self._adamic_adar,
@@ -75,9 +69,7 @@ class FeatureGenerator(object):
             "len_shortest_undirected_path": self._len_shortest_path,
             "resource_allocation": self._resource_allocation,
             "sorensen_index": self._sorensen_index,
-            "leicht_holme_newman": self._leicht_holme_newman,
-            "genres": self._genre, 
-            "time_active":self._time_active
+            "leicht_holme_newman": self._leicht_holme_newman
         }
         result = []
         for abbrv in features_to_use:
@@ -85,7 +77,6 @@ class FeatureGenerator(object):
                 feature_name = abbreviation_map[abbrv]
                 result.append( (feature_name, feature_mappers[feature_name]) )
         return result
-
 
     def compute_features(self, u, v):
         """
@@ -122,22 +113,6 @@ class FeatureGenerator(object):
 
     def _random(self, u, v):
         return 1 if random.uniform(0,1) <=.5 else 0
-
-    def _genre(self, u, v):
-        if u not in self.genres or v not in self.genres:
-            return 0
-        else:
-            genre_u = self.genres[u]
-            genre_v = self.genres[v]
-            return float(len(set(genre_u).intersection(set(genre_v)))/len(set(genre_u).union(set(genre_v))))
-
-    def _time_active(self, u, v):
-        if u not in self.time_active or v not in self.time_active:
-            return 0
-        else:
-            time_u = self.genres[u]
-            time_v = self.genres[v]
-            return float(len(set(time_u).intersection(set(time_v)))/len(set(time_u).union(set(time_v))))
 
     def _len_shortest_path(self, u, v):
         try:
