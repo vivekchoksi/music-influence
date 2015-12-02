@@ -370,7 +370,7 @@ if __name__ == '__main__':
     IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=False)
 
     # Initialize and train Predictor
-    features = ["nc", "jc", "aa", "pa", "ra", "si", "lh", "rdn"] # This list here for reference
+    features = ["nc", "jc", "aa", "pa", "ra", "si", "lh"] # This list here for reference
 
     # Run Each feature Independently
     for f in features:
