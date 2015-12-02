@@ -29,6 +29,8 @@ def is_same_artist(artist_one, artist_two):
     return True
   if 'featuring' in artist_one.lower():
     tokens = artist_one.lower().split("featuring")
+  if 'ft' in artist_one.lower():
+    tokens = artist_one.lower().split("ft")
     if tokens[0].strip() == artist_two.lower() or tokens[1].strip() == artist_two.lower():
       return True
   return False
@@ -93,6 +95,7 @@ def add_song(artist_to_songs, artist_name, song_index):
     artist_to_songs[artist_name] = [song_index]
 
 def get_artist_to_songs_dict():
+  total_songs = 0 
   if not os.path.isfile('../data/artist_to_songs.csv'):
     return {}
   file_open = open('../data/artist_to_songs.csv', 'r')
@@ -101,6 +104,8 @@ def get_artist_to_songs_dict():
   for line in file_open:
     tokens = line.split(';')
     to_return[tokens[0].strip()] = ast.literal_eval(tokens[1].strip())
+    total_songs += len(ast.literal_eval(tokens[1]))
+  print 'total songs: %d' %(total_songs)
   return to_return
   #if os.path.isfile('../data/artist_to_songs.pickle'):
   #  return pickle.load(open('../data/artist_to_songs.pickle', 'r'))
@@ -143,7 +148,8 @@ def main():
   names = []
   load_time_active()
   song_file = open('../data/evolution.csv', 'r')
-  num_already_looked_at = 5870+1 #how many songs i've already looked at (first line is just column titles)
+  num_already_looked_at = 17094+1 #how many songs i've already looked at (first line is just column titles)
+  #total: 17094
   print 'looked at %d songs' %(num_already_looked_at-1)
   for i in range(num_already_looked_at): 
     next(song_file)
@@ -151,7 +157,7 @@ def main():
   song_to_artist = {}
   num_lines = 0
   for line in song_file:
-    if num_lines == 300: #how many we want to scrape this time (for query limit)
+    if num_lines == 200: #how many we want to scrape this time (for query limit)
       break
     num_lines += 1
     artist_name, song_title = get_artist_and_song(line)
