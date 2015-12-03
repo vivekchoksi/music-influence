@@ -28,7 +28,7 @@ class FeatureGenerator(object):
         """
         self.verbose = verbose
         self.basepath = os.path.dirname(os.path.dirname(__file__))
-        self.sdf = GraphLoader().load_song_dataframe()
+        self.sdf = GraphLoader(verbose=verbose).load_song_dataframe()
         self.average_song_vectors = self._get_average_song_vectors()
         self.IG = None
         features_to_use = ["nc"] if features_to_use is None else features_to_use
@@ -49,7 +49,7 @@ class FeatureGenerator(object):
 
     def get_feature_mappers(self, features_to_use):
         abbreviation_map = {
-            "rdn": "random",
+            "rnd": "random",
             "nc": "ncommon_neighbors",
             "jc": "jaccard_coefficient",
             "aa": "adamic_adar",
@@ -62,8 +62,9 @@ class FeatureGenerator(object):
 
             # Audio features
             "aae": "all_audio_euclidean_distance",
-            "hae": "_harmonic_audio_euclidean_distance",
-            "tae": "_timbral_audio_euclidean_distance",
+            "hae": "harmonic_audio_euclidean_distance",
+            "tae": "timbral_audio_euclidean_distance",
+            "sae": "separate_audio_euclidean_distance",
 
         }
         feature_mappers = {
@@ -80,8 +81,10 @@ class FeatureGenerator(object):
 
             # Audio features
             "all_audio_euclidean_distance": self._all_audio_euclidean_distance,
-            "_harmonic_audio_euclidean_distance": self._harmonic_audio_euclidean_distance,
-            "_timbral_audio_euclidean_distance": self._timbral_audio_euclidean_distance,
+            "harmonic_audio_euclidean_distance": self._harmonic_audio_euclidean_distance,
+            "timbral_audio_euclidean_distance": self._timbral_audio_euclidean_distance,
+            "separate_audio_euclidean_distance": self._separate_audio_euclidean_distance,
+
         }
         result = []
         for abbrv in features_to_use:
@@ -94,7 +97,14 @@ class FeatureGenerator(object):
         """
         :return: list of feature mappings for influence edge (u,v)
         """
-        edge_features = [func(u,v) for name, func in self.feature_mappers]
+        edge_features = []
+        for name, func in self.feature_mappers:
+            features = func(u, v)
+            if isinstance(features, list):
+                for feature in features:
+                    edge_features.append(feature)
+            else:
+                edge_features.append(features)
         return edge_features
 
     def _all_audio_euclidean_distance(self, u, v):
@@ -105,6 +115,12 @@ class FeatureGenerator(object):
 
     def _timbral_audio_euclidean_distance(self, u, v):
         return np.linalg.norm(self.average_song_vectors[u][8:] - self.average_song_vectors[v][8:])
+
+    def _separate_audio_euclidean_distance(self, u, v):
+        """
+        :return: a list with n features, where n is the number of audio topics
+        """
+        return list(np.absolute(self.average_song_vectors[u] - self.average_song_vectors[v]))
 
     def _sorensen_index(self, u, v):
         if (float(self.IG.degree(u) + self.IG.degree(v))) == 0: return 0
@@ -160,7 +176,7 @@ class FeatureGenerator(object):
             by that artist
         """
         average_song_vectors = {}
-        song_vectors = GraphLoader().load_song_vectors()
+        song_vectors = GraphLoader(verbose=self.verbose).load_song_vectors()
         for artist_id, song_vectors_for_artist in song_vectors.iteritems():
             average_song_vectors[artist_id] = np.mean(np.array(song_vectors_for_artist), axis=0)
         return average_song_vectors

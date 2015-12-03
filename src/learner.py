@@ -39,7 +39,7 @@ class EdgePredictor(object):
         random.seed(0)
         self.basepath = os.path.dirname(os.path.dirname(__file__))
         self.IG = IG
-        self.featurizer = FeatureGenerator(features_to_use=features_to_use)
+        self.featurizer = FeatureGenerator(verbose=verbose, features_to_use=features_to_use)
         self.verbose = verbose
 
     def _total_edges(self, IG):
@@ -197,7 +197,7 @@ class EdgePredictor(object):
         self.train_data to have m*ptrain positive examples and m*ptrain negative examples (to mantain class balance),
         similarly it sets self.test_data to have m*(1-ptrain) positive examples and m*(1-ptrain) negative examples.
         """
-        assert pvalidation + ptrain < 1; assert scale < 1;
+        assert pvalidation + ptrain < 1; assert scale <= 1;
 
         # Try loading feature matrices
         if use_cache_features and self.load_cache_features_successful(): return
@@ -343,11 +343,11 @@ class EdgePredictor(object):
                 self.log("\t...{}% progress".format((i/percent)*10))
         return ys, ypreds
 
-def run(IG, features_to_use, scale=0.5):
+def run(IG, features_to_use, scale=1.0, verbose=True):
     """
     Train Learner, Make Predictions, Show AUC metrics, plot
     """
-    ep = EdgePredictor(IG, features_to_use=features_to_use)
+    ep = EdgePredictor(IG, verbose=verbose, features_to_use=features_to_use)
     class_weights = ep.preprocess(use_cache_features=False, use_cache_examples=False, balanced=True, scale=scale)
 
     # Fit
@@ -367,20 +367,14 @@ if __name__ == '__main__':
     logging.basicConfig(format="[%(name)s %(asctime)s]\t%(msg)s", level=logging.INFO)
 
     # Load IG graph
-    IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=False)
+    IG = GraphLoader(verbose=False).load_networkx_influence_graph(pruned=False)
 
     # Initialize and train Predictor
+    run(IG, ["nc"], scale=1.0, verbose=False)
+    run(IG, ["sae"], scale=1.0, verbose=False)
+
     # features = ["nc", "jc", "aa", "pa", "ra", "si", "lh"] # This list here for reference
-    features = ["aae", "hae", "tae"]
-
-    # run(IG, ["nc"])
-    # run(IG, ["aae", "nc"])
-
+    # features = ["aae", "hae", "tae", "rnd"]
     # Run Each feature Independently
-    for f in features:
-        run(IG, [f])
-
-
-    #run(IG, ["rdn"])
-
-
+    # for f in features:
+        # run(IG, [f])
