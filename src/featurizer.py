@@ -61,10 +61,10 @@ class FeatureGenerator(object):
             "lh": "leicht_holme_newman",
 
             # Audio features
-            "aae": "all_audio_euclidean_distance",
-            "hae": "harmonic_audio_euclidean_distance",
-            "tae": "timbral_audio_euclidean_distance",
-            "sae": "separate_audio_euclidean_distance",
+            "ja": "joint_audio",
+            "ha": "harmonic_audio",
+            "ta": "timbral_audio",
+            "da": "disjoint_audio",
 
         }
         feature_mappers = {
@@ -80,10 +80,10 @@ class FeatureGenerator(object):
             "leicht_holme_newman": self._leicht_holme_newman, 
 
             # Audio features
-            "all_audio_euclidean_distance": self._all_audio_euclidean_distance,
-            "harmonic_audio_euclidean_distance": self._harmonic_audio_euclidean_distance,
-            "timbral_audio_euclidean_distance": self._timbral_audio_euclidean_distance,
-            "separate_audio_euclidean_distance": self._separate_audio_euclidean_distance,
+            "joint_audio": self._all_audio_euclidean_distance,
+            "harmonic_audio": self._harmonic_audio_euclidean_distance,
+            "timbral_audio": self._timbral_audio_euclidean_distance,
+            "disjoint_audio": self._separate_audio_euclidean_distance,
 
         }
         result = []
@@ -100,6 +100,8 @@ class FeatureGenerator(object):
         edge_features = []
         for name, func in self.feature_mappers:
             features = func(u, v)
+
+            # Special case: when func returns a list of features, we want to add each one iteratively.
             if isinstance(features, list):
                 for feature in features:
                     edge_features.append(feature)

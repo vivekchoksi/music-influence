@@ -371,7 +371,9 @@ if __name__ == '__main__':
 
     # Initialize and train Predictor
     run(IG, ["nc"], scale=1.0, verbose=False)
-    run(IG, ["sae"], scale=1.0, verbose=False)
+    run(IG, ["da"], scale=1.0, verbose=False)
+    run(IG, ["nc", "da"], scale=1.0, verbose=False)
+
 
     # features = ["nc", "jc", "aa", "pa", "ra", "si", "lh"] # This list here for reference
     # features = ["aae", "hae", "tae", "rnd"]
