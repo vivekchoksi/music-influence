@@ -13,7 +13,9 @@ import pandas as pd
 import codecs
 import snap
 import os
+import ast
 import logging
+import pdb
 logging.basicConfig(format="[%(name)s %(asctime)s]\t%(msg)s", level=logging.INFO)
 
 
@@ -26,6 +28,9 @@ class GraphLoader(object):
     EDGES_FILENAME = "song_artists_only_edges.csv"
     EVOLUTION_FILENAME = "evolution.csv"
     LABELS_FILENAME = "song_artists_only_labels.csv"
+    SONG_VECTORS_FILENAME = "song_vectors.csv"
+    SONG_VECTORS_PICKLE= "song_vectors.pickle"
+
 
     def __init__(self, path=None, verbose=True):
         self.basepath = os.path.dirname(os.path.dirname(__file__)) if path is None else path
@@ -71,6 +76,36 @@ class GraphLoader(object):
                 Graph.AddEdge(ids[source], ids[target])
         self.log('Done')
         return Graph, ids
+
+    def pickle_dump_song_vectors(self, path=None, outfile_path=None):
+        """
+        Pickle dump a dictionary mapping from artist ID to list of lists of audio features.
+        """
+        filepath = os.path.join(self.basepath, self.DATA_DIR, self.SONG_VECTORS_FILENAME) if path is None else path
+        outfile_path = os.path.join(self.basepath, self.DATA_DIR, self.SONG_VECTORS_PICKLE) \
+            if outfile_path is None else outfile_path
+        self.log('Dumping song vectors to file:{}...'.format(outfile_path))
+
+        song_vectors = {}
+        with open(filepath, 'r') as f:
+            for line in f:
+                artist_id, vectors_as_string = line.split(';')
+                vectors = ast.literal_eval(vectors_as_string)
+                for idx, vector in enumerate(vectors):
+                    vectors[idx] = [float(val) for val in vector]
+                song_vectors[artist_id] = vectors
+        pickle.dump(song_vectors, open(outfile_path, 'wb'))
+        self.log('Done')
+
+    def load_song_vectors(self, path=None):
+        """
+        :return: song vectors loaded from a pickle file, mapping rom artist ID to list of lists of audio features
+        """
+        filepath = os.path.join(self.basepath, self.DATA_DIR, self.SONG_VECTORS_PICKLE) if path is None else path
+        self.log('Loading graph from file:{}...'.format(filepath))
+        song_vectors = pickle.load(open(filepath, 'rb'))
+        self.log('Done')
+        return song_vectors       
 
     def pickle_dump_graph(self, Graph, pickle_filename):
         self.log('Dumping graph to file:{}...'.format(pickle_filename))
@@ -137,6 +172,7 @@ def main():
     ldr = GraphLoader()
     G = ldr.load_snap_influence_graph()  # snap TNGraph
     Gnx = ldr.load_networkx_influence_graph()  # networkx influence graph
+    ldr.pickle_dump_song_vectors()
 
 if __name__ == '__main__':
     main()

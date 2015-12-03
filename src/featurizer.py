@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from networkx import Graph
 import networkx as nx
+import numpy as np
 import sys
 from networkx.exception import NetworkXNoPath
 from loader import GraphLoader
@@ -9,6 +10,7 @@ import random
 import math
 import logging
 import warnings
+import pdb
 
 
 
@@ -27,6 +29,7 @@ class FeatureGenerator(object):
         self.verbose = verbose
         self.basepath = os.path.dirname(os.path.dirname(__file__))
         self.sdf = GraphLoader().load_song_dataframe()
+        self.average_song_vectors = self._get_average_song_vectors()
         self.IG = None
         features_to_use = ["nc"] if features_to_use is None else features_to_use
         self.feature_mappers = self.get_feature_mappers(features_to_use)
@@ -39,7 +42,6 @@ class FeatureGenerator(object):
     def set_graph(self, IG):
         self.IG = IG
         self.UIG = IG.to_undirected()
-
 
     def get_feature_names(self):
         names, funcs = zip(*self.feature_mappers)
@@ -56,7 +58,10 @@ class FeatureGenerator(object):
             #"sp": "len_shortest_undirected_path",
             "ra": "resource_allocation",
             "si": "sorensen_index",
-            "lh": "leicht_holme_newman"
+            "lh": "leicht_holme_newman",
+
+            # Audio features
+            "ae": "audio_euclidean_distance",
 
         }
         feature_mappers = {
@@ -69,7 +74,10 @@ class FeatureGenerator(object):
             "len_shortest_undirected_path": self._len_shortest_path,
             "resource_allocation": self._resource_allocation,
             "sorensen_index": self._sorensen_index,
-            "leicht_holme_newman": self._leicht_holme_newman
+            "leicht_holme_newman": self._leicht_holme_newman, 
+
+            # Audio features
+            "audio_euclidean_distance": self._audio_euclidean_distance,
         }
         result = []
         for abbrv in features_to_use:
@@ -84,6 +92,9 @@ class FeatureGenerator(object):
         """
         edge_features = [func(u,v) for name, func in self.feature_mappers]
         return edge_features
+
+    def _audio_euclidean_distance(self, u, v):
+        return np.linalg.norm(self.average_song_vectors[u] - self.average_song_vectors[v])
 
     def _sorensen_index(self, u, v):
         if (float(self.IG.degree(u) + self.IG.degree(v))) == 0: return 0
@@ -131,6 +142,17 @@ class FeatureGenerator(object):
         personal[v] = 1.0
         r_vu = nx.pagerank(self.IG, personalization=personal).get(u)
         return r_uv + r_vu
+
+    def _get_average_song_vectors(self):
+        """
+        :return: dictionary mapping from artist ID to the vector of the average audio features from all songs
+            by that artist
+        """
+        average_song_vectors = {}
+        song_vectors = GraphLoader().load_song_vectors()
+        for artist_id, song_vectors_for_artist in song_vectors.iteritems():
+            average_song_vectors[artist_id] = np.mean(np.array(song_vectors_for_artist), axis=0)
+        return average_song_vectors
 
     def feature_matrix(self, edges):
         """
