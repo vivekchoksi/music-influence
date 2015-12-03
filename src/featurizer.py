@@ -61,7 +61,9 @@ class FeatureGenerator(object):
             "lh": "leicht_holme_newman",
 
             # Audio features
-            "ae": "audio_euclidean_distance",
+            "aae": "all_audio_euclidean_distance",
+            "hae": "_harmonic_audio_euclidean_distance",
+            "tae": "_timbral_audio_euclidean_distance",
 
         }
         feature_mappers = {
@@ -77,7 +79,9 @@ class FeatureGenerator(object):
             "leicht_holme_newman": self._leicht_holme_newman, 
 
             # Audio features
-            "audio_euclidean_distance": self._audio_euclidean_distance,
+            "all_audio_euclidean_distance": self._all_audio_euclidean_distance,
+            "_harmonic_audio_euclidean_distance": self._harmonic_audio_euclidean_distance,
+            "_timbral_audio_euclidean_distance": self._timbral_audio_euclidean_distance,
         }
         result = []
         for abbrv in features_to_use:
@@ -93,8 +97,14 @@ class FeatureGenerator(object):
         edge_features = [func(u,v) for name, func in self.feature_mappers]
         return edge_features
 
-    def _audio_euclidean_distance(self, u, v):
+    def _all_audio_euclidean_distance(self, u, v):
         return np.linalg.norm(self.average_song_vectors[u] - self.average_song_vectors[v])
+
+    def _harmonic_audio_euclidean_distance(self, u, v):
+        return np.linalg.norm(self.average_song_vectors[u][:8] - self.average_song_vectors[v][:8])
+
+    def _timbral_audio_euclidean_distance(self, u, v):
+        return np.linalg.norm(self.average_song_vectors[u][8:] - self.average_song_vectors[v][8:])
 
     def _sorensen_index(self, u, v):
         if (float(self.IG.degree(u) + self.IG.degree(v))) == 0: return 0
@@ -123,7 +133,8 @@ class FeatureGenerator(object):
         return self.IG.degree(u) * self.IG.degree(v)
 
     def _random(self, u, v):
-        return 1 if random.uniform(0,1) <=.5 else 0
+        return random.uniform(0, 1)
+        # return 1 if random.uniform(0,1) <=.5 else 0
 
     def _len_shortest_path(self, u, v):
         try:

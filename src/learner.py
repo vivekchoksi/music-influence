@@ -343,7 +343,7 @@ class EdgePredictor(object):
                 self.log("\t...{}% progress".format((i/percent)*10))
         return ys, ypreds
 
-def run(IG, features_to_use, scale=0.1):
+def run(IG, features_to_use, scale=0.5):
     """
     Train Learner, Make Predictions, Show AUC metrics, plot
     """
@@ -371,7 +371,10 @@ if __name__ == '__main__':
 
     # Initialize and train Predictor
     # features = ["nc", "jc", "aa", "pa", "ra", "si", "lh"] # This list here for reference
-    features = ["ae"]
+    features = ["aae", "hae", "tae"]
+
+    # run(IG, ["nc"])
+    # run(IG, ["aae", "nc"])
 
     # Run Each feature Independently
     for f in features:
