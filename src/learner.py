@@ -6,6 +6,7 @@ from loader import GraphLoader
 import random
 import cPickle
 import numpy as np
+import pdb
 import os
 from matplotlib import pyplot as plt
 from sklearn.metrics.ranking import roc_auc_score, average_precision_score
@@ -324,6 +325,17 @@ class EdgePredictor(object):
         plt.ylabel("Precission")
         plt.savefig(os.path.join(self.basepath, "plots", "ptopk_{}.png".format(suffix)))
 
+    def print_feature_weights(self):
+        importances = self.classifier.feature_importances_
+        std = np.std([tree.feature_importances_ for tree in self.classifier.estimators_],
+                     axis=0)
+        indices = np.argsort(importances)[::-1]
+
+        # Print the feature ranking
+        self.log("Ranked feature importances:")
+
+        for f in range(importances.shape[0]):
+            self.log("%d. Feature %d (%f)" % (f + 1, indices[f], importances[indices[f]]))
 
     def auc_metrics(self, y, ypreds):
         print("Features Used: {}".format(self.featurizer.get_feature_names()))
@@ -353,6 +365,9 @@ def run(IG, features_to_use, scale=1.0, verbose=True):
     # Fit
     ep.fit(class_weights)
 
+    if verbose:
+        ep.print_feature_weights()
+
     # Make Predictions
     ys, ypreds = ep.make_predictions()
 
@@ -370,9 +385,10 @@ if __name__ == '__main__':
     IG = GraphLoader(verbose=False).load_networkx_influence_graph(pruned=False)
 
     # Initialize and train Predictor
-    run(IG, ["nc"], scale=1.0, verbose=False)
-    run(IG, ["da"], scale=1.0, verbose=False)
-    run(IG, ["nc", "da"], scale=1.0, verbose=False)
+    run(IG, ["nc", "da"], scale=1.0, verbose=True)
+    # run(IG, ["nc"], scale=1.0, verbose=False)
+    # run(IG, ["da"], scale=1.0, verbose=False)
+    # run(IG, ["nc", "da"], scale=1.0, verbose=False)
 
 
     # features = ["nc", "jc", "aa", "pa", "ra", "si", "lh"] # This list here for reference
