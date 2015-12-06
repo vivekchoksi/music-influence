@@ -309,12 +309,22 @@ class EdgePredictor(object):
         posrate = 1.0 / c1
         maxk = int(posrate*len(ys))  # Max topk is 2 times the distribution we'd expect
         maxkpow =  math.ceil(np.log10(2*maxk))
-        ks = np.array(list(set(map(int, np.logspace(0, maxkpow, num=100)))))
+
+        # Sample k values on a log scale.
+        # ks = np.array(list(set(map(int, np.logspace(0, maxkpow, num=100)))))
+
+        # Use all k values; don't discard any.
+        ks = np.array(range(1, maxk + 1))
 
         precisions_at_k = []
         for k in ks:
+            # Indices of the k examples with the highest y predicted value.
             idices = np.argsort(ypreds)[::-1][0:k]
+
+            # The true y labels of these k examples.
             ysk = ys[idices]
+
+            # Append the precision of these top k predictions.
             yscore = np.ones((len(ysk), 1))
             precisions_at_k.append(precision_score(ysk, yscore))
 
@@ -322,16 +332,31 @@ class EdgePredictor(object):
         plt.semilogx(ks, precisions_at_k, 'bo', alpha=.9)
         plt.axvline(x=maxk, ymin=0, linewidth=2, color='r', alpha=.2)
         plt.title("Precision at Topk")
-        plt.ylabel("Precission")
+        plt.ylabel("Precision")
         plt.savefig(os.path.join(self.basepath, "plots", "ptopk_{}.png".format(suffix)))
+
+    def report_incorrect_predictions(self, ys, ypreds, class_weights):
+        print "Reporting false positives"
+        c0, c1 = class_weights
+        posrate = 1.0 / c1
+        maxk = int(posrate*len(ys))
+
+        # Indices of examples, sorted from highest y predicted value to lowest.
+        top_pred_indices = np.argsort(ypreds)[::-1][0:maxk]
+
+        for i, top_pred_index in enumerate(top_pred_indices):
+            if ys[top_pred_index] != 1:
+                self.log("Misclassified the %dth highest-predicted example (y_pred=%f)" % (i, ypreds[top_pred_index]))
 
     def print_feature_weights(self):
         importances = self.classifier.feature_importances_
+
+        # Unused variable. Could use this to create a bar plot showing feature importances with std dev interval.
+        # See: http://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html
         std = np.std([tree.feature_importances_ for tree in self.classifier.estimators_],
                      axis=0)
         indices = np.argsort(importances)[::-1]
 
-        # Print the feature ranking
         self.log("Ranked feature importances:")
 
         for f in range(importances.shape[0]):
@@ -376,6 +401,8 @@ def run(IG, features_to_use, scale=1.0, verbose=True):
 
     # Topk Metrics
     ep.precision_topk(ys, ypreds, class_weights, '_'.join(ep.featurizer.get_feature_names()))
+
+    ep.report_incorrect_predictions(ys, ypreds, class_weights)
 
 if __name__ == '__main__':
     # Setup logging

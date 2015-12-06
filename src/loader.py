@@ -102,7 +102,7 @@ class GraphLoader(object):
         :return: song vectors loaded from a pickle file, mapping rom artist ID to list of lists of audio features
         """
         filepath = os.path.join(self.basepath, self.DATA_DIR, self.SONG_VECTORS_PICKLE) if path is None else path
-        self.log('Loading graph from file:{}...'.format(filepath))
+        self.log('Loading song data from file:{}...'.format(filepath))
         song_vectors = pickle.load(open(filepath, 'rb'))
         self.log('Done')
         return song_vectors       
