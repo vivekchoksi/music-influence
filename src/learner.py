@@ -374,7 +374,6 @@ class EdgePredictor(object):
                 break
             if ys[top_pred_index] == 1:
                 # Artist1 influenced artist2, but we predicted otherwise.
-                print self.test_data[0][top_pred_index][0]
                 artist1, artist2 = [labels[artist].strip() for artist in self.test_data[0][top_pred_index][0]]
                 print("%dth lowest-predicted example (y_pred=%f): %s --> %s" % (i, ypreds[top_pred_index], artist1, artist2))
 
@@ -432,8 +431,9 @@ def run(IG, features_to_use, scale=1.0, verbose=True):
     # Topk Metrics
     ep.precision_topk(ys, ypreds, class_weights, '_'.join(ep.featurizer.get_feature_names()))
 
-    ep.report_false_positives(ys, ypreds, class_weights)
-    ep.report_false_negatives(ys, ypreds, class_weights)
+    if verbose:
+        ep.report_false_positives(ys, ypreds, class_weights)
+        ep.report_false_negatives(ys, ypreds, class_weights)
 
 def run_each_feature_independently(IG, verbose=True):
     features = ["rnd", "nc", "jc", "aa", "pa", "ra", "si", "lh", "ja", "da"]
@@ -454,8 +454,8 @@ if __name__ == '__main__':
     # Load IG graph
     IG = GraphLoader(verbose=False).load_networkx_influence_graph(pruned=False)
 
-    # run_each_feature_independently(IG, verbose=False)
-    # run_each_pair_of_features(IG, verbose=False)
+    run_each_feature_independently(IG, verbose=False)
+    run_each_pair_of_features(IG, verbose=False)
 
-    run(IG, ["da"], scale=1.0, verbose=True)
+    # run(IG, ["da"], scale=1.0, verbose=True)
 
