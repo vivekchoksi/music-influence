@@ -30,6 +30,7 @@ class FeatureGenerator(object):
         self.basepath = os.path.dirname(os.path.dirname(__file__))
         self.sdf = GraphLoader(verbose=verbose).load_song_dataframe()
         self.average_song_vectors = self._get_average_song_vectors()
+        self.artists_to_years = GraphLoader(verbose=verbose).load_artists_to_years()
         self.IG = None
         features_to_use = ["nc"] if features_to_use is None else features_to_use
         self.feature_mappers = self.get_feature_mappers(features_to_use)
@@ -60,6 +61,10 @@ class FeatureGenerator(object):
             "si": "sorensen_index",
             "lh": "leicht_holme_newman",
 
+            # Features using the years of the artists' songs
+            "pr": "precedence",
+            "yd": "year_difference",
+
             # Audio features
             "ja": "joint_audio",
             "ha": "harmonic_audio",
@@ -78,6 +83,9 @@ class FeatureGenerator(object):
             "resource_allocation": self._resource_allocation,
             "sorensen_index": self._sorensen_index,
             "leicht_holme_newman": self._leicht_holme_newman, 
+
+            "precedence": self._precedence,
+            "year_difference": self._year_difference,
 
             # Audio features
             "joint_audio": self._all_audio_euclidean_distance,
@@ -123,6 +131,19 @@ class FeatureGenerator(object):
         :return: a list with n features, where n is the number of audio topics
         """
         return list(np.absolute(self.average_song_vectors[u] - self.average_song_vectors[v]))
+
+    def _precedence(self, u, v):
+        """
+        :return: indicator feature that is 0 if artist u's songs were after all of artist v's songs
+        """
+        u_years = self.artists_to_years[u]
+        v_years = self.artists_to_years[v]
+        return 0 if min(u_years) > max(v_years) else 1
+
+    def _year_difference(self, u, v):
+        u_years = self.artists_to_years[u]
+        v_years = self.artists_to_years[v]
+        return np.mean(list(v_years)) - np.mean(list(u_years))
 
     def _sorensen_index(self, u, v):
         if (float(self.IG.degree(u) + self.IG.degree(v))) == 0: return 0

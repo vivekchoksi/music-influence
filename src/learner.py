@@ -454,8 +454,12 @@ if __name__ == '__main__':
     # Load IG graph
     IG = GraphLoader(verbose=False).load_networkx_influence_graph(pruned=False)
 
-    run_each_feature_independently(IG, verbose=False)
-    run_each_pair_of_features(IG, verbose=False)
+    # run_each_feature_independently(IG, verbose=False)
+    # run_each_pair_of_features(IG, verbose=False)
 
-    # run(IG, ["da"], scale=1.0, verbose=True)
+    run(IG, ["da", "yd", "pa"], scale=1.0, verbose=True)
+    # run(IG, ["yd"], scale=1.0, verbose=False)
+    # run(IG, ["pr"], scale=1.0, verbose=False)
+    # run(IG, ["da", "yd"], scale=1.0, verbose=False)
+    # run(IG, ["da", "pr"], scale=1.0, verbose=False)
 

@@ -29,7 +29,8 @@ class GraphLoader(object):
     EVOLUTION_FILENAME = "evolution.csv"
     LABELS_FILENAME = "song_artists_only_labels.csv"
     SONG_VECTORS_FILENAME = "song_vectors.csv"
-    SONG_VECTORS_PICKLE= "song_vectors.pickle"
+    SONG_VECTORS_PICKLE = "song_vectors.pickle"
+    ARTISTS_TO_YEARS_PICKLE = 'artists_to_years.pickle'
 
 
     def __init__(self, path=None, verbose=True):
@@ -105,7 +106,17 @@ class GraphLoader(object):
         self.log('Loading song data from file:{}...'.format(filepath))
         song_vectors = pickle.load(open(filepath, 'rb'))
         self.log('Done')
-        return song_vectors       
+        return song_vectors
+
+    def load_artists_to_years(self, path=None):
+        """
+        :return: dictionary mapping rom artist ID to list of years when the artist's songs were released
+        """
+        filepath = os.path.join(self.basepath, self.DATA_DIR, self.ARTISTS_TO_YEARS_PICKLE) if path is None else path
+        self.log('Loading artist years data from file:{}...'.format(filepath))
+        artists_to_years = pickle.load(open(filepath, 'rb'))
+        self.log('Done')
+        return artists_to_years  
 
     def pickle_dump_graph(self, Graph, pickle_filename):
         self.log('Dumping graph to file:{}...'.format(pickle_filename))
