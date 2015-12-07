@@ -22,8 +22,8 @@ class EdgePredictor(object):
     IG = None
 
     # For now just easy ensemble method
-    #classifier = svm.SVC(class_weight="balanced", probability=True)
-    classifier = ExtraTreesClassifier()
+    classifier = svm.SVC(class_weight="balanced", probability=True)
+    #classifier = ExtraTreesClassifier()
 
     # Tuple Xtrain, Phitrain, Ytrain, set when self.train() is called by the client
     train_data = None
@@ -197,7 +197,7 @@ class EdgePredictor(object):
         self.train_data to have m*ptrain positive examples and m*ptrain negative examples (to mantain class balance),
         similarly it sets self.test_data to have m*(1-ptrain) positive examples and m*(1-ptrain) negative examples.
         """
-        assert pvalidation + ptrain < 1; assert scale < 1;
+        assert pvalidation + ptrain < 1; assert scale <= 1;
 
         # Try loading feature matrices
         if use_cache_features and self.load_cache_features_successful(): return
@@ -330,11 +330,22 @@ class EdgePredictor(object):
         print("\tROC AUC: {}".format(roc_auc_score(y, ypreds)))
         print("\tPrecision-Recall AUC: {}".format(average_precision_score(y, ypreds, average="weighted")))
 
-    def make_predictions(self):
+    def make_predictions_testset(self, balanced=True):
         exs, phis = zip(*self.test_data[0])
+        phis = list(phis)
         ys = self.test_data[1]
+
+        if balanced is False:
+            # Ensure that we create enough negative examples to match the original distribution
+            nneeded = self._num_neg_needed_to_calibrate_dataset(sum(ys), self.IG)
+            neg = self.nrandom_negative_examples(nneeded - (len(ys)-sum(ys)), self.IG)
+            phineg = self.featurizer.feature_matrix(neg)
+            phis += phineg
+            ys += [0 for _ in range(len(phineg))]
+
+
         self.log("Evaluating Model")
-        self.log("Will make {} predictions".format(len(ys)))
+        self.log("Will make {} predictions on set with PosRate:{}".format(len(ys), sum(ys)/float(len(ys))))
         percent = int(len(ys)/10)
         ypreds = []
         for i, phi in enumerate(phis):
@@ -343,7 +354,7 @@ class EdgePredictor(object):
                 self.log("\t...{}% progress".format((i/percent)*10))
         return ys, ypreds
 
-def run(IG, features_to_use, scale=0.1):
+def run(IG, features_to_use, scale=0.1, balanced_testset=True):
     """
     Train Learner, Make Predictions, Show AUC metrics, plot
     """
@@ -354,7 +365,7 @@ def run(IG, features_to_use, scale=0.1):
     ep.fit(class_weights)
 
     # Make Predictions
-    ys, ypreds = ep.make_predictions()
+    ys, ypreds = ep.make_predictions_testset(balanced=balanced_testset)
 
     # AUC Metrics
     ep.auc_metrics(ys, ypreds)
@@ -373,10 +384,10 @@ if __name__ == '__main__':
     features = ["nc", "jc", "aa", "pa", "ra", "si", "lh"] # This list here for reference
 
     # Run Each feature Independently
-    for f in features:
-        run(IG, [f])
+    # for f in features:
+    #      run(IG, [f])
 
 
-    #run(IG, ["rdn"])
+    run(IG, ["aa"], scale=1, balanced_testset=True)
 
 
