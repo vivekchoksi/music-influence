@@ -118,7 +118,7 @@ class GraphLoader(object):
         the artist name as one of its attributes
         """
         filepath = os.path.join(self.basepath, self.DATA_DIR, self.EDGES_FILENAME) if path is None else path
-        G = nx.read_edgelist(filepath, delimiter=';', comments="Source")
+        G = nx.read_edgelist(filepath, delimiter=';', create_using=nx.DiGraph(), comments="Source")
         names = self.get_artist_ids_to_names()
         for nid in G.node:
             if nid in names:
