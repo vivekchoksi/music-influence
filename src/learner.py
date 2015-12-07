@@ -217,6 +217,11 @@ class EdgePredictor(object):
         else:
             pos, neg = self._generate_examples(scale, IGcp, balanced=balanced)
 
+        # Randomize
+        self.log("Randomizing")
+        np.random.shuffle(pos)
+        np.random.shuffle(neg)
+
         # Split
         self.log("Splitting")
         (postr,negtr), (posvalid, negvalid), (postst, negtst) = self._split(pos, neg, ptrain, pvalidation, IG, balanced)
@@ -393,8 +398,11 @@ class EdgePredictor(object):
 
     def auc_metrics(self, y, ypreds):
         print("Features Used: {}".format(self.featurizer.get_feature_names()))
-        print("\tROC AUC: {}".format(round(roc_auc_score(y, ypreds), 3)))
-        print("\tPrecision-Recall AUC: {}".format(round(average_precision_score(y, ypreds, average="weighted"), 3)))
+        auc = round(roc_auc_score(y, ypreds), 3)
+        print("\tROC AUC: {}".format(auc))
+        prc = round(average_precision_score(y, ypreds, average="weighted"), 3)
+        print("\tPrecision-Recall AUC: {}".format(prc))
+        return auc, prc
 
     def make_predictions(self):
         exs, phis = zip(*self.test_data[0])
@@ -409,12 +417,12 @@ class EdgePredictor(object):
                 self.log("\t...{}% progress".format((i/percent)*10))
         return ys, ypreds
 
-def run(IG, features_to_use, scale=1.0, verbose=True, balanced=True, use_cache_examples=True, randomize=True):
+def run(IG, features_to_use, scale=1.0, verbose=True, balanced=True, use_cache_examples=True):
     """
     Train Learner, Make Predictions, Show AUC metrics, plot
     """
     ep = EdgePredictor(IG, verbose=verbose, features_to_use=features_to_use)
-    class_weights = ep.preprocess(use_cache_features=False, use_cache_examples=False, balanced=True, scale=scale)
+    class_weights = ep.preprocess(use_cache_features=False, use_cache_examples=use_cache_examples, balanced=balanced, scale=scale)
 
     # Fit
     ep.fit(class_weights)
@@ -426,7 +434,7 @@ def run(IG, features_to_use, scale=1.0, verbose=True, balanced=True, use_cache_e
     ys, ypreds = ep.make_predictions()
 
     # AUC Metrics
-    ep.auc_metrics(ys, ypreds)
+    aucs, prcs = ep.auc_metrics(ys, ypreds)
 
     # Topk Metrics
     ep.precision_topk(ys, ypreds, class_weights, '_'.join(ep.featurizer.get_feature_names()))
@@ -434,6 +442,8 @@ def run(IG, features_to_use, scale=1.0, verbose=True, balanced=True, use_cache_e
     if verbose:
         ep.report_false_positives(ys, ypreds, class_weights)
         ep.report_false_negatives(ys, ypreds, class_weights)
+
+    return aucs, prcs
 
 def run_each_feature_independently(IG, verbose=True):
     features = ["rnd", "nc", "jc", "aa", "pa", "ra", "si", "lh", "ja", "da"]
@@ -457,7 +467,7 @@ def cross_validate(k, features,  scale=1.0, balanced=True, use_cache_examples=Tr
     for _ in range(k):
         logging.info("\tStarting {}th run".format(_))
         auc, prc = run(IG, features, scale=scale, balanced=balanced,
-                       use_cache_examples=use_cache_examples, randomize=True)
+                       use_cache_examples=use_cache_examples)
         scores.append((auc, prc))
 
     aucs, prcs = zip(*scores)
@@ -475,7 +485,8 @@ if __name__ == '__main__':
     # run_each_feature_independently(IG, verbose=False)
     # run_each_pair_of_features(IG, verbose=False)
 
-    run(IG, ["da", "yd", "pa"], scale=1.0, verbose=True)
+    cross_validate(5, ["pa"], use_cache_examples=False)
+    #run(IG, ["da", "yd", "pa"], scale=1.0, verbose=True)
     # run(IG, ["yd"], scale=1.0, verbose=False)
     # run(IG, ["pr"], scale=1.0, verbose=False)
     # run(IG, ["da", "yd"], scale=1.0, verbose=False)
