@@ -409,7 +409,7 @@ class EdgePredictor(object):
                 self.log("\t...{}% progress".format((i/percent)*10))
         return ys, ypreds
 
-def run(IG, features_to_use, scale=1.0, verbose=True):
+def run(IG, features_to_use, scale=1.0, verbose=True, balanced=True, use_cache_examples=True, randomize=True):
     """
     Train Learner, Make Predictions, Show AUC metrics, plot
     """
@@ -446,6 +446,24 @@ def run_each_pair_of_features(IG, verbose=True):
         for i2, f2 in enumerate(features):
             if i2 > i1:
                 run(IG, [f1, f2], verbose=verbose)
+
+def cross_validate(k, features,  scale=1.0, balanced=True, use_cache_examples=True):
+    logging.info("Will run {}-fold bootstrap sampling validation".format(k))
+    # Load IG graph
+    IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=False)
+
+
+    scores = []  # List tuples with elements (roc_auc, precision_recall_auc)
+    for _ in range(k):
+        logging.info("\tStarting {}th run".format(_))
+        auc, prc = run(IG, features, scale=scale, balanced=balanced,
+                       use_cache_examples=use_cache_examples, randomize=True)
+        scores.append((auc, prc))
+
+    aucs, prcs = zip(*scores)
+    print("Averaged ROC AUC {}".format(sum(aucs) / float(len(aucs))))
+    print("Averaged PR AUC {}".format(sum(prcs) / float(len(prcs))))
+
 
 if __name__ == '__main__':
     # Setup logging
