@@ -262,6 +262,7 @@ class EdgePredictor(object):
         self.log("Class Weights in Train Set: c0={}, c1={}".format(*weights))
         return weights
 
+
     def tune_model(self):
         """
         TODO use validation set to tune hyperparameters
@@ -335,18 +336,47 @@ class EdgePredictor(object):
         plt.ylabel("Precision")
         plt.savefig(os.path.join(self.basepath, "plots", "ptopk_{}.png".format(suffix)))
 
-    def report_incorrect_predictions(self, ys, ypreds, class_weights):
-        print "Reporting false positives"
+    def report_false_positives(self, ys, ypreds, class_weights):
+        print "Reporting top false positives"
         c0, c1 = class_weights
         posrate = 1.0 / c1
-        maxk = int(posrate*len(ys))
+        maxk = int(posrate*len(ys)) # Number of positive examples
 
-        # Indices of examples, sorted from highest y predicted value to lowest.
+        labels = GraphLoader(verbose=False).get_artist_ids_to_names()
+
+        # Get the top positive predicted examples, in order from highest y predicted value to lowest.
         top_pred_indices = np.argsort(ypreds)[::-1][0:maxk]
 
+        # Among these, identify the examples that were actually negative examples.
         for i, top_pred_index in enumerate(top_pred_indices):
-            if ys[top_pred_index] != 1:
-                self.log("Misclassified the %dth highest-predicted example (y_pred=%f)" % (i, ypreds[top_pred_index]))
+            if ypreds[top_pred_index] <= 0.5:
+                break
+            if ys[top_pred_index] == 0:
+                # We predicted that artist1 influenced artist2, but this was not the case.
+                artist1, artist2 = [labels[artist].strip() for artist in self.test_data[0][top_pred_index][0]]
+                print("%dth highest-predicted example (y_pred=%f): %s --> %s" % (i, ypreds[top_pred_index], artist1, artist2))
+
+
+    def report_false_negatives(self, ys, ypreds, class_weights):
+        print "Reporting top false negatives"
+        c0, c1 = class_weights
+        posrate = 1.0 / c1
+        maxk = len(ys) - int(posrate*len(ys)) # Number of negative examples
+
+        labels = GraphLoader(verbose=False).get_artist_ids_to_names()
+
+        # Get the most negatively predicted examples, in order from lowest y predicted value to highest.
+        top_pred_indices = np.argsort(ypreds)[0:maxk]
+
+        # Among these, identify the examples that were actually positive examples.
+        for i, top_pred_index in enumerate(top_pred_indices):
+            if ypreds[top_pred_index] >= 0.5:
+                break
+            if ys[top_pred_index] == 1:
+                # Artist1 influenced artist2, but we predicted otherwise.
+                print self.test_data[0][top_pred_index][0]
+                artist1, artist2 = [labels[artist].strip() for artist in self.test_data[0][top_pred_index][0]]
+                print("%dth lowest-predicted example (y_pred=%f): %s --> %s" % (i, ypreds[top_pred_index], artist1, artist2))
 
     def print_feature_weights(self):
         importances = self.classifier.feature_importances_
@@ -365,7 +395,7 @@ class EdgePredictor(object):
     def auc_metrics(self, y, ypreds):
         print("Features Used: {}".format(self.featurizer.get_feature_names()))
         print("\tROC AUC: {}".format(round(roc_auc_score(y, ypreds), 3)))
-        # print("\tPrecision-Recall AUC: {}".format(round(average_precision_score(y, ypreds, average="weighted"), 3)))
+        print("\tPrecision-Recall AUC: {}".format(round(average_precision_score(y, ypreds, average="weighted"), 3)))
 
     def make_predictions(self):
         exs, phis = zip(*self.test_data[0])
@@ -402,7 +432,8 @@ def run(IG, features_to_use, scale=1.0, verbose=True):
     # Topk Metrics
     ep.precision_topk(ys, ypreds, class_weights, '_'.join(ep.featurizer.get_feature_names()))
 
-    # ep.report_incorrect_predictions(ys, ypreds, class_weights)
+    ep.report_false_positives(ys, ypreds, class_weights)
+    ep.report_false_negatives(ys, ypreds, class_weights)
 
 def run_each_feature_independently(IG, verbose=True):
     features = ["rnd", "nc", "jc", "aa", "pa", "ra", "si", "lh", "ja", "da"]
@@ -423,13 +454,8 @@ if __name__ == '__main__':
     # Load IG graph
     IG = GraphLoader(verbose=False).load_networkx_influence_graph(pruned=False)
 
-    run_each_feature_independently(IG, verbose=False)
+    # run_each_feature_independently(IG, verbose=False)
     # run_each_pair_of_features(IG, verbose=False)
 
-    # Initialize and train Predictor
-    # run(IG, ["nc", "da"], scale=1.0, verbose=True)
-    # run(IG, ["nc"], scale=1.0, verbose=False)
-    # run(IG, ["da"], scale=1.0, verbose=False)
-    # run(IG, ["nc", "da"], scale=1.0, verbose=False)
-
+    run(IG, ["da"], scale=1.0, verbose=True)
 
