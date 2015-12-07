@@ -65,8 +65,8 @@ class FeatureGenerator(object):
             "ha": "harmonic_audio",
             "ta": "timbral_audio",
             "da": "disjoint_audio",
-
         }
+
         feature_mappers = {
             "random": self._random,
             "ncommon_neighbors": self._ncommon_neighbors,
@@ -133,13 +133,19 @@ class FeatureGenerator(object):
         return self._ncommon_neighbors(u,v) / float(self.IG.degree(u) * self.IG.degree(v))
 
     def _common_neighbors(self, u, v):
-        return set(self.IG.neighbors(v)) & set(self.IG.neighbors(u))
+        return set(self.IG.neighbors(v)) & set(self.IG.neighbors(u)) # Set intersection.
 
     def _ncommon_neighbors(self, u, v):
         return len(self._common_neighbors(u, v))
 
     def _jaccard_coeff(self, u, v):
-        return float(self._ncommon_neighbors(u,v)) / (len(set(self.IG.neighbors(v)) | set(self.IG.neighbors(u))))
+        # Cardinality of set interesection divided by cardinality of set union.
+        union_size = len(set(self.IG.neighbors(v)) | set(self.IG.neighbors(u)))
+        if union_size == 0:
+            return 0.0
+        else: 
+            intersection_size = self._ncommon_neighbors(u,v)
+            return float(intersection_size) / union_size
 
     def _adamic_adar(self, u, v):
         return sum([ 1.0 / math.log(self.IG.degree(z)) for z in self._common_neighbors(u,v)])

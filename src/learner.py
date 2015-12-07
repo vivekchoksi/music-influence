@@ -364,8 +364,8 @@ class EdgePredictor(object):
 
     def auc_metrics(self, y, ypreds):
         print("Features Used: {}".format(self.featurizer.get_feature_names()))
-        print("\tROC AUC: {}".format(roc_auc_score(y, ypreds)))
-        print("\tPrecision-Recall AUC: {}".format(average_precision_score(y, ypreds, average="weighted")))
+        print("\tROC AUC: {}".format(round(roc_auc_score(y, ypreds), 3)))
+        # print("\tPrecision-Recall AUC: {}".format(round(average_precision_score(y, ypreds, average="weighted"), 3)))
 
     def make_predictions(self):
         exs, phis = zip(*self.test_data[0])
@@ -402,7 +402,19 @@ def run(IG, features_to_use, scale=1.0, verbose=True):
     # Topk Metrics
     ep.precision_topk(ys, ypreds, class_weights, '_'.join(ep.featurizer.get_feature_names()))
 
-    ep.report_incorrect_predictions(ys, ypreds, class_weights)
+    # ep.report_incorrect_predictions(ys, ypreds, class_weights)
+
+def run_each_feature_independently(IG, verbose=True):
+    features = ["rnd", "nc", "jc", "aa", "pa", "ra", "si", "lh", "ja", "da"]
+    for f in features:
+        run(IG, [f], verbose=verbose)
+
+def run_each_pair_of_features(IG, verbose=True):
+    features = ["rnd", "nc", "jc", "aa", "pa", "ra", "si", "lh", "ja", "da"]
+    for i1, f1 in enumerate(features):
+        for i2, f2 in enumerate(features):
+            if i2 > i1:
+                run(IG, [f1, f2], verbose=verbose)
 
 if __name__ == '__main__':
     # Setup logging
@@ -411,15 +423,13 @@ if __name__ == '__main__':
     # Load IG graph
     IG = GraphLoader(verbose=False).load_networkx_influence_graph(pruned=False)
 
+    run_each_feature_independently(IG, verbose=False)
+    # run_each_pair_of_features(IG, verbose=False)
+
     # Initialize and train Predictor
-    run(IG, ["nc", "da"], scale=1.0, verbose=True)
+    # run(IG, ["nc", "da"], scale=1.0, verbose=True)
     # run(IG, ["nc"], scale=1.0, verbose=False)
     # run(IG, ["da"], scale=1.0, verbose=False)
     # run(IG, ["nc", "da"], scale=1.0, verbose=False)
 
 
-    # features = ["nc", "jc", "aa", "pa", "ra", "si", "lh"] # This list here for reference
-    # features = ["aae", "hae", "tae", "rnd"]
-    # Run Each feature Independently
-    # for f in features:
-        # run(IG, [f])
