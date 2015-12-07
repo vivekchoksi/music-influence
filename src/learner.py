@@ -397,11 +397,11 @@ class EdgePredictor(object):
             self.log("%d. Feature %d (%f)" % (f + 1, indices[f], importances[indices[f]]))
 
     def auc_metrics(self, y, ypreds):
-        print("Features Used: {}".format(self.featurizer.get_feature_names()))
-        auc = round(roc_auc_score(y, ypreds), 3)
-        print("\tROC AUC: {}".format(auc))
-        prc = round(average_precision_score(y, ypreds, average="weighted"), 3)
-        print("\tPrecision-Recall AUC: {}".format(prc))
+        self.log("Features Used: {}".format(self.featurizer.get_feature_names()))
+        auc = roc_auc_score(y, ypreds)
+        self.log("\tROC AUC: {}".format(auc))
+        prc = average_precision_score(y, ypreds, average="weighted")
+        self.log("\tPrecision-Recall AUC: {}".format(prc))
         return auc, prc
 
     def make_predictions(self):
@@ -445,6 +445,29 @@ def run(IG, features_to_use, scale=1.0, verbose=True, balanced=True, use_cache_e
 
     return aucs, prcs
 
+def cross_validate(k, features,  scale=1.0, balanced=True, use_cache_examples=True, verbose=False):
+    if verbose:
+        logging.info("Will run {}-fold bootstrap sampling validation".format(k))
+    # Load IG graph
+    IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=False)
+
+
+    scores = []  # List tuples with elements (roc_auc, precision_recall_auc)
+    for _ in range(k):
+        if verbose:
+            logging.info("\tStarting {}th run".format(_))
+        auc, prc = run(IG, features, scale=scale, balanced=balanced,
+                       use_cache_examples=use_cache_examples, verbose=verbose)
+        scores.append((auc, prc))
+
+    aucs, prcs = zip(*scores)
+    avg_aucs = sum(aucs) / float(len(aucs))
+    avg_prcs = sum(prcs) / float(len(prcs))
+    print("Features used: {}".format(str(features)))
+    print("\tAveraged ROC AUC {}".format(round(avg_aucs, 3)))
+    print("\tAveraged PR AUC {}".format(round(avg_prcs, 3)))
+
+
 def run_each_feature_independently(IG, verbose=True):
     features = ["rnd", "nc", "jc", "aa", "pa", "ra", "si", "lh", "ja", "da"]
     for f in features:
@@ -457,27 +480,9 @@ def run_each_pair_of_features(IG, verbose=True):
             if i2 > i1:
                 run(IG, [f1, f2], verbose=verbose)
 
-def cross_validate(k, features,  scale=1.0, balanced=True, use_cache_examples=True):
-    logging.info("Will run {}-fold bootstrap sampling validation".format(k))
-    # Load IG graph
-    IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=False)
-
-
-    scores = []  # List tuples with elements (roc_auc, precision_recall_auc)
-    for _ in range(k):
-        logging.info("\tStarting {}th run".format(_))
-        auc, prc = run(IG, features, scale=scale, balanced=balanced,
-                       use_cache_examples=use_cache_examples)
-        scores.append((auc, prc))
-
-    aucs, prcs = zip(*scores)
-    print("Averaged ROC AUC {}".format(sum(aucs) / float(len(aucs))))
-    print("Averaged PR AUC {}".format(sum(prcs) / float(len(prcs))))
-
-
 if __name__ == '__main__':
     # Setup logging
-    logging.basicConfig(format="[%(name)s %(asctime)s]\t%(msg)s", level=logging.INFO)
+    logging.basicConfig(format="[%(name)s %(asctime)s]\t%(msg)s", level=logging.WARNING)
 
     # Load IG graph
     IG = GraphLoader(verbose=False).load_networkx_influence_graph(pruned=False)
@@ -485,7 +490,7 @@ if __name__ == '__main__':
     # run_each_feature_independently(IG, verbose=False)
     # run_each_pair_of_features(IG, verbose=False)
 
-    cross_validate(5, ["pa"], use_cache_examples=False)
+    cross_validate(5, ["pa"], use_cache_examples=False, verbose=False)
     #run(IG, ["da", "yd", "pa"], scale=1.0, verbose=True)
     # run(IG, ["yd"], scale=1.0, verbose=False)
     # run(IG, ["pr"], scale=1.0, verbose=False)
