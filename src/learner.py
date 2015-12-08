@@ -335,10 +335,16 @@ class EdgePredictor(object):
             precisions_at_k.append(precision_score(ysk, yscore))
 
         plt.figure()
+
+        # Set the y scale.
+        axes = plt.gca()
+        axes.set_ylim([0.0, 1.05])
+
         plt.semilogx(ks, precisions_at_k, 'bo', alpha=.9)
-        plt.axvline(x=maxk, ymin=0, linewidth=2, color='r', alpha=.2)
-        plt.title("Precision at Topk")
+        # plt.axvline(x=maxk, ymin=0, linewidth=2, color='r', alpha=.2)
+        plt.title("Precision at top k")
         plt.ylabel("Precision")
+        plt.xlabel("k")
         plt.savefig(os.path.join(self.basepath, "plots", "ptopk_{}.png".format(suffix)))
 
     def report_false_positives(self, ys, ypreds, class_weights):
@@ -468,17 +474,23 @@ def cross_validate(k, features,  scale=1.0, balanced=True, use_cache_examples=Tr
     print("\tAveraged PR AUC {}".format(round(avg_prcs, 3)))
 
 
-def run_each_feature_independently(IG, verbose=True):
-    features = ["rnd", "nc", "jc", "aa", "pa", "ra", "si", "lh", "ja", "da"]
+def run_each_feature_independently(k=5, verbose=True):
+    features = ["rnd", "nc", "jc", "aa", "pa", "ra", "si", "lh", "ja", "da", "pr", "yd"]
+    time_feature = "yd"
     for f in features:
-        run(IG, [f], verbose=verbose)
+        cross_validate(k, [f], verbose=verbose)
 
-def run_each_pair_of_features(IG, verbose=True):
+def run_each_pair_of_features(k=5, verbose=True):
+    """
+    Run each feature along with the feature "yd" (year difference).
+    :param k: the number of folds to use in cross-validation
+    """
+    time_feature = "yd"
     features = ["rnd", "nc", "jc", "aa", "pa", "ra", "si", "lh", "ja", "da"]
     for i1, f1 in enumerate(features):
-        for i2, f2 in enumerate(features):
+        for i2, f2 in [(9, "da")]:
             if i2 > i1:
-                run(IG, [f1, f2], verbose=verbose)
+                cross_validate(k, [f1, f2, time_feature], use_cache_examples=False, verbose=verbose)
 
 if __name__ == '__main__':
     # Setup logging
@@ -487,13 +499,10 @@ if __name__ == '__main__':
     # Load IG graph
     IG = GraphLoader(verbose=False).load_networkx_influence_graph(pruned=False)
 
-    # run_each_feature_independently(IG, verbose=False)
-    # run_each_pair_of_features(IG, verbose=False)
+    # run_each_pair_of_features(k=5, verbose=False)
+    # run_each_feature_independently(k=5, verbose=False)
 
-    cross_validate(5, ["pa"], use_cache_examples=False, verbose=False)
-    #run(IG, ["da", "yd", "pa"], scale=1.0, verbose=True)
-    # run(IG, ["yd"], scale=1.0, verbose=False)
-    # run(IG, ["pr"], scale=1.0, verbose=False)
-    # run(IG, ["da", "yd"], scale=1.0, verbose=False)
-    # run(IG, ["da", "pr"], scale=1.0, verbose=False)
+    # cross_validate(5, ["yd", "da"], use_cache_examples=False, verbose=False)
+    # cross_validate(5, ["da"], use_cache_examples=False, verbose=False)
+    run(IG, ["yd", "da"], use_cache_examples=False, verbose=True)
 

@@ -130,7 +130,7 @@ class FeatureGenerator(object):
         """
         :return: a list with n features, where n is the number of audio topics
         """
-        return list(np.absolute(self.average_song_vectors[u] - self.average_song_vectors[v]))
+        return list(self.average_song_vectors[u] - self.average_song_vectors[v])
 
     def _precedence(self, u, v):
         """

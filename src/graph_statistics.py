@@ -62,15 +62,16 @@ class GraphStatistics(object):
 
 
         # These may throw gnuplot errors; if so, edit the generated .plt files to correct the errors and run
-        # gnuplot from terminal.
-        # snap.PlotOutDegDistr(self.Graph, 'out_degree_distr', 'Out-degree distribution')
-        # snap.PlotInDegDistr(self.Graph, 'in_degree_distr', 'In-degree distribution')
+        # gnuplot from terminal. (May need to set terminal to svg instead of png depending on your gnuplot
+        # installation.)
+        snap.PlotOutDegDistr(self.Graph, 'out_degree_distr', 'Out-degree distribution')
+        snap.PlotInDegDistr(self.Graph, 'in_degree_distr', 'In-degree distribution')
 
 
 def main():
     graph_statistics = GraphStatistics()
-    graph_statistics.load_graph_from_edges('../data/edges.csv')
-    graph_statistics.print_statistics('graph-info.txt')
+    graph_statistics.load_graph_from_edges('../data/song_artists_only_edges.csv')
+    graph_statistics.print_statistics('reduced-graph-info.txt')
 
 if __name__ == '__main__':
     main()
