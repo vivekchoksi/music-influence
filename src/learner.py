@@ -353,6 +353,8 @@ class EdgePredictor(object):
         posrate = 1.0 / c1
         maxk = int(posrate*len(ys)) # Number of positive examples
 
+        _, phis = zip(*self.test_data[0]) # Get the feature matrix.
+
         labels = GraphLoader(verbose=False).get_artist_ids_to_names()
 
         # Get the top positive predicted examples, in order from highest y predicted value to lowest.
@@ -365,7 +367,8 @@ class EdgePredictor(object):
             if ys[top_pred_index] == 0:
                 # We predicted that artist1 influenced artist2, but this was not the case.
                 artist1, artist2 = [labels[artist].strip() for artist in self.test_data[0][top_pred_index][0]]
-                print("%dth highest-predicted example (y_pred=%f): %s --> %s" % (i, ypreds[top_pred_index], artist1, artist2))
+                print("%dth highest-predicted (y_pred=%f): %s --> %s" % (i, ypreds[top_pred_index], artist1, artist2))
+                print "\t", [round(feature_value, 3) for feature_value in phis[top_pred_index]]
 
 
     def report_false_negatives(self, ys, ypreds, class_weights):
@@ -373,6 +376,8 @@ class EdgePredictor(object):
         c0, c1 = class_weights
         posrate = 1.0 / c1
         maxk = len(ys) - int(posrate*len(ys)) # Number of negative examples
+
+        _, phis = zip(*self.test_data[0]) # Get the feature matrix.
 
         labels = GraphLoader(verbose=False).get_artist_ids_to_names()
 
@@ -386,7 +391,8 @@ class EdgePredictor(object):
             if ys[top_pred_index] == 1:
                 # Artist1 influenced artist2, but we predicted otherwise.
                 artist1, artist2 = [labels[artist].strip() for artist in self.test_data[0][top_pred_index][0]]
-                print("%dth lowest-predicted example (y_pred=%f): %s --> %s" % (i, ypreds[top_pred_index], artist1, artist2))
+                print("%dth lowest-predicted (y_pred=%f): %s --> %s" % (i, ypreds[top_pred_index], artist1, artist2))
+                print "\t", [round(feature_value, 3) for feature_value in phis[top_pred_index]]
 
     def print_feature_weights(self):
         importances = self.classifier.feature_importances_
@@ -457,7 +463,6 @@ def cross_validate(k, features,  scale=1.0, balanced=True, use_cache_examples=Tr
     # Load IG graph
     IG = GraphLoader(verbose=True).load_networkx_influence_graph(pruned=False)
 
-
     scores = []  # List tuples with elements (roc_auc, precision_recall_auc)
     for _ in range(k):
         if verbose:
@@ -499,10 +504,12 @@ if __name__ == '__main__':
     # Load IG graph
     IG = GraphLoader(verbose=False).load_networkx_influence_graph(pruned=False)
 
+
     # run_each_pair_of_features(k=5, verbose=False)
     # run_each_feature_independently(k=5, verbose=False)
 
     # cross_validate(5, ["yd", "da"], use_cache_examples=False, verbose=False)
     # cross_validate(5, ["da"], use_cache_examples=False, verbose=False)
-    run(IG, ["yd", "da"], use_cache_examples=False, verbose=True)
+    run(IG, ["yd", "pa", "da"], use_cache_examples=False, verbose=True)
+    # run(IG, ["yd"], use_cache_examples=False, verbose=True)
 

@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import pdb
 from networkx import Graph
 import networkx as nx
 import numpy as np
@@ -130,6 +131,7 @@ class FeatureGenerator(object):
         """
         :return: a list with n features, where n is the number of audio topics
         """
+        # return list(self.average_song_vectors[u]) + list(self.average_song_vectors[v])
         return list(self.average_song_vectors[u] - self.average_song_vectors[v])
 
     def _precedence(self, u, v):

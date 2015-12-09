@@ -28,7 +28,7 @@ def get_artists_to_years():
                         year = int(datum)
                         print '\tResolving year to:', year
                         break
-            artists_to_years[artist].add(year)
+            artists_to_years[artist].append(year)
 
     return artists_to_years
 
